@@ -5,6 +5,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
+/**
+ * Class to dialogue with the Car table
+ */
 public class CarDao extends DaoBase{
     public static final String TABLE_CREATE = Constants.CREATE_TABLE_CARS;
 

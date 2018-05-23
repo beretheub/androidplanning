@@ -2,6 +2,9 @@ package com.example.berenice.androidplanning.database;
 
 import android.provider.BaseColumns;
 
+/**
+ * Class to stock all the needed constants for the database
+ */
 public final class Constants implements BaseColumns {
     //Database name
     public static final String DATABASE_NAME = "planning.db";

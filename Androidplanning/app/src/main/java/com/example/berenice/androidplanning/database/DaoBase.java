@@ -3,10 +3,13 @@ package com.example.berenice.androidplanning.database;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+/**
+ * Abstract class to permit all the DAO classes to communicate with the Database
+ */
 public abstract class DaoBase {
 
     protected final static int VERSION = 1;
-    protected final static String NOM = "planning.db";
+    protected final static String NOM = Constants.DATABASE_NAME;
 
     protected SQLiteDatabase mDb = null;
     protected DatabaseHandler mHandler = null;

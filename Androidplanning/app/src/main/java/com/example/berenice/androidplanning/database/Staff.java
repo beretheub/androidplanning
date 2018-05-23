@@ -1,5 +1,8 @@
 package com.example.berenice.androidplanning.database;
 
+/**
+ * Class to represent one line of the Staff table
+ */
 public class Staff {
     int id;
     String name;

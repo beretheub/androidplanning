@@ -1,5 +1,8 @@
 package com.example.berenice.androidplanning.database;
 
+/**
+ * Class to represent one line of the TaskStaff table
+ */
 public class TaskStaff {
     int id;
     String task;

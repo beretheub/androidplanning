@@ -1,5 +1,8 @@
 package com.example.berenice.androidplanning.database;
 
+/**
+ * Class to represent one line of the Car table
+ */
 public class Car {
     int id;
     String name;

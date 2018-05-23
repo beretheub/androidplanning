@@ -4,6 +4,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
+/**
+ * Class to dialogue with the Staff table
+ */
 public class StaffDao extends DaoBase {
     public static final String TABLE_CREATE = Constants.CREATE_TABLE_STAFF;
 
