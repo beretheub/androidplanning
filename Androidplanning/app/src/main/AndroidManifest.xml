@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.berenice.androidplanning">
 
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +21,12 @@
         <activity
             android:name=".sendSms.sendSmsActivity"
             android:label="@string/title_activity_send_sms"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Fiche"
+            android:label="@string/title_activity_fiche"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Task"></activity>
     </application>
 
 </manifest>
