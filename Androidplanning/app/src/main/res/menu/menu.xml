@@ -5,7 +5,7 @@
         android:id="@+id/send_sms"
         android:icon="@drawable/logo_raid_blanc"
         android:orderInCategory="0"
-        android:title="Contacts">
+        android:title="Write message">
     </item>
     <item
         android:id="@+id/buro"
