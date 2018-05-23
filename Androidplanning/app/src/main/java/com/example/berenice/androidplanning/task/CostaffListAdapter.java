@@ -14,12 +14,15 @@ import com.example.berenice.androidplanning.R;
 
 import java.util.ArrayList;
 
-public class CotaffListAdapter extends BaseAdapter implements ListAdapter{
+/**
+ * ListAdapter in order to show the colleagues on a certain task
+ */
+public class CostaffListAdapter extends BaseAdapter implements ListAdapter{
 
     private ArrayList<String> list = new ArrayList<String>();
     private Context context;
 
-    public CotaffListAdapter(ArrayList<String> list, Context context) {
+    public CostaffListAdapter(ArrayList<String> list, Context context) {
         this.list = list;
         this.context = context;
     }
