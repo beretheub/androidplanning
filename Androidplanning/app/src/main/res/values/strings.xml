@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Androidplanning</string>
+    <string name="title_activity_send_sms">sendSMS</string>
+
+    #Strings for the SMS activity
+    <string name="messageText">Text</string>
+    <string name="messageLabel">Type your message here:</string>
+    <string name="sendButtonLabel">Send</string>
+    <string name="recipientsLabel">Recipients</string>
 </resources>
