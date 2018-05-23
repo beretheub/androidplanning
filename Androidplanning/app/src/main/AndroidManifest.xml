@@ -26,6 +26,11 @@
             android:name=".task.taskActivity"
             android:label="@string/title_activity_task"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Fiche"
+            android:label="@string/title_activity_fiche"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Task"></activity>
     </application>
 
 </manifest>
