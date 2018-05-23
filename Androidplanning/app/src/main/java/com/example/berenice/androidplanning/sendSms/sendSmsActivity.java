@@ -4,11 +4,12 @@ import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.service.carrier.CarrierMessagingService;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,11 +23,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class sendSmsActivity extends AppCompatActivity {
+/**
+ * Activity to write and send a SMS to predefined persons
+ */
+public class sendSmsActivity extends AppCompatActivity  {
 
     ListView recipientsListView;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
