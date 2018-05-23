@@ -8,23 +8,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
-
-    <menu xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:actionbarcompat_mse="http://schemas.android.com/apk/res-auto" >
-    <item
-        android:id="@+id/send_sms"
-        android:icon="@drawable/logo_raid"
-        android:orderInCategory="0"
-        android:title="Contacts">
-    </item>
-    <item
-        android:id="@+id/buro"
-        android:icon="@drawable/logo_raid"
-        android:orderInCategory="1"
-        android:title="Se connecter en tant que buro">
-    </item>
-    </menu>
-
     <Button
         android:id="@+id/goToBuroButton"
         style="@android:style/Widget.Button"
@@ -47,9 +30,9 @@
         android:layout_height="wrap_content"
         android:text="Go to Task activity"
         android:id="@+id/goToTaskButton"
-        app:layout_constraintTop_toBottomOf="@id/goToSmsButton"/>
+        android:layout_gravity="right"/>
 
-</android.support.constraint.ConstraintLayout>
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="18dp"

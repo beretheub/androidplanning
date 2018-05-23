@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:actionbarcompat_mse="http://schemas.android.com/apk/res-auto" >
+    <item
+        android:id="@+id/send_sms"
+        android:icon="@drawable/logo_raid"
+        android:orderInCategory="0"
+        android:title="Contacts">
+    </item>
+    <item
+        android:id="@+id/buro"
+        android:icon="@drawable/logo_raid"
+        android:orderInCategory="1"
+        android:title="Se connecter en tant que buro">
+    </item>
+    <item
+        android:id="@+id/goto_task"
+        android:icon="@drawable/logo_raid"
+        android:orderInCategory="0"
+        android:title="Task">
+    </item>
+</menu>

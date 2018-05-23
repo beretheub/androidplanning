@@ -3,8 +3,10 @@ package com.example.berenice.androidplanning;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuInflater;
 import android.widget.Button;
 import android.view.View;
+import android.view.Menu;
 
 import com.example.berenice.androidplanning.task.taskActivity;
 
@@ -35,5 +37,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
     }
 }
