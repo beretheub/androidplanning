@@ -21,4 +21,11 @@
         android:text="Go to SMS activity"
         android:id="@+id/goToSmsButton"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Task activity"
+        android:id="@+id/goToTaskButton"
+        app:layout_constraintTop_toBottomOf="@id/goToSmsButton"/>
+
 </android.support.constraint.ConstraintLayout>

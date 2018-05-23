@@ -7,4 +7,13 @@
     <string name="messageLabel">Type your message here:</string>
     <string name="sendButtonLabel">Send</string>
     <string name="recipientsLabel">Recipients</string>
+    <string name="title_activity_task">task</string>
+    <string name="departureLabel">Departure:</string>
+    <string name="beginLabel">Begin:</string>
+    <string name="endLabel">End:</string>
+    <string name="descriptionLabel">Description:</string>
+    <string name="carLabel">Car:</string>
+    <string name="costaffLabel">Colleagues:</string>
+    <string name="sendButtonAllLabel">Send SMS all</string>
+
 </resources>
