@@ -2,11 +2,10 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/logo_raid2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <Button
         android:id="@+id/goToBuroButton"
@@ -26,38 +25,51 @@
         android:textSize="8sp" />
 
     <Button
+        android:id="@+id/goToTaskButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to Task activity"
-        android:id="@+id/goToTaskButton"
-        android:layout_gravity="right"/>
-
+        android:layout_gravity="right"
+        android:text="Go to Task activity" />
 
     <TextView
         android:layout_width="fill_parent"
-        android:layout_height="18dp"
-        android:layout_marginTop="180dp"
+        android:layout_height="116dp"
         android:gravity="center"
         android:text="Bonjour ! Qui es-tu ?"
-        android:textColor="@android:color/background_light"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/nom"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="monospace"
-        android:hint="Nom Prénom"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_light"
-        android:textSize="12sp" />
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+
+        <EditText
+            android:id="@+id/nom"
+            android:layout_width="191dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="monospace"
+            android:hint="Nom Prénom"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="12sp" />
+
+        <SearchView
+            android:id="@+id/nomButton"
+            android:layout_width="82dp"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/logo_raid"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo_raid2" />
+        android:layout_height="128dp"
+        android:layout_gravity="bottom"
+        android:src="@drawable/logo_raid_noir" />
 
 </LinearLayout>

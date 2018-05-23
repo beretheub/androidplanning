@@ -7,7 +7,7 @@
     <string name="messageLabel">Type your message here:</string>
     <string name="sendButtonLabel">Send</string>
     <string name="recipientsLabel">Recipients</string>
-    <string name="title_activity_task">task</string>
+    <string name="title_activity_task">Task</string>
     <string name="departureLabel">Departure:</string>
     <string name="beginLabel">Begin:</string>
     <string name="endLabel">End:</string>

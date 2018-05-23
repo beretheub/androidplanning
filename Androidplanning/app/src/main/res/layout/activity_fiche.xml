@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fiche">
+    tools:context=".task.taskActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -20,14 +20,144 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_fiche" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8sp"
+            android:padding="3dp"
+            android:text="INSERT DAY NUMBER HERE"
+            android:textColor="208040"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/nameStaff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INSERT NAME Staffeur HERE"
+            android:padding="3dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_height="3dip"
+                android:background="#FF909090" />
+
+        </TableLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:text="@string/departureLabel"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:lines="2"
+                    />
+                <View android:layout_width="2dp"
+                    android:background="#FF909090"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:text="@string/beginLabel"
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+                <View android:layout_width="2dp"
+                    android:background="#FF909090"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:text="@string/endLabel"
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+            </TableRow>
+            <View
+                android:layout_height="1dip"
+                android:background="#FF909090" />
+            <TableRow>
+                <TextView
+                    android:text="@string/title_activity_task"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:lines="4"/>
+                <View android:layout_width="2dp"
+                    android:background="#FF909090"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:text="INSERT TASK DESCRIPTION"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:width="0dp"/>
+            </TableRow>
+
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+        </TableLayout>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:text="@string/departureLabel"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:lines="2"
+                    />
+                <View android:layout_width="2dp"
+                    android:background="#FF909090"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:text="@string/beginLabel"
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+                <View android:layout_width="2dp"
+                    android:background="#FF909090"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:text="@string/endLabel"
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"/>
+            </TableRow>
+            <View
+                android:layout_height="1dip"
+                android:background="#FF909090" />
+            <TableRow>
+                <TextView
+                    android:text="@string/title_activity_task"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:lines="4"/>
+                <View android:layout_width="2dp"
+                    android:background="#FF909090"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:text="INSERT TASK DESCRIPTION"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:width="0dp"/>
+            </TableRow>
+
+            <View
+                android:layout_height="2dip"
+                android:background="#FF909090" />
+        </TableLayout>
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

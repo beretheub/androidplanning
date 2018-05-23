@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.berenice.androidplanning.records.RecordActivity;
 import com.example.berenice.androidplanning.task.taskActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Salut
 
         Button smsButton = findViewById(R.id.goToSmsButton);
         smsButton.setOnClickListener(new android.view.View.OnClickListener() {
@@ -38,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button nomButton = findViewById(R.id.nomButton);
+        taskButton.setOnClickListener(new android.view.View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(getBaseContext(), RecordActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 
