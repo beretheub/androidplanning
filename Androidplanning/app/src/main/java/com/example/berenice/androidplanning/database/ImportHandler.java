@@ -154,11 +154,11 @@ public class ImportHandler {
                 if (values[1].equalsIgnoreCase("")) {continue;}
                 else {taskID = Integer.parseInt(values[1]);}
                 if (values[2].equalsIgnoreCase("")) {continue;}
-                else {staffID = Integer.parseInt(values[1]);}
+                else {staffID = Integer.parseInt(values[2]);}
                 if (values[5].equalsIgnoreCase("")) {carID = 0;}
-                else {carID = Integer.parseInt(values[1]);}
+                else {carID = Integer.parseInt(values[5]);}
                 if (values[6].equalsIgnoreCase("")) {driverID = 0;}
-                else {driverID = Integer.parseInt(values[1]);}
+                else {driverID = Integer.parseInt(values[6]);}
 
                 TaskStaff newEntry = new TaskStaff(1,
                         taskID,
