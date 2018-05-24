@@ -7,30 +7,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/goToBuroButton"
-        style="@android:style/Widget.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="Se connecter en tant que Buro" />
-
-    <Button
-        android:id="@+id/goToSmsButton"
-        style="@android:style/Widget.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="Go to SMS activity"
-        android:textSize="8sp" />
-
-    <Button
-        android:id="@+id/goToTaskButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="Go to Task activity" />
-
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="116dp"
@@ -58,7 +34,7 @@
             android:textColor="@android:color/background_light"
             android:textSize="12sp" />
 
-        <SearchView
+        <Button
             android:id="@+id/nomButton"
             android:layout_width="82dp"
             android:layout_height="fill_parent" />

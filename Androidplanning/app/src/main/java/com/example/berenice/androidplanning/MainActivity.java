@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.view.View;
 import android.view.Menu;
 
 import com.example.berenice.androidplanning.records.RecordActivity;
+import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
 import com.example.berenice.androidplanning.task.taskActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,36 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button smsButton = findViewById(R.id.goToSmsButton);
-        smsButton.setOnClickListener(new android.view.View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent i = new Intent(getBaseContext(), com.example.berenice.androidplanning.sendSms.sendSmsActivity.class);
-                startActivity(i);
-            }
-        });
-
-        Button taskButton = findViewById(R.id.goToTaskButton);
-        taskButton.setOnClickListener(new android.view.View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent i = new Intent(getBaseContext(), taskActivity.class);
-                startActivity(i);
-            }
-        });
-
         Button nomButton = findViewById(R.id.nomButton);
-        taskButton.setOnClickListener(new android.view.View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent i = new Intent(getBaseContext(), RecordActivity.class);
-                startActivity(i);
-            }
-        });
-
     }
 
     @Override
@@ -64,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         Intent i;
         switch (item.getItemId()){
             case R.id.send_sms:
-                i = new Intent(getBaseContext(), com.example.berenice.androidplanning.sendSms.sendSmsActivity.class);
+                i = new Intent(getBaseContext(), SendSmsActivity.class);
                 startActivity(i);
                 return true;
             case R.id.goto_task:

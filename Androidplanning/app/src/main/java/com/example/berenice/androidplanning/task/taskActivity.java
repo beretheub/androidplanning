@@ -31,6 +31,7 @@ public class taskActivity extends AppCompatActivity {
         ArrayList<String> list = new ArrayList<String>();
         list.add("Till");
         list.add("Béré");
+        list.add("Bab");
 
         //instantiate custom adapter
         CostaffListAdapter adapter = new CostaffListAdapter(list, this);

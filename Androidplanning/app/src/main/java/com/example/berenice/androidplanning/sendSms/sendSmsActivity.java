@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * Activity to write and send a SMS to predefined persons
  */
-public class sendSmsActivity extends AppCompatActivity  {
+public class SendSmsActivity extends AppCompatActivity  {
 
     ListView recipientsListView;
 

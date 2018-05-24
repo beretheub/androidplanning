@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".sendSms.sendSmsActivity"
+            android:name=".sendSms.SendSmsActivity"
             android:label="@string/title_activity_send_sms"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
