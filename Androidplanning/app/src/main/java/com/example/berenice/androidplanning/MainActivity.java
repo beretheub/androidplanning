@@ -60,37 +60,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return true;
+        return new MyMenu().onCreate(menu, this);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-        Intent i;
-        switch (item.getItemId()){
-            case R.id.send_sms:
-                i = new Intent(getBaseContext(), SendSmsActivity.class);
-                startActivity(i);
-                return true;
-            case R.id.goto_task:
-                i = new Intent(getBaseContext(), taskActivity.class);
-                startActivity(i);
-                return true;
-            case R.id.goto_schedule:
-                i = new Intent(getBaseContext(), RecordActivity.class);
-                startActivity(i);
-                return true;
-
-            case R.id.goto_testDB:
-                i = new Intent(getBaseContext(), TestDbActivity.class);
-                startActivity(i);
-                return true;
-
-            default:
-                return false;
-        }
+        return new MyMenu().onclickAction(item, this, getBaseContext());
     }
 
 }
