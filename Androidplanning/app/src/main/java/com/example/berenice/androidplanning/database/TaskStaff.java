@@ -5,15 +5,15 @@ package com.example.berenice.androidplanning.database;
  */
 public class TaskStaff {
     int id;
-    String task;
-    String staff;
+    int task;
+    int staff;
     Boolean respo;
     Boolean sheet;
-    String car;
-    String driver;
+    int car;
+    int driver;
     Boolean onTheRace;
 
-    public TaskStaff(int id, String task, String staff, Boolean respo, Boolean sheet, String car, String driver, Boolean onTheRace) {
+    public TaskStaff(int id, int task, int staff, Boolean respo, Boolean sheet, int car, int driver, Boolean onTheRace) {
         super();
         this.id = id;
         this.task = task;
@@ -33,19 +33,19 @@ public class TaskStaff {
         this.id = id;
     }
 
-    public String getTask() {
+    public int getTask() {
         return task;
     }
 
-    public void setTask(String task) {
+    public void setTask(int task) {
         this.task = task;
     }
 
-    public String getStaff() {
+    public int getStaff() {
         return staff;
     }
 
-    public void setStaff(String staff) {
+    public void setStaff(int staff) {
         this.staff = staff;
     }
 
@@ -65,19 +65,19 @@ public class TaskStaff {
         this.sheet = sheet;
     }
 
-    public String getCar() {
+    public int getCar() {
         return car;
     }
 
-    public void setCar(String car) {
+    public void setCar(int car) {
         this.car = car;
     }
 
-    public String getDriver() {
+    public int getDriver() {
         return driver;
     }
 
-    public void setDriver(String driver) {
+    public void setDriver(int driver) {
         this.driver = driver;
     }
 
