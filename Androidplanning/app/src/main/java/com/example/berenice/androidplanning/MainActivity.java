@@ -70,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.goto_task:
                 i = new Intent(getBaseContext(), taskActivity.class);
                 startActivity(i);
+
+            case R.id.nomButton:
+                i = new Intent(getBaseContext(), RecordActivity.class);
+                startActivity(i);
+
             default:
                 return false;
         }

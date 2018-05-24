@@ -158,6 +158,12 @@
                 android:background="#FF909090" />
         </TableLayout>
 
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Chiffres et profil de la journée"/>
+
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
