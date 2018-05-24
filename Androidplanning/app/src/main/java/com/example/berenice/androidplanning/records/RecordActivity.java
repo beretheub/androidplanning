@@ -55,8 +55,7 @@ public class RecordActivity extends AppCompatActivity {
         TextView dayTextView = findViewById(R.id.day);
         dayTextView.setText("J" + currentDay);
         TextView nameStaff = findViewById(R.id.nameStaff);
-        nameStaff.setText(currentStaff.getName().toUpperCase() + ", "
-                + currentStaff.getFirstname());
+        nameStaff.setText(currentStaff.getName().toUpperCase() + ", "+ currentStaff.getFirstname());
 
         //generate list
         QueryHandler qh = new QueryHandler();
