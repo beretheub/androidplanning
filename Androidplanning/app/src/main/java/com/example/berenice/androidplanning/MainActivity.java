@@ -43,14 +43,16 @@ public class MainActivity extends AppCompatActivity {
             case R.id.goto_task:
                 i = new Intent(getBaseContext(), taskActivity.class);
                 startActivity(i);
-
+                return true;
             case R.id.nomButton:
                 i = new Intent(getBaseContext(), RecordActivity.class);
                 startActivity(i);
+                return true;
 
             case R.id.goto_testDB:
                 i = new Intent(getBaseContext(), TestDbActivity.class);
                 startActivity(i);
+                return true;
 
             default:
                 return false;
