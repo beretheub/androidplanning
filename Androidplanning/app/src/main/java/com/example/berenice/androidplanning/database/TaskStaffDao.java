@@ -4,6 +4,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
+import java.util.ArrayList;
+
 /**
  * Class to dialogue with the TaskStaff table
  */
@@ -69,5 +71,26 @@ public class TaskStaffDao extends DaoBase {
                 c.getInt(5),
                 c.getInt(6),
                 race);
+    }
+
+    /**
+     * Returns all the tasks of a certain Staff
+     * @param idStaff
+     */
+    public ArrayList<Integer> getTasksOfStaff(long idStaff) {
+        String query;
+        query = String.format("select %s from %s where %s = ?",
+                Constants.TASKS_STAFF_TASK,
+                Constants.TABLE_TASKS_STAFF,
+                Constants.TASKS_STAFF_STAFF);
+
+        Cursor c = getDb().rawQuery(query, new String[]{String.valueOf(idStaff)});
+        ArrayList<Integer> result = new ArrayList<Integer>();
+
+        while (c.moveToNext()) {
+            result.add(c.getInt(0));
+        }
+
+        return result;
     }
 }
