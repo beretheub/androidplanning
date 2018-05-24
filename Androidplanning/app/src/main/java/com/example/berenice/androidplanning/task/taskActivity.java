@@ -1,13 +1,30 @@
 package com.example.berenice.androidplanning.task;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import com.example.berenice.androidplanning.DateFormater;
+import com.example.berenice.androidplanning.MyMenu;
 import com.example.berenice.androidplanning.R;
+import com.example.berenice.androidplanning.database.QueryHandler;
+import com.example.berenice.androidplanning.database.Staff;
+import com.example.berenice.androidplanning.database.Task;
+import com.example.berenice.androidplanning.database.TaskDao;
+import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
 
 import java.util.ArrayList;
 
@@ -23,23 +40,73 @@ public class taskActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //TODO needs to receive the task (or the id) and update multiple elements of the activity
+        //look up the current userid
+        final int userID;
+        SharedPreferences prefs = getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
+        userID = prefs.getInt("userID", 0);
 
+        //get task id from intent
+        int taskID;
+        taskID = Integer.parseInt(getIntent().getStringExtra("currentTask"));
 
-        //TODO look for the colleagues in the database and populate the List
-        //generate list
-        ArrayList<String> list = new ArrayList<String>();
-        list.add("Till");
-        list.add("Béré");
-        list.add("Bab");
+        //get task info from database
+        TaskDao dao = new TaskDao(getBaseContext());
+        dao.open();
+        Task currentTask = dao.findTask(taskID);
+        dao.close();
+
+        //Update fields
+        Toolbar tb = findViewById(R.id.toolbar);
+        setSupportActionBar(tb);
+        getSupportActionBar().setTitle(currentTask.getName());
+
+        TextView departureTime = findViewById(R.id.departureTime);
+        departureTime.setText(DateFormater.formatDateToTime(currentTask.getDeparture()));
+        TextView startTime = findViewById(R.id.beginTime);
+        startTime.setText(DateFormater.formatDateToTime(currentTask.getBegin()));
+        TextView endTime = findViewById(R.id.endTime);
+        endTime.setText(DateFormater.formatDateToTime(currentTask.getEnd()));
+
+        TextView descriptionText = findViewById(R.id.descriptionText);
+        descriptionText.setText(currentTask.getDescription());
+
+        //lookup the colleagues in the database
+        QueryHandler qh = new QueryHandler();
+        final ArrayList<Staff> costaff = qh.getCostaff(getBaseContext(), taskID);
 
         //instantiate custom adapter
-        CostaffListAdapter adapter = new CostaffListAdapter(list, this);
+        CostaffListAdapter adapter = new CostaffListAdapter(costaff, this);
 
         //handle listview and assign adapter
         ListView lView = (ListView)findViewById(R.id.listCostaff);
         lView.setAdapter(adapter);
 
+        //Listener for messages to all
+        Button sendMessageToCostaff = findViewById(R.id.sendMessageToCostaff);
+        sendMessageToCostaff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String recips="";
+                for (Staff s : costaff)
+                {
+                    //add all the ids of other costaff to a string
+                    if (s.getId()!=userID){
+                        recips+=s.getId()+",";}
+                }
+                Intent i = new Intent(getBaseContext(), SendSmsActivity.class);
+                i.putExtra("recips",recips);
+                startActivity(i);
+            }
+        });
+
+        //Ask for Caal permission
+        if (!(ContextCompat.checkSelfPermission(this,
+                Manifest.permission.CALL_PHONE)
+                == PackageManager.PERMISSION_GRANTED)) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.CALL_PHONE},
+                    0);
+        }
     }
 
     @Override
@@ -48,6 +115,13 @@ public class taskActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu, menu);
         menu.getItem(1).setVisible(false);
         return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        return new MyMenu().onclickAction(item, this, getBaseContext());
     }
 
 }

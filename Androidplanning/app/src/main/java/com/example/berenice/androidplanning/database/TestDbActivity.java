@@ -27,6 +27,7 @@ public class TestDbActivity extends AppCompatActivity {
                 ih.importAll("4");
             }
         });
+<<<<<<< HEAD
 
         final Button testStaffLoad = (Button) findViewById(R.id.testStaffDB);
         testStaffLoad.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +38,8 @@ public class TestDbActivity extends AppCompatActivity {
                 dao.close();
             }
         });
+=======
+>>>>>>> f72cc26af7c28aa92180e4fe30a90d932adcd72f
     }
 
 }

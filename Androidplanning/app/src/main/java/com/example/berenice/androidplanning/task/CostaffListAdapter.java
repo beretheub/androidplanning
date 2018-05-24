@@ -1,6 +1,8 @@
 package com.example.berenice.androidplanning.task;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +11,11 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.berenice.androidplanning.R;
+import com.example.berenice.androidplanning.database.Staff;
+import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
 
 import java.util.ArrayList;
 
@@ -19,10 +24,10 @@ import java.util.ArrayList;
  */
 public class CostaffListAdapter extends BaseAdapter implements ListAdapter{
 
-    private ArrayList<String> list = new ArrayList<String>();
+    private ArrayList<Staff> list = new ArrayList<>();
     private Context context;
 
-    public CostaffListAdapter(ArrayList<String> list, Context context) {
+    public CostaffListAdapter(ArrayList<Staff> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -52,8 +57,7 @@ public class CostaffListAdapter extends BaseAdapter implements ListAdapter{
         }
         //Handle TextView and display string from your list
         TextView listItemText = (TextView) view.findViewById(R.id.nameCostaff);
-        listItemText.setText(list.get(position));
-
+        listItemText.setText(list.get(position).getName());
 
         //Handle buttons and add onClickListeners
         Button callBtn = (Button) view.findViewById(R.id.call_btn);
@@ -62,13 +66,20 @@ public class CostaffListAdapter extends BaseAdapter implements ListAdapter{
         callBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO: find out who was clicked and call him
+                Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                callIntent.setData(Uri.parse("tel:"+list.get(position).getPhonenumber()));
+                try{context.startActivity(callIntent);}
+                catch(SecurityException e){
+                    Toast.makeText(context, "No permission", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         smsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO: find out who was clicked and message him
+                Intent smsIntent = new Intent(context, SendSmsActivity.class);
+                smsIntent.putExtra("recips",String.valueOf(list.get(position).getId()));
+                context.startActivity(smsIntent);
             }
         });
 
