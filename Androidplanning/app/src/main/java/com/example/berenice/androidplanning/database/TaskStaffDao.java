@@ -74,7 +74,7 @@ public class TaskStaffDao extends DaoBase {
     }
 
     /**
-     * Returns all the tasks of a certain Staff
+     * Returns all the tasks (id) of a certain Staff
      * @param idStaff
      */
     public ArrayList<Integer> getTasksOfStaff(long idStaff) {
@@ -88,6 +88,29 @@ public class TaskStaffDao extends DaoBase {
         ArrayList<Integer> result = new ArrayList<Integer>();
 
         while (c.moveToNext()) {
+
+            result.add(c.getInt(0));
+        }
+
+        return result;
+    }
+
+    /**
+     * Returns all the staff (id) of a certain task
+     * @param idTask
+     */
+    public ArrayList<Integer> getStaffOfTask(long idTask) {
+        String query;
+        query = String.format("select %s from %s where %s = ?",
+                Constants.TASKS_STAFF_STAFF,
+                Constants.TABLE_TASKS_STAFF,
+                Constants.TASKS_STAFF_TASK);
+
+        Cursor c = getDb().rawQuery(query, new String[]{String.valueOf(idTask)});
+        ArrayList<Integer> result = new ArrayList<Integer>();
+
+        while (c.moveToNext()) {
+
             result.add(c.getInt(0));
         }
 
