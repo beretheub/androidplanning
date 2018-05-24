@@ -20,6 +20,12 @@
         android:title="Task">
     </item>
     <item
+        android:id="@+id/goto_schedule"
+        android:icon="@drawable/logo_raid_blanc"
+        android:orderInCategory="0"
+        android:title="Schedule">
+    </item>
+    <item
         android:id="@+id/goto_testDB"
         android:icon="@drawable/logo_raid_blanc"
         android:orderInCategory="0"

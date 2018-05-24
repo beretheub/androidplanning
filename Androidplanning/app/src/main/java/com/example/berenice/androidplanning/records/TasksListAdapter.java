@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.TextView;
-
+import com.example.berenice.androidplanning.database.Task;
 import com.example.berenice.androidplanning.R;
 
 import java.util.ArrayList;
@@ -17,10 +17,10 @@ import java.util.ArrayList;
  */
 public class TasksListAdapter extends BaseAdapter implements ListAdapter {
 
-    private ArrayList<String> list = new ArrayList<String>();
+    private ArrayList<Task> list = new ArrayList<Task>();
     private Context context;
 
-    public TasksListAdapter(ArrayList<String> list, Context context) {
+    public TasksListAdapter(ArrayList<Task> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -46,29 +46,8 @@ public class TasksListAdapter extends BaseAdapter implements ListAdapter {
         View view = convertView;
         if (view == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.line_costaff, null);
+            view = inflater.inflate(R.layout.line_task, null);
         }
-        //Handle TextView and display string from your list
-        TextView listItemText = (TextView) view.findViewById(R.id.nameCostaff);
-        listItemText.setText(list.get(position));
-
-
-        //Handle buttons and add onClickListeners
-        Button callBtn = (Button) view.findViewById(R.id.call_btn);
-        Button smsBtn = (Button) view.findViewById(R.id.sms_btn);
-
-        callBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: find out who was clicked and call him
-            }
-        });
-        smsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: find out who was clicked and message him
-            }
-        });
 
         return view;
     }

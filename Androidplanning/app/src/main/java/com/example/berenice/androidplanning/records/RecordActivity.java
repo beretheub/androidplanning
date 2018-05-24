@@ -16,8 +16,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.berenice.androidplanning.R;
-import com.example.berenice.androidplanning.task.CostaffListAdapter;
-
+import com.example.berenice.androidplanning.records.TasksListAdapter;
+import com.example.berenice.androidplanning.database.Task;
 import java.util.ArrayList;
 
 /**
@@ -29,20 +29,21 @@ public class RecordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_task);
+        setContentView(R.layout.activity_schedule);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         //TODO needs to receive the task (or the id) and update multiple elements of the activity
 
 
-        //TODO look for the colleagues in the database and populate the List
         //generate list
-        ArrayList<String> list = new ArrayList<String>();
-        list.add("Eco-respo");
-        list.add("Signaleur S16");
-        list.add("Service entrée");
-        list.add("Rangement SAS");
+        ArrayList<Task> list = new ArrayList<Task>();
+        Task task1 = new Task(0, "Eco-Respo", "7:00", "7:15", "9:15", "Vérifier tri, peser, ramassr déchets");
+        list.add(task1);
+
+        Task task2 = new Task(0, "S17", "9:15", "10:00", "15:00", "Signaler puis débaliser");
+        list.add(task2);
+
 
         //instantiate custom adapter
         TasksListAdapter adapter = new TasksListAdapter(list, this);
