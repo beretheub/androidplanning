@@ -1,6 +1,7 @@
 package com.example.berenice.androidplanning.records;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,6 +17,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.berenice.androidplanning.R;
+import com.example.berenice.androidplanning.database.QueryHandler;
+import com.example.berenice.androidplanning.database.Staff;
+import com.example.berenice.androidplanning.database.StaffDao;
 import com.example.berenice.androidplanning.records.TasksListAdapter;
 import com.example.berenice.androidplanning.database.Task;
 import java.util.ArrayList;
@@ -33,17 +37,29 @@ public class RecordActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //TODO needs to receive the task (or the id) and update multiple elements of the activity
+        int userID=1;
+        String currentDay="";
 
+        //Access shared preferences
+        SharedPreferences prefs = getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
+        userID = prefs.getInt("userID", 0);
+        currentDay = prefs.getString("Day", "1");
+
+        StaffDao dao = new StaffDao(this);
+        dao.open();
+        Staff currentStaff = dao.findStaffById(userID);
+        dao.close();
+
+        //Update fields
+        TextView dayTextView = findViewById(R.id.day);
+        dayTextView.setText("J"+currentDay);
+        TextView nameStaff = findViewById(R.id.nameStaff);
+        nameStaff.setText(currentStaff.getName().toUpperCase() + ", "
+                +currentStaff.getFirstname() );
 
         //generate list
-        ArrayList<Task> list = new ArrayList<Task>();
-        Task task1 = new Task(0, "Eco-Respo", "7:00", "7:15", "9:15", "Vérifier tri, peser, ramassr déchets");
-        list.add(task1);
-
-        Task task2 = new Task(0, "S17", "9:15", "10:00", "15:00", "Signaler puis débaliser");
-        list.add(task2);
-
+        QueryHandler qh = new QueryHandler();
+        ArrayList<Task> list = qh.getTasksFromStaff(this,userID);
 
         //instantiate custom adapter
         TasksListAdapter adapter = new TasksListAdapter(list, this);
