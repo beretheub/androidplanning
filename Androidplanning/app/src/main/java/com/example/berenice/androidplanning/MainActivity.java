@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.view.Menu;
 
-import com.example.berenice.androidplanning.database.DatabaseHandler;
 import com.example.berenice.androidplanning.database.TestDbActivity;
 import com.example.berenice.androidplanning.records.RecordActivity;
 import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
