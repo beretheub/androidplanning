@@ -63,11 +63,11 @@ public class TaskStaffDao extends DaoBase {
         else {race = true;}
 
         return new TaskStaff(c.getInt(0),
-                c.getString(1),
-                c.getString(2),
+                c.getInt(1),
+                c.getInt(2),
                 respo, sheet,
-                c.getString(5),
-                c.getString(6),
+                c.getInt(5),
+                c.getInt(6),
                 race);
     }
 }
