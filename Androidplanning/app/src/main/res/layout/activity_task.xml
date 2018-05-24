@@ -26,19 +26,9 @@
         android:orientation="vertical"
         android:layout_marginTop="?attr/actionBarSize">
 
-        <TextView
-            android:id="@+id/nameTask"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="INSERT NAME HERE"
-            android:padding="3dp"/>
-
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <View
-                android:layout_height="3dip"
-                android:background="#FF909090" />
 
             <TableRow>
 
@@ -54,7 +44,7 @@
                     android:text="@string/beginLabel"
                     android:padding="3dp"/>
                 <TextView
-                    android:id="@+id/startTime"
+                    android:id="@+id/beginTime"
                     android:text="XX:XX"/>
             </TableRow>
             <TableRow>
@@ -123,6 +113,7 @@
                 android:text="@string/costaffLabel"
                 android:textStyle="bold"/>
             <Button
+                android:id="@+id/sendMessageToCostaff"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"

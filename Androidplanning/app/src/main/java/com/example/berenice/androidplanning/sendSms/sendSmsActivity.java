@@ -18,7 +18,10 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.example.berenice.androidplanning.R;
+import com.example.berenice.androidplanning.database.Staff;
+import com.example.berenice.androidplanning.database.StaffDao;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,6 +38,7 @@ public class SendSmsActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_sms);
 
+        //Ask for SMS permission
         if (!(ContextCompat.checkSelfPermission(this,
                 Manifest.permission.SEND_SMS)
                 == PackageManager.PERMISSION_GRANTED)) {
@@ -47,19 +51,25 @@ public class SendSmsActivity extends AppCompatActivity  {
 
         recipientsListView = (ListView) findViewById(R.id.listRecipients);
 
-        //TODO here only test values until now, will one day be populated by intent
-        final String[][] recips = new String[][]{
-                {"Till", "0769422814"},
-                {"Béré", "0769422814"}
-        };
+        final ArrayList<Staff> recips = new ArrayList<>();
+        String recipsIDs = getIntent().getStringExtra("recips");
+        if (recipsIDs!=""){
+            String[] ids = recipsIDs.split(",");
+            StaffDao dao = new StaffDao(getBaseContext());
+            dao.open();
+            for (int i = 0; i<ids.length; i++){
+                recips.add(dao.findStaffById(Integer.parseInt(ids[i])));
+            }
+            dao.close();
+        }
 
         List<HashMap<String, String>> list = new ArrayList<HashMap<String,String>>();
 
         HashMap<String,String> element;
-        for(int i = 0; i < recips.length; i++){
+        for(Staff s:recips){
             element = new HashMap<String, String>();
-            element.put("name", recips[i][0]);
-            element.put("number", recips[i][1]);
+            element.put("name", s.getName()+", "+s.getFirstname());
+            element.put("number", s.getPhonenumber());
             list.add(element);
         }
 
@@ -76,9 +86,9 @@ public class SendSmsActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 String phoneNumbers = "";
-                for(int i = 0; i < recips.length; i++)
+                for(Staff s:recips)
                 {
-                    phoneNumbers += recips[i][1] + ",";
+                    phoneNumbers += s.getPhonenumber() + ",";
                 }
                 phoneNumbers = phoneNumbers.
                         substring(0,phoneNumbers.length()-1);
