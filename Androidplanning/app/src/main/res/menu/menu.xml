@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:actionbarcompat_mse="http://schemas.android.com/apk/res-auto" >
+    xmlns:actionbarcompat_mse="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/send_sms"
         android:icon="@drawable/logo_raid_blanc"

@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -37,8 +38,8 @@ public class RecordActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        int userID=1;
-        String currentDay="";
+        int userID = 1;
+        String currentDay = "";
 
         //Access shared preferences
         SharedPreferences prefs = getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
@@ -52,29 +53,41 @@ public class RecordActivity extends AppCompatActivity {
 
         //Update fields
         TextView dayTextView = findViewById(R.id.day);
-        dayTextView.setText("J"+currentDay);
+        dayTextView.setText("J" + currentDay);
         TextView nameStaff = findViewById(R.id.nameStaff);
         nameStaff.setText(currentStaff.getName().toUpperCase() + ", "
-                +currentStaff.getFirstname() );
+                + currentStaff.getFirstname());
 
         //generate list
         QueryHandler qh = new QueryHandler();
-        ArrayList<Task> list = qh.getTasksFromStaff(this,userID);
+        ArrayList<Task> list = qh.getTasksFromStaff(this, userID);
 
         //instantiate custom adapter
         TasksListAdapter adapter = new TasksListAdapter(list, this);
 
         //handle listview and assign adapter
-        ListView lView = (ListView)findViewById(R.id.listTasks);
+        ListView lView = (ListView) findViewById(R.id.listTasks);
         lView.setAdapter(adapter);
 
+        TextView day = (TextView) findViewById(R.id.day);
+        day.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+
+                // Réagir au clic
+
+            }
+
+        });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        menu.getItem(1).setVisible(false);
-        return true;
+        @Override
+        public boolean onCreateOptionsMenu (Menu menu){
+            MenuInflater inflater = getMenuInflater();
+            inflater.inflate(R.menu.menu, menu);
+            menu.getItem(1).setVisible(false);
+            return true;
+        }
     }
-}
+

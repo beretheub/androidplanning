@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.view.Menu;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.berenice.androidplanning.database.Staff;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button nameButton = (Button) findViewById(R.id.nameButton);
+        final ImageButton nameButton = (ImageButton) findViewById(R.id.nameButton);
         nameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

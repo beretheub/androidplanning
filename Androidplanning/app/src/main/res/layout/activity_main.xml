@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#2E2E2E"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,14 +13,15 @@
         android:layout_height="116dp"
         android:gravity="center"
         android:text="Bonjour ! Qui es-tu ?"
+        android:textColor="#FFFFFF"
         android:textStyle="bold" />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
 
 
         <EditText
@@ -31,21 +33,23 @@
             android:hint="Nom Prénom"
             android:inputType="textPersonName"
             android:textAlignment="center"
-            android:textColor="@android:color/background_light"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
             android:textSize="12sp" />
 
-        <Button
+        <ImageButton
             android:id="@+id/nameButton"
-            android:layout_width="82dp"
-            android:layout_height="fill_parent" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_icon" />
 
     </LinearLayout>
 
     <ImageView
         android:id="@+id/logo_raid"
         android:layout_width="fill_parent"
-        android:layout_height="128dp"
+        android:layout_height="165dp"
         android:layout_gravity="bottom"
-        android:src="@drawable/logo_raid_noir" />
+        android:src="@drawable/logo_raid_blanc" />
 
 </LinearLayout>
