@@ -39,7 +39,6 @@ public class ImportHandler {
                     .open("planningDB/J" + day + "/T_Staff.txt"), StandardCharsets.ISO_8859_1);
 
             BufferedReader reader = new BufferedReader(is);
-            reader.readLine();
             String line;
             StaffDao dao = new StaffDao(context);
             dao.open();
@@ -77,7 +76,6 @@ public class ImportHandler {
                     .open("planningDB/J" + day + "/T_Taches.txt"), StandardCharsets.ISO_8859_1);
 
             BufferedReader reader = new BufferedReader(is);
-            reader.readLine();
             String line;
             TaskDao dao = new TaskDao(context);
             dao.open();
@@ -108,7 +106,6 @@ public class ImportHandler {
                     .open("planningDB/J" + day + "/T_Voitures.txt"), StandardCharsets.ISO_8859_1);
 
             BufferedReader reader = new BufferedReader(is);
-            reader.readLine();
             String line;
             CarDao dao = new CarDao(context);
             dao.open();
@@ -138,7 +135,6 @@ public class ImportHandler {
                     StandardCharsets.ISO_8859_1);
 
             BufferedReader reader = new BufferedReader(is);
-            reader.readLine();
             String line;
             TaskStaffDao dao = new TaskStaffDao(context);
             dao.open();
