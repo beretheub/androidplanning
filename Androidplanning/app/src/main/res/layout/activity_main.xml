@@ -35,7 +35,7 @@
             android:textSize="12sp" />
 
         <Button
-            android:id="@+id/nomButton"
+            android:id="@+id/nameButton"
             android:layout_width="82dp"
             android:layout_height="fill_parent" />
 

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button nomButton = findViewById(R.id.nomButton);
+        Button nomButton = findViewById(R.id.nameButton);
     }
 
     @Override
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 i = new Intent(getBaseContext(), taskActivity.class);
                 startActivity(i);
                 return true;
-            case R.id.nomButton:
+            case R.id.goto_schedule:
                 i = new Intent(getBaseContext(), RecordActivity.class);
                 startActivity(i);
                 return true;
