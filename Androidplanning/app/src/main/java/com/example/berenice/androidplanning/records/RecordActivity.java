@@ -1,74 +1,63 @@
 package com.example.berenice.androidplanning.records;
 
 import android.content.Context;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.berenice.androidplanning.R;
+import com.example.berenice.androidplanning.task.CostaffListAdapter;
 
 import java.util.ArrayList;
 
+/**
+ * Activity to display the schedule of one member, during one day, with the different tasks and times
+ */
 
-public class RecordActivity extends BaseAdapter implements ListAdapter {
-
-    private ArrayList<String> list = new ArrayList<String>();
-    private Context context;
-
-    public RecordActivity(ArrayList<String> list, Context context) {
-        this.list = list;
-        this.context = context;
-    }
-
+public class RecordActivity extends AppCompatActivity {
 
     @Override
-    public Object getItem(int pos) {
-        return list.get(pos);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_task);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        //TODO needs to receive the task (or the id) and update multiple elements of the activity
+
+
+        //TODO look for the colleagues in the database and populate the List
+        //generate list
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("Eco-respo");
+        list.add("Signaleur S16");
+        list.add("Service entrée");
+        list.add("Rangement SAS");
+
+        //instantiate custom adapter
+        TasksListAdapter adapter = new TasksListAdapter(list, this);
+
+        //handle listview and assign adapter
+        ListView lView = (ListView)findViewById(R.id.listTasks);
+        lView.setAdapter(adapter);
+
     }
 
     @Override
-    public int getCount() {
-        return list.size();
-    }
-
-    @Override
-    public long getItemId(int pos) {
-        //TODO check how to find out which button has been pressed
-        return 0;
-    }
-
-    public View getView(final int position, View convertView, ViewGroup parent) {
-        View view = convertView;
-        if (view == null) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.line_costaff, null);
-        }
-        //Handle TextView and display string from your list
-        TextView listItemText = (TextView) view.findViewById(R.id.nameCostaff);
-        listItemText.setText(list.get(position));
-
-
-        //Handle buttons and add onClickListeners
-        Button callBtn = (Button) view.findViewById(R.id.call_btn);
-        Button smsBtn = (Button) view.findViewById(R.id.sms_btn);
-
-        callBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: find out who was clicked and call him
-            }
-        });
-        smsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO: find out who was clicked and message him
-            }
-        });
-
-        return view;
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        menu.getItem(1).setVisible(false);
+        return true;
     }
 }
