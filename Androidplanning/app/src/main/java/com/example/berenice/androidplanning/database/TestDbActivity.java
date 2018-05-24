@@ -27,7 +27,6 @@ public class TestDbActivity extends AppCompatActivity {
                 ih.importAll("4");
             }
         });
-
     }
 
 }
