@@ -35,7 +35,7 @@ public class StaffDao extends DaoBase {
     /**
      * @param id id of the wanted staff
      */
-    public Staff findStaff(long id) {
+    public Staff findStaffById(long id) {
         Cursor c = getDb().rawQuery("select "
                 + Constants.STAFF_ID  + " , "
                 + Constants.STAFF_NAME  + " , "
@@ -47,6 +47,41 @@ public class StaffDao extends DaoBase {
                 + Constants.STAFF_TALKIEC
                 + " from " + Constants.TABLE_STAFF
                 + " where " + Constants.STAFF_ID + " = ?", new String[]{String.valueOf(id)});
+
+        if (c.moveToFirst()== false) {return null;}
+
+        boolean talkiel, talkiec;
+
+        if (c.getInt(6) == 0) {talkiel = false;}
+        else {talkiel = true;}
+        if (c.getInt(7) == 0) {talkiec = false;}
+        else {talkiec = true;}
+
+
+        return new Staff(c.getInt(0),
+                c.getString(1),
+                c.getString(2),
+                c.getString(3),
+                c.getString(4),
+                c.getString(5),
+                talkiel, talkiec);
+    }
+
+    /**
+     * @param name name of the wanted staff
+     */
+    public Staff findStaffByName(String name) {
+        Cursor c = getDb().rawQuery("select "
+                + Constants.STAFF_ID  + " , "
+                + Constants.STAFF_NAME  + " , "
+                + Constants.STAFF_FIRSTNAME  + " , "
+                + Constants.STAFF_PHONE  + " , "
+                + Constants.STAFF_ROLE  + " , "
+                + Constants.STAFF_SECTOR + " , "
+                + Constants.STAFF_TALKIEL + " , "
+                + Constants.STAFF_TALKIEC
+                + " from " + Constants.TABLE_STAFF
+                + " where " + Constants.STAFF_NAME + " = ?", new String[]{name});
 
         if (c.moveToFirst()== false) {return null;}
 
