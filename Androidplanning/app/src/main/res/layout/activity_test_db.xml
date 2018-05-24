@@ -26,11 +26,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="testAllImport"/>
-    <Button
-        android:id="@+id/testStaffDB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show staff Number 5"
-        android:layout_gravity="bottom"/>
-
+   
 </android.support.design.widget.CoordinatorLayout>

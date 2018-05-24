@@ -27,17 +27,6 @@ public class TestDbActivity extends AppCompatActivity {
                 ih.importAll("4");
             }
         });
-
-        final Button testStaffLoad = (Button) findViewById(R.id.testStaffDB);
-        testStaffLoad.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                StaffDao dao = new StaffDao(context);
-                dao.open();
-                Staff staff5 = dao.findStaff(5);
-                dao.close();
-            }
-        });
     }
 
 }
