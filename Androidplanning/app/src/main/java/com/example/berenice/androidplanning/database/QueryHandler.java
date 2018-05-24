@@ -34,4 +34,25 @@ public class QueryHandler {
 
         return result;
     }
+
+    public ArrayList<Staff> getCostaff(Context context, int idTask)
+    {
+        StaffDao sdao = new StaffDao(context);
+        TaskStaffDao tsdao = new TaskStaffDao(context);
+
+        sdao.open();
+        tsdao.open();
+
+        ArrayList<Integer> staffIDs = tsdao.getStaffOfTask(idTask);
+        ArrayList<Staff> result = new ArrayList<>();
+
+        for (int id : staffIDs){
+            result.add(sdao.findStaffById(id));
+        }
+
+        sdao.close();
+        tsdao.close();
+
+        return result;
+    }
 }
