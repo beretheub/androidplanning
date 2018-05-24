@@ -17,4 +17,5 @@
     <string name="sendButtonAllLabel">Send SMS all</string>
 
     <string name="title_activity_fiche">fiche</string>
+    <string name="title_activity_test_db">TestDb</string>
 </resources>

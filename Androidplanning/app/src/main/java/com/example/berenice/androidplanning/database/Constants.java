@@ -14,35 +14,35 @@ public final class Constants implements BaseColumns {
 
     // The table names
     public static final String TABLE_STAFF = "T_Staff";
-    public static final String TABLE_TASKS = "T_Tâches";
-    public static final String TABLE_TASKS_STAFF = "T_Tâches et staffeurs";
+    public static final String TABLE_TASKS = "T_Taches";
+    public static final String TABLE_TASKS_STAFF = "T_TachesEtStaffeurs";
     public static final String TABLE_CARS = "T_Voitures";
 
     //Column names
     //Staff
     public static final String STAFF_ID = "_id";
     public static final String STAFF_NAME = "Nom";
-    public static final String STAFF_FIRSTNAME = "Prénom";
+    public static final String STAFF_FIRSTNAME = "Prenom";
     public static final String STAFF_PHONE = "Portable";
-    public static final String STAFF_ROLE = "Rôle";
+    public static final String STAFF_ROLE = "Role";
     public static final String STAFF_SECTOR = "Secteur";
-    public static final String STAFF_TALKIEL = "Talkie long";
-    public static final String STAFF_TALKIEC = "Talkie court";
+    public static final String STAFF_TALKIEL = "TalkieLong";
+    public static final String STAFF_TALKIEC = "TalkieCourt";
 
     //Tasks
     public static final String TASKS_ID = "_id";
-    public static final String TASKS_NAME = "Tâche";
-    public static final String TASKS_DEP = "Départ";
-    public static final String TASKS_BEG = "Début";
+    public static final String TASKS_NAME = "Tache";
+    public static final String TASKS_DEP = "Depart";
+    public static final String TASKS_BEG = "Debut";
     public static final String TASKS_END = "Fin";
     public static final String TASKS_DESCRIPTION = "Description";
 
     //Tasks and staff
     public static final String TASKS_STAFF_ID = "_id";
-    public static final String TASKS_STAFF_TASK = "Tâche";
+    public static final String TASKS_STAFF_TASK = "Tache";
     public static final String TASKS_STAFF_STAFF = "Staffeur";
     public static final String TASKS_STAFF_RESPO = "Respo";
-    public static final String TASKS_STAFF_SHEET = "Fiche Respo";
+    public static final String TASKS_STAFF_SHEET = "FicheRespo";
     public static final String TASKS_STAFF_CAR = "Voiture";
     public static final String TASKS_STAFF_DRIVER = "Conducteur";
     public static final String TASKS_STAFF_RACE = "Signaleur";
@@ -50,7 +50,7 @@ public final class Constants implements BaseColumns {
     //Cars
     public static final String CARS_ID = "_id";
     public static final String CARS_NAME = "Nom";
-    public static final String CARS_NUMBER = "N° Voiture";
+    public static final String CARS_NUMBER = "N_Voiture";
 
     //TODO add column numbers ?
 

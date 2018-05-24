@@ -25,11 +25,15 @@
         <activity
             android:name=".task.taskActivity"
             android:label="@string/title_activity_task"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".records.RecordActivity"
             android:label="@string/title_activity_fiche"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".database.TestDbActivity"
+            android:label="@string/title_activity_test_db"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

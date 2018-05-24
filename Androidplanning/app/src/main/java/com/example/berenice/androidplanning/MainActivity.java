@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.view.Menu;
 
+import com.example.berenice.androidplanning.database.DatabaseHandler;
+import com.example.berenice.androidplanning.database.TestDbActivity;
 import com.example.berenice.androidplanning.records.RecordActivity;
 import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
 import com.example.berenice.androidplanning.task.taskActivity;
@@ -44,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.nomButton:
                 i = new Intent(getBaseContext(), RecordActivity.class);
+                startActivity(i);
+
+            case R.id.goto_testDB:
+                i = new Intent(getBaseContext(), TestDbActivity.class);
                 startActivity(i);
 
             default:
