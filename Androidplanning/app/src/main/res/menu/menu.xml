@@ -8,7 +8,7 @@
         android:title="Write message">
     </item>
     <item
-        android:id="@+id/buro"
+        android:id="@+id/goto_buro"
         android:icon="@drawable/logo_raid_blanc"
         android:orderInCategory="1"
         android:title="Se connecter en tant que buro">

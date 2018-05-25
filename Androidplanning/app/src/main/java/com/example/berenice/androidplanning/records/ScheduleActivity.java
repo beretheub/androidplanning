@@ -97,14 +97,6 @@ public class ScheduleActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        menu.getItem(1).setVisible(false);
-        return true;
-    }
-
     private PopupWindow pw;
 
     private void showPopup() {

@@ -103,6 +103,7 @@ public class taskActivity extends AppCompatActivity {
             TextView carName = (TextView) findViewById(R.id.carName);
             carName.setText(currentCar.getName());
         }
+
         //Listener for messages to all
         Button sendMessageToCostaff = findViewById(R.id.sendMessageToCostaff);
         sendMessageToCostaff.setOnClickListener(new View.OnClickListener() {
@@ -129,21 +130,6 @@ public class taskActivity extends AppCompatActivity {
                     new String[]{Manifest.permission.CALL_PHONE},
                     0);
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        menu.getItem(1).setVisible(false);
-        return true;
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        return new MyMenu().onclickAction(item, this, getBaseContext());
     }
 
 }
