@@ -1,0 +1,32 @@
+1;1;K1;;;;;CP1
+2;2;K2;;;;;CP2
+3;3;K3;;;;;CP3
+4;4;K4;;;;;CP1
+5;5;K5;;;;;CP3
+6;6;K6;;;;;Freelance
+7;7;K7;;;;;Balisage
+8;8;K8;;;;;Info
+9;9;K9;;;;;Camp
+10;10;K10;;;;;Arrivée/Départ
+11;11;S1;;;;;Signaleurs 1
+12;12;S2;;;;;Signaleurs 2
+13;13;S3;;;;;Signaleurs 3
+14;14;S4;;;;;Signaleurs 4
+15;15;S5;;;;;Signaleurs 5
+16;16;S6;;;;;Signaleurs 6
+17;17;Cam 1;;;;;Matos 1
+18;18;Cam 2;;;;;Matos 2
+19;19;Cam 3;;;;;Matos 3
+20;20;Cam 4;;;;;Affaires concs 1
+21;21;Cam 5;;;;;Affaires concs 2
+22;22;Cam 6;;;;;Affaires concs 3
+23;23;Cam 7;;;;;Affaires staff
+24;24;Cam 8;;;;;Dokever
+25;25;Cam 9;;;;;Bouffe
+26;26;Cam 10;;;;;Espace détente
+27;27;Cam 11;;;;;CP2
+28;28;Frigo;;;;;Frigo
+29;29;S1_bis;;;;;Signaleurs 1
+30;30;S4_bis;;;;;Signaleurs 4
+31;31;S2_bis;;;;;Signaleurs 2
+32;32;S3_bis;;;;;Signaleurs 3

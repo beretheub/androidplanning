@@ -1,0 +1,95 @@
+1;PC Course;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 19:00:00;Gérer la course;2;;0;0;0
+2;Freelance;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 19:00:00;Suivre en Freelance;2;;0;0;0
+3;Ouvreurs;30.12.1899 04:00:00;30.12.1899 04:00:00;30.12.1899 13:00:00;Parcourent l'iti et vérifient le balisage;2;;0;0;0
+4;Respo Actifun;30.12.1899 07:15:00;30.12.1899 09:10:00;30.12.1899 14:00:00;Gère l'actifun;3;;0;0;0
+5;Respo CO Départ;30.12.1899 05:00:00;30.12.1899 05:00:00;30.12.1899 09:30:00;Balise, gère et explique la CO aux Concs, débalise;1;;0;0;0
+6;Respo CO Mourres;30.12.1899 06:30:00;30.12.1899 06:30:00;30.12.1899 17:30:00;Balise la CO Départ à 05:00. Balise, gère et explique la CO aux Concs, débalise;1;;0;0;0
+7;Balisage J+1;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 19:00:00;Balisent la J3;2;;0;0;0
+8;Respo N1;30.12.1899 00:00:00;30.12.1899 00:00:00;30.12.1899 11:00:00;Organiser le camp;1;;0;0;0
+9;Respo N2;30.12.1899 09:30:00;30.12.1899 09:30:00;30.12.1899 00:00:00;Organiser le camp;1;;0;0;0
+10;Freelance Log N1;30.12.1899 00:00:00;30.12.1899 00:00:00;30.12.1899 07:00:00;Gérer la logistique sur le camp;1;;0;0;0
+11;Freelance Log N2;30.12.1899 09:30:00;30.12.1899 09:30:00;30.12.1899 00:00:00;Gérer la logistique sur le camp;1;;0;0;0
+12;Respo Matos N1;30.12.1899 00:00:00;30.12.1899 00:00:00;30.12.1899 11:00:00;Sur le camping. Gérer le matos et les tentes matos;1;;0;0;0
+13;Respo Matos N2;30.12.1899 11:00:00;30.12.1899 11:00:00;30.12.1899 00:00:00;Sur le camp. Gérer le matos et les tentes matos;1;;0;0;0
+14;Respos Relais;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 19:00:00;Surveillent les antennes relais;2;;0;0;0
+15;Respos VIP;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 19:00:00;Fait ses trucs de VIP : tchatche et amène les VIPs aux activités de VIP;2;;0;0;0
+16;Installation de la cerem;30.12.1899 13:30:00;30.12.1899 13:30:00;30.12.1899 14:30:00;SAS. Installation de la scène et du matériel nécessaire;4;;0;0;0
+17;Repétition cerem;30.12.1899 14:30:00;30.12.1899 14:30:00;30.12.1899 18:30:00;SAS. Répéter la cérem;4;;0;0;0
+18;Cerem;30.12.1899 19:00:00;30.12.1899 19:00:00;30.12.1899 20:30:00;SAS. Animer la cérem;4;;0;0;0
+19;Equipe staff;30.12.1899 08:00:00;30.12.1899 08:00:00;30.12.1899 19:00:00;Courent la J2 comme des concurrents normaux;4;;0;0;0
+20;Déménagement Cam Affaires concurrents;30.12.1899 09:00:00;30.12.1899 09:00:00;30.12.1899 09:45:00;Assurer le transfert entre Volx et Saint-Etienne- les-Orgues. Partir avec les autres cams affaires concurrents, la cam affaire staff et la cam Dokever;6;;0;0;0
+21;Freelance Concs perdus;30.12.1899 08:00:00;30.12.1899 08:00:00;30.12.1899 19:00:00;Rattraper les concs perdus et les rediriger.;2;;0;0;0
+22;Chargement des affaires concurrents;30.12.1899 06:00:00;30.12.1899 06:00:00;30.12.1899 07:45:00;Sur le camping. Récupérer les affaires des concurrents et les mettre directement dans les cams.;6;;0;0;0
+23;Déménagement Cam Affaires Staff;30.12.1899 09:00:00;30.12.1899 09:00:00;30.12.1899 09:45:00;Assurer le transfert entre  Volx et Saint-Etienne- les-Orgues. Partir avec les autres cams affaies concurrents et la cam Dokever;2;;0;0;0
+24;Déménagement Cam Bouffe;30.12.1899 07:50:00;30.12.1899 07:50:00;30.12.1899 08:35:00;Assurer le transfert entre  Volx et Saint-Etienne- les-Orgues. Partir avec la cam l'ED, le camion frigo, kangoo info et kangoo freelance camp;2;;0;0;0
+25;Déménagement cam espace détente;30.12.1899 07:50:00;30.12.1899 07:50:00;30.12.1899 08:35:00;Assurer le transfert entre  Volx et Saint-Etienne- les-Orgues. Partir avec la cam la cam bouffe, le camion frigo, kangoo info et kangoo freelane camp;2;;0;0;0
+26;Déménagement Frigo;30.12.1899 07:50:00;30.12.1899 07:50:00;30.12.1899 09:50:00;Assurer le transfert entre  Volx et Saint-Etienne- les-Orgues. Partir avec la cam l'ED et la cam bouffe. Vous allez chercher des bails à Manosque.;3;;0;0;0
+27;Déménagement Cam Dokever;30.12.1899 09:00:00;30.12.1899 09:00:00;30.12.1899 09:45:00;Assurer le transfert entre  Volx et Saint-Etienne- les-Orgues. Partir avec les autres cams affaies concurrents;2;;0;0;0
+28;Déménagement Cam Matos;30.12.1899 10:15:00;30.12.1899 10:15:00;30.12.1899 11:00:00;Assurer le transfert entre  Volx et Saint-Etienne- les-Orgues.;9;;0;0;0
+29;Petit dej staff;30.12.1899 05:30:00;30.12.1899 05:30:00;30.12.1899 07:30:00;Sur le camping, à la tente matos. Sortir le petit déj staff puis le ranger. Le pack bouffe se trouve dans le garde-manger;2;;0;0;0
+30;Petit déj concurrents;30.12.1899 05:30:00;30.12.1899 05:30:00;30.12.1899 07:30:00;Sur le camping. Installer le petit déj et le servir puis le ranger. Le pack bouffe se trouve dans le garde-manger;5;;0;0;0
+31;Réveil des concurrents;30.12.1899 06:00:00;30.12.1899 06:00:00;30.12.1899 06:20:00;Sur le camping. Réveiller les derniers concurrents qui ne sont pas levés.;2;;0;0;0
+32;Respo toilettes camping;30.12.1899 06:00:00;30.12.1899 06:00:00;30.12.1899 07:30:00;Camping. Vérifier que les toilettes restent toujours propres, gérer la file d'attente. Fermer les toilettes à 7h30, et dire aux concurrents de se diriger vers le lieu du départ.;1;;0;0;0
+33;Chargement affaires staff;30.12.1899 05:40:00;30.12.1899 05:40:00;30.12.1899 08:00:00;Sur le camping. Installer une bâche pour déposer les affaires du staff à 5h40. Charger les affaires du staff dans la cam affaires staff. Cumulable avec une autre tâche entre 5h40 et 8h00;2;;0;0;0
+34;Respos VTT;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 19:00:00;Accompagnent Cyclotrott sur la journée pour les déposes et prises de VTT;2;;0;0;0
+35;Récupération du pain;30.12.1899 05:25:00;30.12.1899 05:25:00;30.12.1899 05:40:00;Récupérer la livraison de pain au niveau de l'entrée du camping;1;;0;0;0
+36;Démontage tente matos;30.12.1899 08:00:00;30.12.1899 08:00:00;30.12.1899 10:00:00;Sur le camping. Démonter la tente matos et charger le matos dans les cams;9;;0;0;0
+37;Déménagement Kangoo Freelance Camp;30.12.1899 07:50:00;30.12.1899 07:50:00;30.12.1899 08:35:00;Assurer le transfert entre Volx et Saint-Etienne-les-Orgues. Partir avec la cam bouffe, la cam ED, la kangoo info;2;;0;0;0
+38;Déménagement Kangoo Info;30.12.1899 07:50:00;30.12.1899 07:50:00;30.12.1899 08:35:00;Assurer le transfert entre Volx et Saint-Etienne-les-Orgues. Partir avec la cam bouffe, la cam ED, la kangoo freelance camp;2;;0;0;0
+39;Déménagement Kangoo Départ/Arrivée;30.12.1899 09:00:00;30.12.1899 09:00:00;30.12.1899 09:45:00;Assurer le transfert entre  Volx et Saint-Etienne- les-Orgues;2;;0;0;0
+40;Départ;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 08:50:00;Sur le camping. Installer le départ puis tout remettre dans la kangoo une fois le départ lancé;5;;0;0;0
+41;Nettoyage camping;30.12.1899 07:30:00;30.12.1899 07:30:00;30.12.1899 09:00:00;Sur le camping. Ramasser les déchets sur le camp;2;;0;0;0
+42;Nettoyage salle info/média;30.12.1899 06:50:00;30.12.1899 07:00:00;30.12.1899 07:50:00;Nettoyer les 2 salles. Partir avec la K8;2;;0;0;0
+43;Nettoyage sanitaire camping;30.12.1899 07:30:00;30.12.1899 07:30:00;30.12.1899 08:30:00;Sur le camping. Nettoyer les sanitaires (douches et toilettes) et ramasser les déchets qui traînent sur le camp;3;;0;0;0
+44;SBO;30.12.1899 07:00:00;30.12.1899 08:00:00;30.12.1899 14:45:00;Fait la jonction VTT1/BO/Trail1. Explique les dfférentes orientations. Débalise.;1;;0;0;0
+45;S01;30.12.1899 07:20:00;30.12.1899 08:08:00;30.12.1899 12:15:00;Arrêter les concs sur la route et leur indiquer la bonne direction;1;;0;0;0
+46;S04;30.12.1899 07:20:00;30.12.1899 08:19:00;30.12.1899 12:15:00;Ralentir les concs sur la route et indiquer le chemin sur le bas côté;1;;0;0;0
+47;S05;30.12.1899 07:20:00;30.12.1899 08:19:00;30.12.1899 14:45:00;Ralentir voir arrêter les concs sur la route et indiquer le chemin en face;1;;0;0;0
+48;S06;30.12.1899 07:15:00;30.12.1899 09:00:00;30.12.1899 14:45:00;Ralentir les concs sur la route et indiquer la bonne direction à l'intersection;1;;0;0;0
+49;Débaliseur vtt1;30.12.1899 09:05:00;30.12.1899 09:05:00;30.12.1899 12:15:00;Débalise VTT1 et le début de la BO VTT. Aide S01 à débaliser le reste de BO VTT;1;;0;0;0
+50;Retour S01-S04-Débaliseur VTT1;30.12.1899 12:15:00;30.12.1899 12:15:00;30.12.1899 12:35:00;Vous rentrez tous au camp à Saint-Etienne-Les-Orgues;3;;0;0;0
+51;Aides Actifun;30.12.1899 07:15:00;30.12.1899 09:10:00;30.12.1899 13:00:00;Equipe les concs et appuie la respo actifun;2;;0;0;0
+52;Retour SBO-S05-S06-Aides actifun;30.12.1899 14:45:00;30.12.1899 14:45:00;30.12.1899 15:30:00;Vous rentrez tous au camp à Saint-Etienne-Les-Orgues;5;;0;0;0
+53;S12;30.12.1899 06:30:00;30.12.1899 10:25:00;30.12.1899 20:00:00;Indiquer la bonne direction à l'intersection avec la route;1;;0;0;0
+54;S13;30.12.1899 06:30:00;30.12.1899 10:26:00;30.12.1899 20:00:00;Arrêter les concs sur la route et leur indiquer la bonne direction;1;;0;0;0
+55;S07;30.12.1899 08:50:00;30.12.1899 09:34:00;30.12.1899 18:00:00;Indiquer la bonne direction à l'intersection;1;;0;0;0
+56;S08;30.12.1899 08:50:00;30.12.1899 09:37:00;30.12.1899 18:00:00;Indiquer la bonne direction à l'intersection;1;;0;0;0
+57;S09;30.12.1899 08:50:00;30.12.1899 09:43:00;30.12.1899 18:00:00;Ralentir les concs et les faire passer sur la départementale;1;;0;0;0
+58;S10;30.12.1899 08:50:00;30.12.1899 09:51:00;30.12.1899 18:00:00;Faire passer les concurrents derrière la barrière de la départementale;1;;0;0;0
+59;S11;30.12.1899 08:50:00;30.12.1899 10:04:00;30.12.1899 20:15:00;Refaire traverser les concurrents de l'autre côté de la départementale;1;;0;0;0
+60;Retour S07-S10-CO Mourres;30.12.1899 18:00:00;30.12.1899 18:00:00;30.12.1899 18:30:00;Vous rentrez tous au camp à Saint-Etienne-Les-Orgues;5;;0;0;0
+61;Retour S11-S13;30.12.1899 20:00:00;30.12.1899 20:00:00;30.12.1899 20:15:00;Vous rentrez tous au camp à Saint-Etienne-Les-Orgues;3;;0;0;0
+62;CP1;30.12.1899 09:05:00;30.12.1899 09:20:00;30.12.1899 14:00:00;Gèrent le CP. Noter l'ordre d'arrivée des concs pour aiguiller vers l'actifun;5;;0;0;0
+63;CP2;30.12.1899 10:00:00;30.12.1899 10:20:00;30.12.1899 15:35:00;Gèrent le CP2.;7;;0;0;0
+64;CP3;30.12.1899 10:15:00;30.12.1899 11:15:00;30.12.1899 17:15:00;Gèrent le CP3.;5;;0;0;0
+65;S14;30.12.1899 10:00:00;30.12.1899 11:19:00;30.12.1899 20:50:00;Indiquer aux concs qu'ils quittent la départementale. Tu pars avec la 1ère cam matos, et il doivent te déposer avant d'aller au camp N2.;1;;0;0;0
+66;S15;30.12.1899 10:45:00;30.12.1899 11:28:00;30.12.1899 20:50:00;Ralentir les concs au croisement avec la route;1;;0;0;0
+67;Déchargement des affaires concurrents;30.12.1899 09:45:00;30.12.1899 09:45:00;30.12.1899 10:45:00;Sur le camp. Vider les cams sur des bâches installées sur l'herbe au bout du chemin.;6;;0;0;0
+68;Installer la salle info;30.12.1899 08:35:00;30.12.1899 08:35:00;30.12.1899 09:30:00;Sous-sol de la médiathèque, "salle réunion". Aider les respos info à s'installer.;2;;0;0;0
+69;Déchargement des affaires staff;30.12.1899 09:45:00;30.12.1899 09:45:00;30.12.1899 10:30:00;Sur le camp. Décharger les affaires staff sur le camp avant d'aller garer la cam sur le parking (voir avec le respo parking);2;;0;0;0
+70;Respo SAS;30.12.1899 11:45:00;30.12.1899 11:45:00;30.12.1899 21:05:00;SAS. Gérer l'organisation de la SAS;1;;0;0;0
+71;Installation des kinés;30.12.1899 12:00:00;30.12.1899 12:00:00;30.12.1899 12:30:00;Sur le camp. Aider les kinés à monter les pop ups sur leur emplacement, derrière l'espace détente.;5;;0;0;0
+72;Respo kinés;30.12.1899 13:00:00;30.12.1899 13:00:00;30.12.1899 18:30:00;Sur le camp. Aider les kinés, gérer la file d'attente;1;;0;0;0
+73;Démontage des tentes kinés;30.12.1899 19:00:00;30.12.1899 19:00:00;30.12.1899 19:30:00;Sur le camp. Aider les kinés à démonter les tentes et à les charger dans la cam matos Dokever, qui est garée devant le camp, sur le Parking 1.;5;;0;0;0
+74;Info;30.12.1899 12:30:00;30.12.1899 12:30:00;30.12.1899 18:30:00;Salle info.Faire les classements, gérer les messages concurrents;2;;0;0;0
+75;Récupération de la commande de pain;30.12.1899 11:55:00;30.12.1899 11:55:00;30.12.1899 12:10:00;Récupérer la livraison de pain au niveau de la SAS;1;;0;0;0
+76;Balisage du camp;30.12.1899 11:30:00;30.12.1899 11:30:00;30.12.1899 12:00:00;Baliser le trajet jusqu'au camp;1;;0;0;0
+77;Montage de la tente matos;30.12.1899 11:05:00;30.12.1899 11:05:00;30.12.1899 13:30:00;Sur le camp. Monter la tente matos, décharger le matos dedans, essayer de le faire rapidement;10;;0;0;0
+78;Déménagement pack bouffe;30.12.1899 12:00:00;30.12.1899 12:00:00;30.12.1899 12:30:00;Aller récupérer le stock dans la réserve de la SAS (sauf ce qui est réservé pour la SAS), et l'amner en tente matos.;4;;0;0;0
+79;Arrivée;30.12.1899 11:30:00;30.12.1899 11:30:00;30.12.1899 18:30:00;Sur le parking près du city stade. Installer l'espace arrivée, accueillir les concurrents et leur indiquer le camping où ils dorment et où se trouve l'espace détente. Suivant l'affluence des équipes (horaires extrêmes), les staffeurs peuvent aider ailleurs.;4;;0;0;0
+80;Espace détente;30.12.1899 12:30:00;30.12.1899 12:30:00;30.12.1899 19:00:00;Sur le camp. Installer, tenir puis démonter l'espace détente, et charger le matériel dans la cam après l'avoir démonté+ particper à l'animation. Installer les towers prises sur l'ED. L'espace détente se situe à côté du chemin principal, juste avant les affaire concs.;5;;0;0;0
+81;Respo toilettes de chantiers camp;30.12.1899 13:00:00;30.12.1899 13:00:00;30.12.1899 22:00:00;Camp. Installer avec le personnel de la commune les toilettes de chantier, gérer la file d'attente. Envoyer les concurrents aux toilettes de la piscine si il y a trop de monde.;1;;0;0;0
+82;Indication des douches Piscine;30.12.1899 13:00:00;30.12.1899 13:00:00;30.12.1899 18:30:00;Entre le camp et les douches de la piscine. Aiguiller les concs vers l'escalier, leur rappeler qu'il y a également des toilettes et des lavabos.;1;;0;0;0
+83;Douches Piscine;30.12.1899 13:30:00;30.12.1899 13:30:00;30.12.1899 18:30:00;A côté de la piscine. Indiquer les douches aux concurrents (escalier qui descend), gérer la file d'attente. S'il n'y a pas assez d'eau chaude, remplir des bassines d'eau chaude avec les bouilloires et les amener dans les douches. Aiguiller les douches Homme et Femme. Avant l'arrivée des premiers concs, installer une bâche de séparation entre les parties gauches et droites (H/F).;2;;0;0;0
+84;Préparation de la bouffe;30.12.1899 14:00:00;30.12.1899 14:00:00;30.12.1899 17:00:00;Préparation les sandwichs pour le lendemain dans la SAS. Freelance camp disponible si besoin;8;;0;0;0
+85;Préparation de la SAS;30.12.1899 14:30:00;30.12.1899 14:30:00;30.12.1899 18:30:00;SAS. Installation des tables et des chaises, et des banderoles. Préparation de l'entrée. Dressage des tables ensuite;7;;0;0;0
+86;Chargement CP1;30.12.1899 14:30:00;30.12.1899 14:30:00;30.12.1899 15:15:00;Sur le parking. Charger le matériel pour le CP1. vérifier avec le précédent respo que tout ce qui est déjà l'intérieur de la kangoo fonctionne. Voir le classeur log pour ce qui est à charger.;3;;0;0;0
+87;Chargement CP2;30.12.1899 16:00:00;30.12.1899 16:00:00;30.12.1899 16:45:00;Sur le parking. Charger le matériel pour le CP2. vérifier avec le précédent respo que tout ce qui est déjà l'intérieur de la kangoo fonctionne. Voir le classeur log pour ce qui est à charger.;6;;0;0;0
+88;Chargement CP3;30.12.1899 17:45:00;30.12.1899 17:45:00;30.12.1899 18:30:00;Sur le parking. Charger le matériel pour le CP3. vérifier avec le précédent respo que tout ce qui est déjà l'intérieur de la kangoo fonctionne. Voir le classeur log pour ce qui est à charger.;3;;0;0;0
+89;Aide traiteur;30.12.1899 15:30:00;30.12.1899 15:30:00;30.12.1899 18:30:00;Sur le parking derrière la SAS. Aider le traiteur à s'intaller, à prendre de l'eau depuis la SAS, du courant depuis la borne sur le chemin (triphasé) et à préparer le repas;3;;0;0;0
+90;Respo toilettes Piscine;30.12.1899 17:00:00;30.12.1899 17:00:00;30.12.1899 23:00:00;Piscine. Vérifier que les toilettes restent toujours propres, gérer la file d'attente. Aider le respo douche dans sa tâche.;1;;0;0;0
+91;Respo Olympique Lyonnais;30.12.1899 17:00:00;30.12.1899 17:00:00;30.12.1899 18:45:00;Tenir le Respo Nuit informé de l'évolution du score et des buteurs du match Olympique Lyonnais - FC Nantes. Cumulable avec une autre tâche.;1;;0;0;0
+92;Indication SAS;30.12.1899 18:30:00;30.12.1899 18:30:00;30.12.1899 19:05:00;Sur le camp. Rappeler aux concurrents l'endroit où se trouve la SAS, leur rappeler que le dîner est servi à 19h00. Utiliser un mégaphone pour leur dire d'aller à la SAS (à récupérer en tente matos);2;;0;0;0
+93;Service;30.12.1899 19:00:00;30.12.1899 19:00:00;30.12.1899 20:00:00;SAS. Assurer le service avec traiteur et respo SAS;8;;0;0;0
+94;Eco respo J2 camp;30.12.1899 09:30:00;30.12.1899 09:30:00;30.12.1899 21:30:00;Gérer les poubelles sur le camp (espace détente). Cumulable avec une autre tâche;1;;0;0;0
+95;Eco respo J2 SAS + zone d'arrivée;30.12.1899 12:00:00;30.12.1899 12:00:00;30.12.1899 21:30:00;Gérer les poubelles sur la SAS et la zone d'arrivée/départ. Cumulable avec une autre tâche;1;;0;0;0

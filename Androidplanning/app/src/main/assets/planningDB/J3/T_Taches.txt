@@ -1,0 +1,101 @@
+1;PC Course;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 17:00:00;Gérer la course;2;;0;0;0
+2;Freelance;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 17:00:00;Amusez-vous bien ^^;2;;0;0;0
+4;Respo N3;30.12.1899 09:00:00;30.12.1899 23:59:00;30.12.1899 23:59:00;Gérer la nuit;1;;0;0;0
+5;Respo N2;30.12.1899 05:00:00;30.12.1899 05:00:00;30.12.1899 11:00:00;Gérer la nuit;1;;0;0;0
+6;Respo matos N2;30.12.1899 05:00:00;30.12.1899 05:00:00;30.12.1899 10:30:00;Sur le camp. Gérer le matos et les tentes matos.;1;;0;0;0
+7;Respo matos N3;30.12.1899 11:00:00;30.12.1899 11:00:00;30.12.1899 23:59:00;Sur le camp. Gérer le matos et les tentes matos.;1;;0;0;0
+8;Freelance log N2;30.12.1899 05:00:00;30.12.1899 05:00:00;30.12.1899 11:00:00;Gérer la logistique sur le camp;1;;0;0;0
+9;Freelance log N3;30.12.1899 09:00:00;30.12.1899 09:00:00;30.12.1899 23:59:00;Gérer la logistique du camp;1;;0;0;0
+10;Installation de la cerem;30.12.1899 13:30:00;30.12.1899 13:30:00;30.12.1899 14:30:00;SAS. Installation de la scène et du matériel nécessaire;4;;0;0;0
+11;Repétition cerem;30.12.1899 14:30:00;30.12.1899 14:30:00;30.12.1899 18:30:00;SAS. Répéter la cérem;4;;0;0;0
+12;Cerem;30.12.1899 19:00:00;30.12.1899 19:00:00;30.12.1899 20:00:00;SAS. Animer la cérem;4;;0;0;0
+13;Respo relais;30.12.1899 06:00:00;30.12.1899 06:00:00;30.12.1899 18:00:00;Surveille les antennes relais;2;;0;0;0
+14;Ouvreur;30.12.1899 04:00:00;30.12.1899 04:00:00;30.12.1899 11:00:00;Ouvrir;2;;0;0;0
+15;Balisage J4;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 18:00:00;Baliser la J4;2;;0;0;0
+16;VIP;30.12.1899 06:30:00;30.12.1899 06:30:00;30.12.1899 19:00:00;Gérer les VIP;2;;0;0;0
+17;Déménagement Cam Affaires concurrents;30.12.1899 08:35:00;30.12.1899 08:35:00;30.12.1899 09:50:00;Assurer le transfert entre Saint-Etienne-les-Orgues et Les Omergues . Partir avec les autres cams affaires concurrents;6;;0;0;0
+18;Déménagement Cam Staff;30.12.1899 09:05:00;30.12.1899 09:05:00;30.12.1899 10:20:00;Assurer le transfert entre Saint-Etienne-les-Orgues et Les Omergues. Partir avec la cam bouffe, le camion frigo et la cam Dokever.;2;;0;0;0
+19;Déménagement Cam Bouffe;30.12.1899 09:05:00;30.12.1899 09:05:00;30.12.1899 10:20:00;Assurer le transfert entre Saint-Etienne-les-Orgues et Les Omergues. Partir avec la cam affaires staff, l'ED, le camion frigo et la cam Dokever.;2;;0;0;0
+20;Déménagement cam espace détente;30.12.1899 09:05:00;30.12.1899 09:05:00;30.12.1899 10:20:00;Assurer le transfert entre Saint-Etienne-les-Orgues et Les Omergues. Partir avec la cam affaires staff, la cam bouffe, camion frigo et la cam Dokever.;2;;0;0;0
+21;Déménagement Cam Dokever;30.12.1899 09:05:00;30.12.1899 09:05:00;30.12.1899 10:20:00;Assurer le transfert entre Saint-Etienne-les-Orgues et Les Omergues. Partir avec la cam affaires staff, la cam bouffe, camion frigo et l'ED.;2;;0;0;0
+22;Déménagement Cam Matos;30.12.1899 10:05:00;30.12.1899 10:05:00;30.12.1899 11:20:00;Assurer le transfert entre Saint-Etienne-les-Orgues et Les Omergues. Partir dès que le convoi est prêt.;6;;0;0;0
+23;Équipe staff;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 16:00:00;Courir la J3;4;;0;0;0
+24;Déménagement Cam Frigo;30.12.1899 09:05:00;30.12.1899 09:05:00;30.12.1899 10:20:00;Assurer le transfert entre Saint-Etienne-les-Orgues et Les Omergues. Partir avec la cam affaires staff, l'ED, la cam bouffe et la cam Dokever.;2;;0;0;0
+25;Respo toilettes camp;30.12.1899 06:30:00;30.12.1899 06:30:00;30.12.1899 09:00:00;Camp. Vérifier que les toilettes de chantier restent toujours propres, gérer la file d'attente. Si le départ approche, et dire aux concurrents de se diriger vers le lieu du départ. Ils pourront éventuellement s'arrêter aux toilettes de la piscine en récupérant leur VTT. Gérer la désinstallation des toilettes de chantier avec le personnel de la commune.;1;;0;0;0
+26;Nettoyage douches de la piscine;30.12.1899 07:30:00;30.12.1899 07:30:00;30.12.1899 08:30:00;Aux douches de la piscine. Nettoyer les sanitaires (douches, lavabos et toilettes). Si pendant la tâche, des concs viennent aux toilettes/lavabos, les diriger vers une unique partie (droite OuExclusif gauche) des douches.;3;;0;0;0
+27;Réveil des concurrents;30.12.1899 06:00:00;30.12.1899 06:00:00;30.12.1899 06:10:00;Sur le camp. Réveiller les derniers concurrents qui ne sont pas levés.;2;;0;0;0
+28;Petit dej staff;30.12.1899 05:30:00;30.12.1899 05:30:00;30.12.1899 07:15:00;Sur le camp, à la tente matos. Sortir le petit déj staff, l'installer en bordure du chemin près de la zone staff puis le ranger.;2;;0;0;0
+29;Petit déj concurrents;30.12.1899 05:30:00;30.12.1899 05:30:00;30.12.1899 07:15:00;Sur le camp. Installer le petit déj, l'installer en bordure du chemin près du petit déj staff, et le servir puis le ranger.;5;;0;0;0
+30;Départ;30.12.1899 07:30:00;30.12.1899 07:30:00;30.12.1899 09:00:00;Sur la zone de départ (parking du city stade). Installer le départ puis tout remettre dans la kangoo une fois le départ lancé;5;;0;0;0
+31;Débalisage;30.12.1899 08:35:00;30.12.1899 08:35:00;30.12.1899 09:00:00;Débaliser le trajet entre le camp et l'espace départ/arrivée;1;;0;0;0
+32;Nettoyage SAS;30.12.1899 06:30:00;30.12.1899 06:30:00;30.12.1899 07:30:00;Nettoyer la SAS en fonction de ce qui aura été fait la veille àprès le dîner staff.;2;;0;0;0
+33;Nettoyage salle info/média;30.12.1899 07:15:00;30.12.1899 07:15:00;30.12.1899 07:30:00;Nettoyer les salles;2;;0;0;0
+34;Récupération du pain;30.12.1899 05:10:00;30.12.1899 05:15:00;30.12.1899 05:30:00;A la boulangerie de Saint-Etienne-les-Orgues. Aller récupérer le pain.;1;;0;0;0
+35;Indication départ et VTT;30.12.1899 07:30:00;30.12.1899 07:30:00;30.12.1899 08:40:00;Sur le camp. Indiquer le chemin pour aller au départ, et rappeler aux concurrents de prendre leur VTT en leur rappelant le chemin si nécessaire.;2;;0;0;0
+36;Chargement matériel info;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 07:30:00;SAS. Récupérer le matériel info dans la salle info, le charger dans la K8.;2;;0;0;0
+37;Chargement affaires staff;30.12.1899 06:10:00;30.12.1899 06:10:00;30.12.1899 09:00:00;Sur le camp. Installer une bâche pour déposer les affaires du staff.. Charger les affaires du staff dans la cam affaires staff. Cumulable avec une autre tâche tant que tous les staffeurs n'ont pas déposé leurs affaires.;2;;0;0;0
+38;Chargement des affaires concurrents;30.12.1899 06:30:00;30.12.1899 06:30:00;30.12.1899 08:30:00;Sur le camp. Récupérer les affaires des concurrents et les mettre directement dans les cams 4, 5 et 6.;6;;0;0;0
+39;Démontage tente matos;30.12.1899 08:00:00;30.12.1899 08:00:00;30.12.1899 10:00:00;Sur le camp. Démonter la tente matos et charger le matos dans les cams.;6;;0;0;0
+41;Déménagement matériel info K8;30.12.1899 07:35:00;30.12.1899 07:35:00;30.12.1899 08:50:00;Assurer le transfert entre Saint-Etienne-les-Orgues et Les Omergues. Partir avec la kangoo freelance camp (K6).;2;;0;0;0
+42;Déménagement Kangoo Départ/Arrivée;30.12.1899 09:00:00;30.12.1899 09:00:00;30.12.1899 10:30:00;Assurer le transfert entre Saint-Etienne-les-Orgues et Les Omergues.;2;;0;0;0
+43;Déménagement ReneauMobile;30.12.1899 08:00:00;30.12.1899 08:00:00;30.12.1899 09:30:00;Assurer le transfert entre Saint-Etienne-les-Orgues et Les Omergues. Partez après le démontage tente matos.;2;;0;0;0
+45;Respos VTT;30.12.1899 07:00:00;30.12.1899 07:00:00;30.12.1899 18:00:00;Gérer la préparation des VTT pour le départ. Accompagner Cyclotrott sur la journée: départ, dépose VTT à N-D de Lure, prise VTT au CP 2, dépose VTT à l'arrivée . Voir fiche respo VTT.;2;;0;0;0
+46;Actifun;30.12.1899 07:15:00;30.12.1899 07:45:00;30.12.1899 10:00:00;Baliser actifun, gérer, débaliser;2;;0;0;0
+47;CP1;30.12.1899 07:40:00;30.12.1899 08:00:00;30.12.1899 12:00:00;Monter le CP. Voir fiche CP.Démonter le CP et rentrer;5;;0;0;0
+48;CP2;30.12.1899 08:30:00;30.12.1899 09:45:00;30.12.1899 15:30:00;Monter le CP. Voir fiche CP.Démonter le CP et rentrer;7;;0;0;0
+49;CP3;30.12.1899 09:45:00;30.12.1899 11:00:00;30.12.1899 17:00:00;Monter le CP. Voir fiche CP.Démonter le CP et rentrer;5;;0;0;0
+50;S01;30.12.1899 07:20:00;30.12.1899 08:00:00;30.12.1899 09:00:00;A pied depuis le camp, signaler, débaliser jusqu'à S02;1;;0;0;0
+51;S02;30.12.1899 07:30:00;30.12.1899 08:00:00;30.12.1899 09:15:00;Signaler puis débaliser jusqu’à S03;1;;0;0;0
+52;S03;30.12.1899 07:30:00;30.12.1899 08:00:00;30.12.1899 09:20:00;Signaler puis débaliser jusqu’à S04;1;;0;0;0
+53;S04;30.12.1899 07:30:00;30.12.1899 08:10:00;30.12.1899 09:45:00;Signaler puis débaliser jusqu'à S05;1;;0;0;0
+54;S05;30.12.1899 07:30:00;30.12.1899 08:15:00;30.12.1899 09:50:00;Signaler puis débaliser jusq'à S06;1;;0;0;0
+55;Retour signaleurs S01-S05;30.12.1899 10:00:00;30.12.1899 10:00:00;30.12.1899 12:00:00;Vous débalisez selon vos consignes et rentrez ensuite au camp.;5;;0;0;0
+56;S06;30.12.1899 07:30:00;30.12.1899 08:25:00;30.12.1899 10:05:00;Signaler puis débaliser jusqu'à CP 1;1;;0;0;0
+59;S09;30.12.1899 08:00:00;30.12.1899 09:00:00;30.12.1899 12:50:00;Signaler actifun, BO1 et Trail 2, retour station;1;;0;0;0
+61;Retour signaleurs S06-S10;30.12.1899 13:00:00;30.12.1899 13:00:00;30.12.1899 15:15:00;Vous débalisez selon vos consignes et rentrez ensuite au camp.;2;;0;0;0
+62;S11;30.12.1899 08:00:00;30.12.1899 09:10:00;30.12.1899 13:05:00;Signaler, avertir dangers et espèce protégée sur les crêtes, débaliser jusqu'à S11 puis go CP 2;1;;0;0;0
+63;S12;30.12.1899 08:35:00;30.12.1899 09:50:00;30.12.1899 15:05:00;Signaler, CP Sherpa, débaliser jusq'à CP 2;1;;0;0;0
+64;Retour signaleurs S11, S12;30.12.1899 15:10:00;30.12.1899 15:10:00;30.12.1899 17:00:00;Vous débalisez selon vos consignes et rentrez ensuite au camp.;2;;0;0;0
+65;S13;30.12.1899 08:35:00;30.12.1899 10:25:00;30.12.1899 16:25:00;Débaliser jusq'à CP3;1;;0;0;0
+66;S14;30.12.1899 09:00:00;30.12.1899 11:00:00;30.12.1899 17:45:00;Signaler, débaliser quasi toute BO2;1;;0;0;0
+67;S15;30.12.1899 09:00:00;30.12.1899 11:30:00;30.12.1899 17:00:00;Signaler puis débaliser fin BO2;1;;0;0;0
+68;Retour signaleurs S14, S15;30.12.1899 18:00:00;30.12.1899 18:00:00;30.12.1899 19:00:00;Vous débalisez selon vos consignes et rentrez ensuite au camp.;2;;0;0;0
+69;Balisage du camp;30.12.1899 09:00:00;30.12.1899 09:00:00;30.12.1899 09:30:00;Placer des panneaux pour les sanitaires, la maison du Jabron;1;;0;0;0
+70;Déchargement des affaires concurrents;30.12.1899 10:30:00;30.12.1899 10:30:00;30.12.1899 11:15:00;Garer la cam dans le champ et vider à l'endroit prévu;5;;0;0;0
+71;Déchargement des affaires staff;30.12.1899 10:30:00;30.12.1899 10:30:00;30.12.1899 11:15:00;Garer la cam dans le champ et vider à l'endroit prévu;3;;0;0;0
+72;Montage tente matos;30.12.1899 11:20:00;30.12.1899 11:20:00;30.12.1899 13:20:00;Sous les directives du respo matos, monter la tente matos à l'endroit prévu et y décharger le matos.;11;;0;0;0
+73;Installation salle info;30.12.1899 11:30:00;30.12.1899 11:30:00;30.12.1899 12:30:00;Aider les respos info à s'installer. ATTENTION : tout le matos doit être déchargé car la K9 part dans l'après-midi. Faites attention aux ordinateurs.;2;;0;0;0
+74;Montage arrivée;30.12.1899 11:15:00;30.12.1899 11:15:00;30.12.1899 11:45:00;Sur la place de la mairie. Installer l'espace arrivée + arche;5;;0;0;0
+75;Arrivée;30.12.1899 11:45:00;30.12.1899 11:45:00;30.12.1899 18:00:00;Accueillir les concurrents et leur indiquer les différents lieux du campement;3;;0;0;0
+76;Démontage arrivée;30.12.1899 18:00:00;30.12.1899 18:00:00;30.12.1899 18:30:00;Démonter l'espace arrivée + arche et charger dans cam;5;;0;0;0
+77;Montage espace détente;30.12.1899 11:15:00;30.12.1899 11:15:00;30.12.1899 12:00:00;Devant la SAS, sous les arbres. Installer ED;5;;0;0;0
+78;Espace détente;30.12.1899 12:00:00;30.12.1899 12:00:00;30.12.1899 18:45:00;Tenir l'ED. Penser à indiquer aux concs la maison du Jabron.;5;;0;0;0
+79;Démontage espace détente;30.12.1899 18:45:00;30.12.1899 18:45:00;30.12.1899 19:15:00;Démonter l'espace détente et charger dans cam;5;;0;0;0
+80;Respo pétanque;30.12.1899 12:15:00;30.12.1899 12:15:00;30.12.1899 18:45:00;Surveiller et animer le tournoi de pétanque.;1;;0;0;0
+81;Info;30.12.1899 12:30:00;30.12.1899 12:30:00;30.12.1899 18:30:00;Faire les classements, gérer les messages concurrents;2;;0;0;0
+82;Installation kiné;30.12.1899 11:15:00;30.12.1899 11:15:00;30.12.1899 11:45:00;A côté de l'ED. Aider les kinés à monter les pop up.;5;;0;0;0
+83;Respo kiné;30.12.1899 11:45:00;30.12.1899 11:45:00;30.12.1899 18:45:00;Aider les kinés, gérer la file d'attente;1;;0;0;0
+84;Démontage des tentes kinés;30.12.1899 18:30:00;30.12.1899 18:30:00;30.12.1899 19:00:00;Aider les kinés à démonter les tentes et à les charger dans la cam;3;;0;0;0
+85;Récupération de la commande de pain;30.12.1899 11:55:00;30.12.1899 11:55:00;30.12.1899 12:20:00;Récupérer la livraison de pain sur la place de la mairie (livraison par le boulanger du SuperU de Montbrun). L'emmener ensuite dans la cuisine de la mairie.;1;;0;0;0
+86;Respo toilettes - 1;30.12.1899 12:00:00;30.12.1899 12:00:00;30.12.1899 17:00:00;Vérifier que les 3 toilettes restent toujours propres, gérer la file d'attente.;1;;0;0;0
+87;Respo douches;30.12.1899 12:00:00;30.12.1899 12:00:00;30.12.1899 18:45:00;Gérer la file d'attente. Attention il n'y a que 2 douches (mixtes) pour 200 concurrents et 100 staff !;1;;0;0;0
+88;Chargement CP 1;30.12.1899 18:00:00;30.12.1899 18:00:00;30.12.1899 18:30:00;Charger le matériel pour le CP1, voir classeur log. Vérifier avec le précédent respo que tout fonctionne. Le respo J4 sera Antoine Rit.;3;;0;0;0
+89;Chargement CP 2;30.12.1899 16:30:00;30.12.1899 16:30:00;30.12.1899 17:00:00;Charger le matériel pour le CP2, voir classeur log. Vérifier avec le précédent respo que tout fonctionne. La respo J4 sera Hélène.;6;;0;0;0
+90;Chargement CP 3;30.12.1899 17:30:00;30.12.1899 17:30:00;30.12.1899 18:00:00;Charger le matériel pour le CP3, voir classeur log. Vérifier avec le précédent respo que tout fonctionne;3;;0;0;0
+91;Répartition polos;30.12.1899 21:00:00;30.12.1899 21:00:00;30.12.1899 21:30:00; Vérifier que chaque signaleur prend le polo de la bonne année.;1;;0;0;0
+92;Respo SAS;30.12.1899 12:00:00;30.12.1899 12:00:00;30.12.1899 22:30:00;SAS. Gérer l'organisation de la SAS;1;;0;0;0
+93;Préparation de la SAS;30.12.1899 15:30:00;30.12.1899 15:30:00;30.12.1899 18:30:00;SAS. Installation des tables, chaises, et banderoles. Dressage des tables. Voir plan et infos auprès du respo SAS.;7;;0;0;0
+94;Préparation bouffe;30.12.1899 13:30:00;30.12.1899 13:30:00;30.12.1899 16:30:00;Cuisines de la mairie. Préparation les sandwichs pour le lendemain.;11;;0;0;0
+95;Aide traiteur;30.12.1899 15:30:00;30.12.1899 15:30:00;30.12.1899 18:30:00;Aider le traiteur à s'intaller et à préparer le repas;3;;0;0;0
+96;Indication SAS;30.12.1899 18:30:00;30.12.1899 18:30:00;30.12.1899 19:00:00;Rappeler aux concurrents que le dîner est servi à 19h. Utiliser un mégaphone (récupérer en tente matos) et aller dans le champ concs.;1;;0;0;0
+97;Service;30.12.1899 19:00:00;30.12.1899 19:00:00;30.12.1899 20:00:00;SAS. Assurer le service avec traiteur et respo SAS.;5;;0;0;0
+98;Eco Respo;30.12.1899 06:00:00;30.12.1899 06:00:00;30.12.1899 09:30:00;S'occuper des dernières poubelles (petit dej + nettoyage). Utiliser les bennes fournies par la commune.;;;0;0;0
+99;Taxi Théodore;30.12.1899 13:30:00;30.12.1899 13:30:00;30.12.1899 17:30:00;Va chercher Théodore à la gare d'Avignon. Vois avec lui quand tu dois partir, son train arrive vers 17h16.;1;;0;0;0
+100;Chargement Cam JVIP;30.12.1899 17:00:00;30.12.1899 17:00:00;30.12.1899 18:00:00;Charger le matos nécessaire pour le village JVIP;3;;0;0;0
+101;Retour signaleur S13 - CP3;30.12.1899 17:00:00;30.12.1899 17:00:00;30.12.1899 18:00:00;Rentrer ensemble avec le staff CP3 et le signaleur S13;6;;0;0;0
+102;Respo toilettes - 2;30.12.1899 17:00:00;30.12.1899 17:00:00;30.12.1899 22:00:00;Vérifier que les 3 toilettes restent toujours propres, gérer la file d'attente. Récupère la fiche respo d'auprès Aymeric Bayce.;1;;0;0;0
+103;Eco respo N3;30.12.1899 10:00:00;30.12.1899 10:00:00;30.12.1899 23:59:00;Gérer les poubelles. Cumulable avec une autre tâche;1;;0;0;0
+104;Surveillance VTT - 1;30.12.1899 22:00:00;30.12.1899 22:00:00;30.12.1899 01:00:00;Surveiller les VTT dans une kangoo devant le camp.;2;;0;0;0
+105;Surveillance VTT - 2;31.12.1899 01:00:00;30.12.1899 01:00:00;30.12.1899 04:00:00;Surveiller les VTT dans une kangoo devant le camp.;2;;0;0;0
+106;Surveillance VTT - 3;31.12.1899 04:00:00;30.12.1899 04:00:00;30.12.1899 07:00:00;Surveiller les VTT dans une kangoo devant le camp.;2;;0;0;0
+107;Balisage JVIP;30.12.1899 04:00:00;30.12.1899 04:00:00;30.12.1899 16:00:00;Poser les banderoles pour la JVIP;3;;0;0;0

@@ -1,0 +1,91 @@
+1;Amghar;Nassima;18.9.1996 00:00:00;Non;;0635351812;GPA;concurrents;1;0;0
+2;Amiot;Victor;23.5.1997 00:00:00;Oui;12.10.2015 00:00:00;0677917826;GPA;entreprise;1;0;0
+3;Baudart;Severin;12.12.1997 00:00:00;Non;;0668455916;GPA;concurrents;0;0;0
+4;Baudouin;Odelin;14.5.1997 00:00:00;Non;;0659426979;respo;entreprise;1;0;0
+5;Bayce;Aymeric;2.8.1997 00:00:00;Oui;22.10.2015 00:00:00;0662363133;GPA;com;0;0;0
+6;Béligon;Mathieu;24.10.1996 00:00:00;Non;;0620370286;respo;info;0;0;0
+7;Bernatets;Alexis;21.10.1996 00:00:00;Oui;22.12.2014 00:00:00;0669296719;buro;secgen;0;0;0
+8;Blondin;Pierre;14.10.1996 00:00:00;Oui;28.10.2014 00:00:00;0638104212;respo;sécu;0;0;0
+9;Boloh;Enora;17.2.1996 00:00:00;Oui;5.10.2017 00:00:00;0602353883;respo;log;1;1;0
+10;Bossis;Romain;18.2.1995 00:00:00;Non;;0630820598;respo;entreprise;1;0;0
+11;Bourgoin;Antoine;2.11.1997 00:00:00;Oui;15.5.2017 00:00:00;0659099149;GPA;iti;0;0;0
+12;Cauchetier;Arthur;2.9.1997 00:00:00;Oui;5.1.2016 00:00:00;0605112709;GPA;entreprise;0;0;0
+13;Cayocca;Malo;5.2.1998 00:00:00;Oui;23.12.2016 00:00:00;0614422280;GPA;log;0;0;0
+14;Chirol;Marianne;30.4.1997 00:00:00;Oui;30.4.2015 00:00:00;0685584065;GPA;log;0;1;0
+15;Cougnaud;Rémi;11.10.1996 00:00:00;Non;;0616082197;respo;ouvreurs;0;0;0
+16;Couturier;Paul;12.6.1997 00:00:00;Non;;0616362788;GPA;log;0;0;0
+17;Cuchet;Clément;16.1.1997 00:00:00;Oui;7.7.2015 00:00:00;0788174059;GPA;entreprise;1;0;0
+18;de Grandsaignes;Louis;15.5.1998 00:00:00;Oui;2.9.2016 00:00:00;0646845377;GPA;iti;0;0;0
+19;Del Rio Escobar;Pedro;22.6.1996 00:00:00;Oui;7.4.2015 00:00:00;0034637295926;GPA;log;1;0;0
+20;Delamarre;Thomas;17.10.1996 00:00:00;Oui;9.10.2016 00:00:00;0684562794;buro;polis;1;0;0
+21;Delorme;Guillaume;23.10.1998 00:00:00;Non;;0782006609;GPA;iti;0;0;0
+22;Deronzier;Thomas;19.5.1996 00:00:00;Oui;2.10.2014 00:00:00;0667560961;respo;info;0;0;0
+23;Desforges;Théodore;16.3.1997 00:00:00;Oui;13.2.2017 00:00:00;0681502181;respo;iti;0;0;0
+24;Dollé;Théo;6.5.1996 00:00:00;Oui;5.6.2014 00:00:00;0632245947;respo;entreprise;1;0;0
+25;Dory;Gonzague;31.5.1996 00:00:00;Non;;0760888762;respo;com'int;0;0;0
+26;Duan;Claire;17.3.1998 00:00:00;Oui;14.2.2017 00:00:00;0645970586;GPA;entreprise;1;0;0
+27;Duboudin;Nicolas;3.2.1997 00:00:00;Oui;27.2.2015 00:00:00;0605092223;GPA;log;1;1;0
+28;Dupuis;Tom;24.7.1997 00:00:00;Oui;18.11.2015 00:00:00;0782722048;GPA;developpement;0;0;0
+29;Égée;Guillaume;11.2.1996 00:00:00;Oui;6.6.2014 00:00:00;0781212696;respo;Media;0;0;0
+30;El Gholabzouri;Hajar;25.9.1997 00:00:00;Non;;0612665836;GPA;log;0;0;0
+31;El-Kurdi;Carole;2.12.1997 00:00:00;Oui;1.2.2018 00:00:00;0675194088;respo;concurrents;0;0;0
+32;Ernst;Maria;17.9.1998 00:00:00;Non;;0652004214;GPA;concurrents;0;0;0
+33;Falque;Come;12.5.1998 00:00:00;Non;;0761919859;GPA;entreprise;1;0;0
+34;Fattali;Moaad;15.12.1997 00:00:00;Non;;0661365928;GPA;log;0;0;0
+35;Forget;Tom-Camille;26.10.1997 00:00:00;Oui;25.8.2015 00:00:00;0672193169;GPA;developpement;0;0;0
+36;François;Anne-Flore;5.2.1997 00:00:00;Non;;0646138436;respo;inclusion;0;0;0
+37;Gautier;Ronan;5.2.1997 00:00:00;Oui;1.1.2001 00:00:00;0685441186;GPA;com'int;0;0;0
+38;George;Thomas;23.6.1996 00:00:00;Non;;0679469595;GPA;concurrents;1;0;0
+39;Griehser;Guillaume;26.10.1997 00:00:00;Oui;3.3.2016 00:00:00;0642270599;GPA;log;1;0;0
+40;Hamell;Clara;12.11.1994 00:00:00;Non;;0768512488;GPA;concurrents;0;0;0
+41;Hennequin;Laura;12.11.1994 00:00:00;Oui;17.2.2017 00:00:00;0676125222;GPA;com'int;0;0;0
+42;Heuberger;Bérénice;21.1.1997 00:00:00;Oui;4.6.2015 00:00:00;0674564081;buro;prez;1;0;0
+43;Hoare;Romain;3.9.1997 00:00:00;Oui;29.10.2015 00:00:00;0627572999;respo;ouvreurs;0;0;0
+44;Hubert;Felix;11.10.1997 00:00:00;Non;;0635941239;GPA;developpement;0;0;0
+45;Huet;Achille;13.3.1997 00:00:00;Oui;19.9.2016 00:00:00;0781550440;GPA;iti;0;0;0
+46;Julienne;Alexis;25.6.1996 00:00:00;Oui;19.10.2014 00:00:00;0637999980;respo;com;0;0;0
+47;Kadiri;Hamza;25.6.1996 00:00:00;Non;;0664886868;respo;com'int;0;0;0
+48;Krzymuski;Tanguy;21.9.1998 00:00:00;Non;;0672981772;GPA;entreprise;0;0;0
+49;Lecler;Simon;7.10.1996 00:00:00;Oui;16.2.2015 00:00:00;0671108411;respo;concurrents;0;1;0
+50;Lenoir;Donatien;4.11.1995 00:00:00;Non;;0634953491;respo;developpement;0;0;0
+51;Lepine;Leo;7.8.1997 00:00:00;Oui;21.8.2015 00:00:00;0688025060;GPA;iti;0;0;0
+52;Loiseau GDA;Lucas;3.8.1997 00:00:00;Oui;26.7.2015 00:00:00;0695570644;respo;design;0;0;0
+53;Loiseau;Thibaut;3.8.1997 00:00:00;Oui;23.10.2015 00:00:00;0762982984;GPA;info;1;0;0
+54;Lu;Lilian;6.12.1995 00:00:00;Non;;0698685517;GPA;com'int;0;0;0
+55;Malet;Léopold;18.7.1996 00:00:00;Oui;13.3.2017 00:00:00;0633557036;buro;trez;1;0;0
+56;Malleval;Maude;27.10.1998 00:00:00;Non;;0683801130;GPA;entreprise;1;0;0
+57;Marin;Rocio;22.3.1996 00:00:00;Non;;0664906794;GPA;com;0;0;0
+58;Matsumoto;Yukina;7.10.1997 00:00:00;Non;;0646493899;GPA;entreprise;0;0;0
+59;Maurin;Loïc;21.1.1997 00:00:00;Oui;18.2.2015 00:00:00;0619647881;GPA;iti;1;0;0
+60;Megy;Camille;30.12.1997 00:00:00;Oui;29.10.2015 00:00:00;0667650277;GPA;log;1;1;0
+61;Mellon;Magali;8.8.1997 00:00:00;Oui;20.8.2015 00:00:00;0649405451;GPA;iti;1;0;0
+62;Mensch;Felix;16.11.1997 00:00:00;Non;;0612675876;GPA;log;1;0;0
+63;Merlet;Pierre;7.6.1996 00:00:00;Oui;18.9.2014 00:00:00;0687379805;respo;iti;1;0;0
+64;Mongin;Théophile;19.3.1998 00:00:00;Non;;0612742722;GPA;entreprise;0;0;0
+65;Monsel;Thibault;8.2.1997 00:00:00;Non;;0643155039;GPA;iti;0;0;0
+66;Moreau;Paul;12.6.1997 00:00:00;Oui;3.8.2016 00:00:00;0787293202;respo;enviqua;0;0;0
+67;Muffang;Louis;7.6.1997 00:00:00;0;;0;GPA;design;0;0;0
+68;Nauroy;Loan;18.11.1996 00:00:00;Oui;28.4.2017 00:00:00;0650506350;GPA;com'int;0;0;0
+69;Nouvelle;Léo;21.10.1997 00:00:00;Oui;2.11.2015 00:00:00;0646821740;GPA;entreprise;1;0;0
+70;Ouakrim;Wassim;30.5.1996 00:00:00;Oui;18.8.2014 00:00:00;0659975284;respo;planning;1;0;0
+71;Paquin;Pierre-Henri;8.1.1998 00:00:00;Non;;0783799085;GPA;com;0;0;0
+72;Paris;Antoine;29.8.1997 00:00:00;Oui;28.9.2015 00:00:00;0786858027;GPA;iti;1;0;0
+73;Pereira Da Costa;Daniel;24.2.1996 00:00:00;Non;;0783363211;respo;com;0;0;0
+74;Perrot;Loïs;1.11.1996 00:00:00;Oui;28.4.2015 00:00:00;0602344112;GPA;log;0;0;0
+75;Pierre;Victor;20.8.1996 00:00:00;Oui;12.9.2014 00:00:00;0677345047;respo;achats;0;0;0
+76;Pizzaferri;Lucas;6.9.1996 00:00:00;Non;;0634152804;respo;enviqua;1;0;0
+77;Pluvinet;Basile;6.9.1996 00:00:00;Non;;0634152804;respo;enviqua;0;0;0
+78;Quesnel;Clément;19.5.1996 00:00:00;Oui;22.5.2014 00:00:00;0635267920;respo;developpement;0;0;0
+79;Razakalalao;Lova;5.7.1998 00:00:00;Non;;0652125967;GPA;concurrents;0;0;0
+80;Reneaume;Thomas;9.10.1997 00:00:00;Oui;31.8.2015 00:00:00;0760213845;GPA;info;0;0;0
+81;Rexhausen;Till;29.8.1995 00:00:00;Oui;3.9.2013 00:00:00;0769422814;respo;planning;0;0;0
+82;Rince;Samuel;11.11.1997 00:00:00;Oui;15.2.2016 00:00:00;0625701883;GPA;com;0;0;0
+83;Rit;Antoine;26.8.1997 00:00:00;Oui;26.8.2015 00:00:00;0632053058;GPA;iti;1;0;0
+84;Ropert;William;11.12.1997 00:00:00;Oui;1.9.2016 00:00:00;0629181505;buro;mcdec;1;0;0
+85;Roy;Vincent;26.8.1997 00:00:00;Non;;0678246293;GPA;iti;1;0;0
+86;Sander;Simon;10.2.1997 00:00:00;Non;;0626542757;respo;log;1;0;0
+87;Schmidt;Audrey;14.3.1998 00:00:00;Oui;21.3.2018 00:00:00;0782409609;GPA;com'int;0;0;0
+88;Soffing;Lukas;23.8.1997 00:00:00;Oui;13.2.2015 00:00:00;0767006814;GPA;developpement;0;0;0
+89;Spender;Tanguy;23.1.1998 00:00:00;Oui;24.6.2016 00:00:00;0616741369;GPA;entreprise;0;0;0
+90;Thebault;Clement;16.9.1996 00:00:00;Oui;22.10.2014 00:00:00;0620015960;GPA;concurrents;0;0;0
+91;Thevenin;Helene;7.8.1997 00:00:00;Non;;0615117345;GPA;developpement;1;0;0
