@@ -116,4 +116,75 @@ public class TaskStaffDao extends DaoBase {
 
         return result;
     }
+
+    /**
+     * Returns the car of a task-staff affection
+     * @param idTask
+     * @param idStaff
+     */
+    public int getCarOfTaskStaff(long idTask, long idStaff) {
+        String query;
+        query = String.format("select %s from %s where %s = ? AND %s = ?",
+                Constants.TASKS_STAFF_CAR,
+                Constants.TABLE_TASKS_STAFF,
+                Constants.TASKS_STAFF_STAFF,
+                Constants.TASKS_STAFF_TASK);
+
+        Cursor c = getDb().rawQuery(
+                query, new String[]{String.valueOf(idStaff),String.valueOf(idTask)});
+
+        int result = 0;
+
+        while (c.moveToNext()) {
+
+            result = c.getInt(0);
+        }
+
+        return result;
+    }
+
+    /**
+     * Returns the driver of a certain car
+     * @param driverID
+     */
+    public int getDriverOfCar(long driverID) {
+        String query;
+        query = String.format("select %s from %s where %s = ?",
+                Constants.TASKS_STAFF_DRIVER,
+                Constants.TABLE_TASKS_STAFF,
+                Constants.TASKS_STAFF_TASK);
+
+        Cursor c = getDb().rawQuery(
+                query, new String[]{String.valueOf(driverID)});
+
+        int result = 0;
+
+        while (c.moveToNext()) {
+
+            result = c.getInt(0);
+        }
+
+        return result;
+    }
+
+    public ArrayList<Integer> getPassengersOfCar(long carID)
+    {
+        String query;
+        query = String.format("select %s from %s where %s = ?",
+                Constants.TASKS_STAFF_STAFF,
+                Constants.TABLE_TASKS_STAFF,
+                Constants.TASKS_STAFF_CAR);
+
+        Cursor c = getDb().rawQuery(
+                query, new String[]{String.valueOf(carID)});
+
+        ArrayList<Integer> result = new ArrayList<>();
+
+        while (c.moveToNext()) {
+
+            result.add(c.getInt(0));
+        }
+
+        return result;
+    }
 }

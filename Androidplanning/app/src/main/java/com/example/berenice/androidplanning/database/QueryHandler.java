@@ -35,6 +35,12 @@ public class QueryHandler {
         return result;
     }
 
+    /**
+     * Gets all the staff of a certain task
+     * @param context
+     * @param idTask
+     * @return
+     */
     public ArrayList<Staff> getCostaff(Context context, int idTask)
     {
         StaffDao sdao = new StaffDao(context);
@@ -52,6 +58,61 @@ public class QueryHandler {
 
         sdao.close();
         tsdao.close();
+
+        return result;
+    }
+
+    /**
+     * Finds the car and driver of a task-staff affection
+     * @param context
+     * @param taskID
+     * @param userID
+     * @return
+     */
+    public ArrayList<Object> getCarDriver(Context context, int taskID, int userID)
+    {
+        TaskStaffDao tsdao = new TaskStaffDao(context);
+        StaffDao sdao = new StaffDao(context);
+        CarDao cdao = new CarDao(context);
+        tsdao.open();
+
+        int carID = tsdao.getCarOfTaskStaff(taskID, userID);
+        if (carID == 0)
+            return null;
+
+        int driverID = tsdao.getDriverOfCar(carID);
+
+        tsdao.close();
+
+        cdao.open();
+        sdao.open();
+        Staff driver = sdao.findStaffById(driverID);
+        Car car = cdao.findCar(carID);
+        cdao.close();
+        sdao.close();
+
+        ArrayList<Object> result = new ArrayList<>();
+        result.add(car);
+        result.add(driver);
+
+        return result;
+    }
+
+    public ArrayList<Staff> getPassengersCar(Context context, int carID)
+    {
+        TaskStaffDao tsdao = new TaskStaffDao(context);
+        StaffDao sdao = new StaffDao(context);
+
+        tsdao.open();
+        ArrayList<Integer> passengersID = tsdao.getPassengersOfCar(carID);
+        tsdao.close();
+
+        ArrayList<Staff> result = new ArrayList<>();
+        sdao.open();
+        for (int i:passengersID){
+            result.add(sdao.findStaffById(i));
+        }
+        sdao.close();
 
         return result;
     }

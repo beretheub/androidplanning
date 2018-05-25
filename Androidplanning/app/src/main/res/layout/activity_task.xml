@@ -67,7 +67,7 @@
                 <TextView
                     android:text="@string/descriptionLabel"
                     android:textStyle="bold"
-                    android:layout_weight="1"
+                    android:layout_weight="50"
                     android:layout_width="0dp"/>
                 <View android:layout_width="2dp"
                     android:background="#FF909090"
@@ -75,8 +75,13 @@
                 <TextView
                     android:text="@string/carLabel"
                     android:textStyle="bold"
-                    android:layout_weight="1"
+                    android:layout_weight="10"
                     android:width="0dp"/>
+                <TextView
+                    android:text="INSERT CAR NAME"
+                    android:id="@+id/carName"
+                    android:layout_weight="40"
+                    android:layout_width="0dp"/>
             </TableRow>
             <View
                 android:layout_height="1dip"
@@ -92,11 +97,12 @@
                 <View android:layout_width="2dp"
                     android:background="#FF909090"
                     android:layout_height="match_parent"/>
-                <TextView
+                <ListView
                     android:id="@+id/passengerList"
                     android:text="INSERT LIST OF PASSENGERS OR 0"
                     android:textStyle="bold"
                     android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"/>
             </TableRow>
             <View

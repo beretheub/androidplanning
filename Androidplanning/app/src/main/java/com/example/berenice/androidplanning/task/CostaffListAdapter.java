@@ -37,14 +37,14 @@ public class CostaffListAdapter extends BaseAdapter implements ListAdapter{
     }
 
     @Override
-    public Object getItem(int pos) {
+    public Staff getItem(int pos) {
         return list.get(pos);
     }
 
     @Override
     public long getItemId(int pos) {
-        //TODO check how to find out which button has been pressed
-        return 0;
+
+        return getItem(pos).getId();
     }
 
     @Override
@@ -56,7 +56,7 @@ public class CostaffListAdapter extends BaseAdapter implements ListAdapter{
         }
         //Handle TextView and display string from your list
         TextView listItemText = (TextView) view.findViewById(R.id.nameCostaff);
-        listItemText.setText(list.get(position).getName());
+        listItemText.setText(getItem(position).getName()+", "+getItem(position).getFirstname());
 
         //Handle buttons and add onClickListeners
         ImageButton callBtn = (ImageButton) view.findViewById(R.id.call_btn);
@@ -66,7 +66,7 @@ public class CostaffListAdapter extends BaseAdapter implements ListAdapter{
             @Override
             public void onClick(View v) {
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
-                callIntent.setData(Uri.parse("tel:"+list.get(position).getPhonenumber()));
+                callIntent.setData(Uri.parse("tel:"+getItem(position).getPhonenumber()));
                 try{context.startActivity(callIntent);}
                 catch(SecurityException e){
                     Toast.makeText(context, "No permission", Toast.LENGTH_SHORT).show();
@@ -77,7 +77,7 @@ public class CostaffListAdapter extends BaseAdapter implements ListAdapter{
             @Override
             public void onClick(View v) {
                 Intent smsIntent = new Intent(context, SendSmsActivity.class);
-                smsIntent.putExtra("recips",String.valueOf(list.get(position).getId()));
+                smsIntent.putExtra("recips",String.valueOf(getItem(position).getId()));
                 context.startActivity(smsIntent);
             }
         });

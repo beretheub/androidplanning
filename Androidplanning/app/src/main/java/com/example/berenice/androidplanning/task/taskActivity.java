@@ -20,6 +20,8 @@ import android.widget.TextView;
 import com.example.berenice.androidplanning.DateFormater;
 import com.example.berenice.androidplanning.MyMenu;
 import com.example.berenice.androidplanning.R;
+import com.example.berenice.androidplanning.database.Car;
+import com.example.berenice.androidplanning.database.CarDao;
 import com.example.berenice.androidplanning.database.QueryHandler;
 import com.example.berenice.androidplanning.database.Staff;
 import com.example.berenice.androidplanning.database.Task;
@@ -70,17 +72,37 @@ public class taskActivity extends AppCompatActivity {
         TextView descriptionText = findViewById(R.id.descriptionText);
         descriptionText.setText(currentTask.getDescription());
 
+        //COSTAFF ADAPTER
         //lookup the colleagues in the database
         QueryHandler qh = new QueryHandler();
         final ArrayList<Staff> costaff = qh.getCostaff(getBaseContext(), taskID);
 
-        //instantiate custom adapter
-        CostaffListAdapter adapter = new CostaffListAdapter(costaff, this);
+        //instantiate costaff adapter
+        CostaffListAdapter costaffAdapter = new CostaffListAdapter(costaff, this);
 
         //handle listview and assign adapter
-        ListView lView = (ListView)findViewById(R.id.listCostaff);
-        lView.setAdapter(adapter);
+        ListView costaffListView = (ListView)findViewById(R.id.listCostaff);
+        costaffListView.setAdapter(costaffAdapter);
 
+        //COCAR ADAPTER
+        //Database searches
+        final ArrayList<Object> car_driver= qh.getCarDriver(getBaseContext(), taskID, userID);
+        if (car_driver != null) {
+            Car currentCar = (Car) car_driver.get(0);
+            Staff driver = (Staff) car_driver.get(1);
+            final ArrayList<Staff> passengers = qh.getPassengersCar(getBaseContext(), currentCar.getId());
+
+            //instantiate adapter
+            CarListAdapter carAdapter = new CarListAdapter(passengers, this);
+
+            //handle listview and assign adapter
+            ListView passengersListView = (ListView) findViewById(R.id.passengerList);
+            passengersListView.setAdapter(carAdapter);
+
+            //Write Car name
+            TextView carName = (TextView) findViewById(R.id.carName);
+            carName.setText(currentCar.getName());
+        }
         //Listener for messages to all
         Button sendMessageToCostaff = findViewById(R.id.sendMessageToCostaff);
         sendMessageToCostaff.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +121,7 @@ public class taskActivity extends AppCompatActivity {
             }
         });
 
-        //Ask for Caal permission
+        //Ask for Call permission
         if (!(ContextCompat.checkSelfPermission(this,
                 Manifest.permission.CALL_PHONE)
                 == PackageManager.PERMISSION_GRANTED)) {
