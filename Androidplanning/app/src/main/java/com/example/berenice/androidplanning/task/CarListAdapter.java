@@ -2,6 +2,7 @@ package com.example.berenice.androidplanning.task;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,12 +23,14 @@ import java.util.ArrayList;
  *
  */
 public class CarListAdapter extends BaseAdapter implements ListAdapter {
-    private ArrayList<Staff> list = new ArrayList<>();
+    private ArrayList<Staff> list;
     private Context context;
+    private Staff driver;
 
-    public CarListAdapter(ArrayList<Staff> list, Context context) {
+    public CarListAdapter(ArrayList<Staff> list, Staff driver, Context context) {
         this.list = list;
         this.context = context;
+        this.driver = driver;
     }
 
     @Override
@@ -55,6 +58,9 @@ public class CarListAdapter extends BaseAdapter implements ListAdapter {
         //Handle TextView and display string from your list
         TextView listItemText = (TextView) view.findViewById(R.id.nameCoCar);
         listItemText.setText(list.get(position).getFirstname() + " " +list.get(position).getName());
+        if(getItem(position).getId() == driver.getId()){
+            listItemText.setTextColor(Color.RED);
+        }
 
         return view;
     }

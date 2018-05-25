@@ -78,7 +78,6 @@
                     android:layout_weight="10"
                     android:width="0dp"/>
                 <TextView
-                    android:text="INSERT CAR NAME"
                     android:id="@+id/carName"
                     android:layout_weight="40"
                     android:layout_width="0dp"/>

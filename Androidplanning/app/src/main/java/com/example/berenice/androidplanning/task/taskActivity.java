@@ -93,7 +93,7 @@ public class taskActivity extends AppCompatActivity {
             final ArrayList<Staff> passengers = qh.getPassengersCar(getBaseContext(), currentCar.getId());
 
             //instantiate adapter
-            CarListAdapter carAdapter = new CarListAdapter(passengers, this);
+            CarListAdapter carAdapter = new CarListAdapter(passengers, driver, this);
 
             //handle listview and assign adapter
             ListView passengersListView = (ListView) findViewById(R.id.passengerList);
