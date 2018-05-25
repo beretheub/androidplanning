@@ -124,4 +124,22 @@ public class StaffDao extends DaoBase {
 
         return names.toArray(new String[names.size()]);
     }
+
+    public ArrayList<Staff> findAllStaff() {
+        String query = "select "
+                + Constants.STAFF_NAME  + " , "
+                + Constants.STAFF_FIRSTNAME
+                + " from " + Constants.TABLE_STAFF;
+        Cursor c = getDb().rawQuery(query ,null);
+
+        ArrayList<Staff> res = new ArrayList<>();
+        String currentName;
+
+        while (c.moveToNext()){
+            currentName = c.getString(0);
+            res.add(findStaffByName(currentName));
+        }
+
+        return res;
+    }
 }

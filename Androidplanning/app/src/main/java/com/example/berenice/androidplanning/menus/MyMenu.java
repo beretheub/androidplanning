@@ -1,9 +1,10 @@
-package com.example.berenice.androidplanning;
+package com.example.berenice.androidplanning.menus;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
+import com.example.berenice.androidplanning.R;
 import com.example.berenice.androidplanning.buro.BuroActivity;
 import com.example.berenice.androidplanning.database.TestDbActivity;
 import com.example.berenice.androidplanning.records.ScheduleActivity;

@@ -1,6 +1,5 @@
 package com.example.berenice.androidplanning;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -21,9 +20,8 @@ import com.example.berenice.androidplanning.database.DatabaseHandler;
 import com.example.berenice.androidplanning.database.ImportHandler;
 import com.example.berenice.androidplanning.database.Staff;
 import com.example.berenice.androidplanning.database.StaffDao;
+import com.example.berenice.androidplanning.menus.MyMenu;
 import com.example.berenice.androidplanning.records.ScheduleActivity;
-
-import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
