@@ -6,24 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.view.Menu;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.berenice.androidplanning.database.Staff;
 import com.example.berenice.androidplanning.database.StaffDao;
-import com.example.berenice.androidplanning.database.TestDbActivity;
-import com.example.berenice.androidplanning.records.RecordActivity;
-import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
-import com.example.berenice.androidplanning.task.taskActivity;
+import com.example.berenice.androidplanning.records.ScheduleActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -100,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 //Open Record activity
-                Intent i = new Intent(getBaseContext(), RecordActivity.class);
+                Intent i = new Intent(getBaseContext(), ScheduleActivity.class);
                 startActivity(i);
             }
         });

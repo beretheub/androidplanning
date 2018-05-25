@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.example.berenice.androidplanning.database.TestDbActivity;
-import com.example.berenice.androidplanning.records.RecordActivity;
+import com.example.berenice.androidplanning.records.ScheduleActivity;
 import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
 import com.example.berenice.androidplanning.task.taskActivity;
 
@@ -32,7 +32,7 @@ public class MyMenu {
                 return true;
 
             case R.id.goto_schedule:
-                i = new Intent(context, RecordActivity.class);
+                i = new Intent(context, ScheduleActivity.class);
                 motherAct.startActivity(i);
                 return true;
 

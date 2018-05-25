@@ -1,14 +1,20 @@
 package com.example.berenice.androidplanning.records;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.berenice.androidplanning.DateFormater;
 import com.example.berenice.androidplanning.database.Task;
 import com.example.berenice.androidplanning.R;
+import com.example.berenice.androidplanning.task.taskActivity;
+
 
 import java.util.ArrayList;
 /**
@@ -26,7 +32,7 @@ public class TasksListAdapter extends BaseAdapter implements ListAdapter {
 
 
     @Override
-    public Object getItem(int pos) {
+    public Task getItem(int pos) {
         return list.get(pos);
     }
 
@@ -38,7 +44,7 @@ public class TasksListAdapter extends BaseAdapter implements ListAdapter {
     @Override
     public long getItemId(int pos) {
         //TODO check how to find out which button has been pressed
-        return 0;
+        return getItem(pos).getId();
     }
 
     public View getView(final int position, View convertView, ViewGroup parent) {
@@ -53,16 +59,17 @@ public class TasksListAdapter extends BaseAdapter implements ListAdapter {
         listItemText.setText(list.get(position).getName());
 
         TextView departure = (TextView)view.findViewById(R.id.departureTime_schedule);
-        departure.setText(list.get(position).getDeparture());
+        departure.setText(DateFormater.formatDateToTime(list.get(position).getDeparture()));
 
         TextView begin = (TextView)view.findViewById(R.id.beginTime_schedule);
-        begin.setText(list.get(position).getBegin());
+        begin.setText(DateFormater.formatDateToTime(list.get(position).getBegin()));
 
         TextView end = (TextView)view.findViewById(R.id.endTime_schedule);
-        end.setText(list.get(position).getEnd());
+        end.setText(DateFormater.formatDateToTime(list.get(position).getEnd()));
 
         TextView description = (TextView)view.findViewById(R.id.descriptionTask_schedule);
         description.setText(list.get(position).getDescription());
+
 
         return view;
     }

@@ -1,7 +1,8 @@
 package com.example.berenice.androidplanning.records;
 
-import android.app.Activity;
+
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,27 +13,29 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListAdapter;
+
 import android.widget.ListView;
 import android.widget.PopupWindow;
+
 import android.widget.TextView;
 
 import com.example.berenice.androidplanning.R;
 import com.example.berenice.androidplanning.database.QueryHandler;
 import com.example.berenice.androidplanning.database.Staff;
 import com.example.berenice.androidplanning.database.StaffDao;
-import com.example.berenice.androidplanning.records.TasksListAdapter;
+
 import com.example.berenice.androidplanning.database.Task;
+import com.example.berenice.androidplanning.task.taskActivity;
+
 import java.util.ArrayList;
 
 /**
  * Activity to display the schedule of one member, during one day, with the different tasks and times
  */
 
-public class RecordActivity extends AppCompatActivity {
+public class ScheduleActivity extends AppCompatActivity {
     Button Close;
 
     @Override
@@ -63,7 +66,7 @@ public class RecordActivity extends AppCompatActivity {
 
         //generate list
         QueryHandler qh = new QueryHandler();
-        ArrayList<Task> list = qh.getTasksFromStaff(this, userID);
+        final ArrayList<Task> list = qh.getTasksFromStaff(this, userID);
 
         //instantiate custom adapter
         TasksListAdapter adapter = new TasksListAdapter(list, this);
@@ -81,10 +84,17 @@ public class RecordActivity extends AppCompatActivity {
 
                 showPopup();
             }
+            });
 
+        lView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ScheduleActivity.this, taskActivity.class);
+                intent.putExtra("currentTask", String.valueOf(list.get(position).getId()));
+                startActivity(intent);
             }
+        });
 
-        );
     }
 
     @Override
@@ -94,9 +104,6 @@ public class RecordActivity extends AppCompatActivity {
         menu.getItem(1).setVisible(false);
         return true;
     }
-
-    ;
-
 
     private PopupWindow pw;
 
