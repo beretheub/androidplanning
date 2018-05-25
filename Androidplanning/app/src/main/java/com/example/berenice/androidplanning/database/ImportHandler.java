@@ -113,8 +113,8 @@ public class ImportHandler {
                 String[] values = line.split(";");
 
                 Car newEntry = new Car(1,
-                        values[1],
-                        values[2]);
+                        values[2],
+                        values[1]);
 
                 dao.addCar(newEntry);
             }
