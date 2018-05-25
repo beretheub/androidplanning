@@ -18,4 +18,5 @@
 
     <string name="title_activity_fiche">fiche</string>
     <string name="title_activity_test_db">TestDb</string>
+    <string name="day_figures">Les chiffres de la journée</string>
 </resources>
