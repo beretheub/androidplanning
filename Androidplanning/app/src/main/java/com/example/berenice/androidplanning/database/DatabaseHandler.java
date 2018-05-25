@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.io.File;
+
 /**
  * Class to generate the needed database
  */
@@ -48,6 +50,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL(DROP_TABLE_STAFF);
         db.execSQL(DROP_TABLE_TASKS_STAFF);
         db.execSQL(DROP_TABLE_TASKS);
+    }
+
+    public static boolean doesDatabaseExist(Context context, String dbName) {
+        File dbFile = context.getDatabasePath(dbName);
+        return dbFile.exists();
     }
 
 

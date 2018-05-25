@@ -3,6 +3,7 @@ package com.example.berenice.androidplanning.database;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.provider.SyncStateContract;
 
 import java.util.ArrayList;
 
@@ -80,10 +81,20 @@ public class TaskStaffDao extends DaoBase {
      */
     public ArrayList<Integer> getTasksOfStaff(long idStaff) {
         String query;
-        query = String.format("select %s from %s where %s = ?",
+        query = String.format("select %s.%s from %s inner join %s on %s.%s = %s.%s " +
+                        "where %s.%s = ? order by %s.%s",
+                Constants.TABLE_TASKS_STAFF,
                 Constants.TASKS_STAFF_TASK,
                 Constants.TABLE_TASKS_STAFF,
-                Constants.TASKS_STAFF_STAFF);
+                Constants.TABLE_TASKS,
+                Constants.TABLE_TASKS_STAFF,
+                Constants.TASKS_STAFF_TASK,
+                Constants.TABLE_TASKS,
+                Constants.TASKS_ID,
+                Constants.TABLE_TASKS_STAFF,
+                Constants.TASKS_STAFF_STAFF,
+                Constants.TABLE_TASKS,
+                Constants.TASKS_BEG);
 
         Cursor c = getDb().rawQuery(query, new String[]{String.valueOf(idStaff)});
         ArrayList<Integer> result = new ArrayList<Integer>();
@@ -102,10 +113,11 @@ public class TaskStaffDao extends DaoBase {
      */
     public ArrayList<Integer> getStaffOfTask(long idTask) {
         String query;
-        query = String.format("select %s from %s where %s = ?",
+        query = String.format("select %s from %s where %s = ? order by %s",
                 Constants.TASKS_STAFF_STAFF,
                 Constants.TABLE_TASKS_STAFF,
-                Constants.TASKS_STAFF_TASK);
+                Constants.TASKS_STAFF_TASK,
+                Constants.TASKS_STAFF_STAFF);
 
         Cursor c = getDb().rawQuery(query, new String[]{String.valueOf(idTask)});
         ArrayList<Integer> result = new ArrayList<Integer>();
