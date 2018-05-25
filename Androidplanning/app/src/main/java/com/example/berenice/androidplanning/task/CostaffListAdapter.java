@@ -6,9 +6,8 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,8 +59,8 @@ public class CostaffListAdapter extends BaseAdapter implements ListAdapter{
         listItemText.setText(list.get(position).getName());
 
         //Handle buttons and add onClickListeners
-        Button callBtn = (Button) view.findViewById(R.id.call_btn);
-        Button smsBtn = (Button) view.findViewById(R.id.sms_btn);
+        ImageButton callBtn = (ImageButton) view.findViewById(R.id.call_btn);
+        ImageButton smsBtn = (ImageButton) view.findViewById(R.id.sms_btn);
 
         callBtn.setOnClickListener(new View.OnClickListener() {
             @Override

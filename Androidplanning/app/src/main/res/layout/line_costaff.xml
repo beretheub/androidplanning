@@ -15,22 +15,28 @@
         android:text="NAME COSTAFF"
         android:textStyle="bold" />
 
-    <Button
+    <ImageButton
         android:id="@+id/sms_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="5dp"
-        android:text="SMS" />
+        android:src="@drawable/ic_message"
+        android:background="#FFFFFF"
+        />
 
-    <Button
+    <ImageButton
         android:id="@+id/call_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
         android:layout_toLeftOf="@id/sms_btn"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
-        android:text="Call" />
+        android:src="@drawable/ic_local_phone"
+        android:background="#FFFFFF"/>
 
 </RelativeLayout>
