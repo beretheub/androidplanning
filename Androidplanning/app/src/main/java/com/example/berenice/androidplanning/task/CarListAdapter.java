@@ -58,8 +58,12 @@ public class CarListAdapter extends BaseAdapter implements ListAdapter {
         //Handle TextView and display string from your list
         TextView listItemText = (TextView) view.findViewById(R.id.nameCoCar);
         listItemText.setText(list.get(position).getFirstname() + " " +list.get(position).getName());
-        if(getItem(position).getId() == driver.getId()){
+        String name = list.get(position).getName();
+        if(getItemId(position) == driver.getId()){
             listItemText.setTextColor(Color.RED);
+        }
+        else{
+            listItemText.setTextColor(Color.BLACK);
         }
 
         return view;
