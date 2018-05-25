@@ -20,4 +20,6 @@
     <string name="title_activity_test_db">TestDb</string>
     <string name="day_figures">Les chiffres de la journée</string>
     <string name="hintLogin">Name Firstname</string>
+    <string name="selectAll">Check all</string>
+    <string name="deselectAll">Uncheck all</string>
 </resources>

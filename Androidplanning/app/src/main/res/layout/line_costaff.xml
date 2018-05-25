@@ -23,7 +23,8 @@
         android:scaleType="centerInside"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/ic_message"
+        android:src="@android:drawable/ic_menu_send"
+        android:tint="#7b89a0"
         android:background="#FFFFFF"
         />
 
@@ -36,7 +37,8 @@
         android:layout_toLeftOf="@id/sms_btn"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
-        android:src="@drawable/ic_local_phone"
+        android:src="@android:drawable/ic_menu_call"
+        android:tint="#047009"
         android:background="#FFFFFF"/>
 
 </RelativeLayout>
