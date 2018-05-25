@@ -1,5 +1,6 @@
 package com.example.berenice.androidplanning;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -15,9 +16,14 @@ import android.view.Menu;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.berenice.androidplanning.database.Constants;
+import com.example.berenice.androidplanning.database.DatabaseHandler;
+import com.example.berenice.androidplanning.database.ImportHandler;
 import com.example.berenice.androidplanning.database.Staff;
 import com.example.berenice.androidplanning.database.StaffDao;
 import com.example.berenice.androidplanning.records.ScheduleActivity;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,12 +32,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //check if there is a database
+        if(!DatabaseHandler.doesDatabaseExist(this, Constants.DATABASE_NAME)){
+            ImportHandler ih = new ImportHandler(this);
+            ih.importAll("4");
+        }
+
         //find names of all the staff
         final StaffDao dao = new StaffDao(this);
         dao.open();
         final String[] staffNames = dao.findAllStaffNames();
         final ArrayAdapter<String> namesAdapater = new ArrayAdapter<String>
-                (this, android.R.layout.select_dialog_item, staffNames);
+                (this, R.layout.dropdown, staffNames);
 
         //set names in autocomplete textview
         final AutoCompleteTextView nameField = (AutoCompleteTextView) findViewById(R.id.nameField);
@@ -108,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
-        return new MyMenu().onclickAction(item, this, getBaseContext());
+        return new MyMenu().onclickAction(item, getBaseContext());
     }
 
 }
