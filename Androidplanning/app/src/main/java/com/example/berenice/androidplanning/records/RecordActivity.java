@@ -72,28 +72,19 @@ public class RecordActivity extends AppCompatActivity {
         ListView lView = (ListView) findViewById(R.id.listTasks);
         lView.setAdapter(adapter);
 
-        Button open =(Button) findViewById(R.id.open_popup);
-        open.setOnClickListener(new View.OnClickListener() {
-                                    @Override
 
-                                    public void onClick(View v) {
-
-                                        showPopup();
-                                    }
-                                }
-                );
-
-/*        TextView create_button = (TextView) findViewById(R.id.day);
-        create_button.setOnClickListener(new View.OnClickListener() {
+       TextView day_details = (TextView) findViewById(R.id.day);
+        day_details.setOnClickListener(new View.OnClickListener() {
             @Override
 
             public void onClick(View v) {
 
                 showPopup();
+            }
 
             }
 
-        });*/
+        );
     }
 
     @Override
