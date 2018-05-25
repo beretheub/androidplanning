@@ -51,7 +51,7 @@ public class ImportHandler {
                 if (values[10].equalsIgnoreCase("0")) {talkiec = false;}
                 else {talkiec = true;}
 
-                Staff newEntry = new Staff(1,
+                Staff newEntry = new Staff(Integer.parseInt(values[0]),
                         values[1],
                         values[2],
                         values[6],
@@ -82,7 +82,7 @@ public class ImportHandler {
             while ((line = reader.readLine()) != null) {
                 String[] values = line.split(";");
 
-                Task newEntry = new Task(1,
+                Task newEntry = new Task(Integer.parseInt(values[0]),
                         values[1],
                         values[2],
                         values[3],
@@ -112,7 +112,7 @@ public class ImportHandler {
             while ((line = reader.readLine()) != null) {
                 String[] values = line.split(";");
 
-                Car newEntry = new Car(1,
+                Car newEntry = new Car(Integer.parseInt(values[0]),
                         values[2],
                         values[1]);
 
@@ -148,7 +148,7 @@ public class ImportHandler {
                 else {respo = true;}
                 if (values[4].equalsIgnoreCase("0")) {sheet = false;}
                 else {sheet = true;}
-                if (values[5].equalsIgnoreCase("0")) {onTheRace = false;}
+                if (values[7].equalsIgnoreCase("0")) {onTheRace = false;}
                 else {onTheRace = true;}
 
                 if (values[1].equalsIgnoreCase("")) {continue;}
@@ -160,7 +160,7 @@ public class ImportHandler {
                 if (values[6].equalsIgnoreCase("")) {driverID = 0;}
                 else {driverID = Integer.parseInt(values[6]);}
 
-                TaskStaff newEntry = new TaskStaff(1,
+                TaskStaff newEntry = new TaskStaff(Integer.parseInt(values[0]),
                         taskID,
                         staffID,
                         respo,

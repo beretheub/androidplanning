@@ -4,6 +4,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 /**
  * Class to dialogue with the Staff table
  */
@@ -21,6 +24,7 @@ public class StaffDao extends DaoBase {
      */
     public void addStaff(Staff s) {
         ContentValues value = new ContentValues();
+        value.put(Constants.STAFF_ID, s.getId());
         value.put(Constants.STAFF_NAME, s.getName());
         value.put(Constants.STAFF_FIRSTNAME, s.getFirstname());
         value.put(Constants.STAFF_PHONE, s.getPhonenumber());
@@ -100,5 +104,24 @@ public class StaffDao extends DaoBase {
                 c.getString(4),
                 c.getString(5),
                 talkiel, talkiec);
+    }
+
+    public String[] findAllStaffNames() {
+        String query = "select "
+                + Constants.STAFF_NAME  + " , "
+                + Constants.STAFF_FIRSTNAME
+                + " from " + Constants.TABLE_STAFF;
+        Cursor c = getDb().rawQuery(query ,null);
+
+        ArrayList<String> names = new ArrayList<>();
+        String currentName;
+
+        while (c.moveToNext()){
+            currentName =
+                    c.getString(1) + " " + c.getString(0);
+            names.add(currentName);
+        }
+
+        return names.toArray(new String[names.size()]);
     }
 }

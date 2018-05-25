@@ -43,6 +43,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public void dropDatabase(SQLiteDatabase db) {
+        db.execSQL(DROP_TABLE_CARS);
+        db.execSQL(DROP_TABLE_STAFF);
+        db.execSQL(DROP_TABLE_TASKS_STAFF);
+        db.execSQL(DROP_TABLE_TASKS);
+    }
+
 
 }
 

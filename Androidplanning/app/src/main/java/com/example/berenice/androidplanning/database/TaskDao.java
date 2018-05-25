@@ -21,6 +21,7 @@ public class TaskDao extends DaoBase {
      */
     public void addTask(Task t) {
         ContentValues value = new ContentValues();
+        value.put(Constants.TASKS_ID, t.getId());
         value.put(Constants.TASKS_NAME, t.getName());
         value.put(Constants.TASKS_DEP, t.getDeparture());
         value.put(Constants.TASKS_BEG, t.getBegin());

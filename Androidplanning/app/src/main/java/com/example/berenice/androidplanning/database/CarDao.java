@@ -22,6 +22,7 @@ public class CarDao extends DaoBase{
      */
     public void addCar(Car c) {
         ContentValues value = new ContentValues();
+        value.put(Constants.CARS_ID, c.getId());
         value.put(Constants.CARS_NAME, c.getName());
         value.put(Constants.CARS_NUMBER, c.getId_String());
         mDb.insert(Constants.TABLE_CARS, null, value);

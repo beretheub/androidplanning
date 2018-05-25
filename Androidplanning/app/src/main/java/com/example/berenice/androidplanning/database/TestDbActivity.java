@@ -19,12 +19,20 @@ public class TestDbActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         final Context context = this;
 
-        Button testStaff = (Button) findViewById(R.id.testStaffImport);
-        testStaff.setOnClickListener(new View.OnClickListener() {
+        Button dbImport = (Button) findViewById(R.id.dbImport);
+        dbImport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ImportHandler ih = new ImportHandler(context);
                 ih.importAll("4");
+            }
+        });
+
+        Button testStaff = (Button) findViewById(R.id.dbDrop);
+        testStaff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteDatabase(Constants.DATABASE_NAME);
             }
         });
     }

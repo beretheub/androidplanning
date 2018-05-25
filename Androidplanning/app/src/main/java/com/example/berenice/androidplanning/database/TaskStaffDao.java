@@ -23,6 +23,7 @@ public class TaskStaffDao extends DaoBase {
      */
     public void addTaskStaff(TaskStaff t) {
         ContentValues value = new ContentValues();
+        value.put(Constants.TASKS_STAFF_ID, t.getId());
         value.put(Constants.TASKS_STAFF_TASK, t.getTask());
         value.put(Constants.TASKS_STAFF_STAFF, t.getStaff());
         value.put(Constants.TASKS_STAFF_RESPO, t.getRespo());
@@ -152,7 +153,7 @@ public class TaskStaffDao extends DaoBase {
         query = String.format("select %s from %s where %s = ?",
                 Constants.TASKS_STAFF_DRIVER,
                 Constants.TABLE_TASKS_STAFF,
-                Constants.TASKS_STAFF_TASK);
+                Constants.TASKS_STAFF_CAR);
 
         Cursor c = getDb().rawQuery(
                 query, new String[]{String.valueOf(driverID)});
