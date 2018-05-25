@@ -7,17 +7,20 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TableRow>
             <TextView
+                android:id="@+id/departureTime_schedule"
                 android:text="@string/departureLabel"
+                android:textStyle="bold"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:lines="2"
-                />
+                android:lines="2" />
             <View android:layout_width="2dp"
                 android:background="#FF909090"
                 android:layout_height="match_parent"/>
             <TextView
+                android:id="@+id/beginTime_schedule"
                 android:text="@string/beginLabel"
                 android:textStyle="bold"
                 android:layout_width="0dp"
@@ -26,6 +29,7 @@
                 android:background="#FF909090"
                 android:layout_height="match_parent"/>
             <TextView
+                android:id="@+id/endTime_schedule"
                 android:text="@string/endLabel"
                 android:textStyle="bold"
                 android:layout_width="0dp"
@@ -33,9 +37,11 @@
         </TableRow>
         <View
             android:layout_height="1dip"
-            android:background="#FF909090" />
+            android:background="#FF909090"
+            android:layout_width="match_parent" />
         <TableRow>
             <TextView
+                android:id="@+id/nameTask_schedule"
                 android:text="@string/title_activity_task"
                 android:textStyle="bold"
                 android:layout_weight="1"
@@ -45,15 +51,14 @@
                 android:background="#FF909090"
                 android:layout_height="match_parent"/>
             <TextView
+                android:id="@+id/descriptionTask_schedule"
                 android:text="INSERT TASK DESCRIPTION"
                 android:textStyle="bold"
                 android:layout_weight="1"
                 android:width="0dp"/>
         </TableRow>
-
-        <View
-            android:layout_height="2dip"
-            android:background="#FF909090" />
+        <View android:layout_width="2dp"
+            android:background="#FF909090"
+            android:layout_height="match_parent"/>
     </TableLayout>
-
 </RelativeLayout>

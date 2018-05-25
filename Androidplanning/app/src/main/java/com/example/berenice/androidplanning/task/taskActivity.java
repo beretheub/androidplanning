@@ -60,7 +60,7 @@ public class taskActivity extends AppCompatActivity {
         setSupportActionBar(tb);
         getSupportActionBar().setTitle(currentTask.getName());
 
-        TextView departureTime = findViewById(R.id.departureTime);
+        TextView departureTime = findViewById(R.id.departureTime_task);
         departureTime.setText(DateFormater.formatDateToTime(currentTask.getDeparture()));
         TextView startTime = findViewById(R.id.beginTime);
         startTime.setText(DateFormater.formatDateToTime(currentTask.getBegin()));

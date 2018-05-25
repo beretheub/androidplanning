@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 import com.example.berenice.androidplanning.database.Task;
@@ -48,6 +47,22 @@ public class TasksListAdapter extends BaseAdapter implements ListAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.line_task, null);
         }
+
+        //Handle TextView and display string from your list
+        TextView listItemText = (TextView) view.findViewById(R.id.nameTask_schedule);
+        listItemText.setText(list.get(position).getName());
+
+        TextView departure = (TextView)view.findViewById(R.id.departureTime_schedule);
+        departure.setText(list.get(position).getDeparture());
+
+        TextView begin = (TextView)view.findViewById(R.id.beginTime_schedule);
+        begin.setText(list.get(position).getBegin());
+
+        TextView end = (TextView)view.findViewById(R.id.endTime_schedule);
+        end.setText(list.get(position).getEnd());
+
+        TextView description = (TextView)view.findViewById(R.id.descriptionTask_schedule);
+        description.setText(list.get(position).getDescription());
 
         return view;
     }
