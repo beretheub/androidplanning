@@ -4,9 +4,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.view.Menu;
 import android.widget.EditText;
@@ -27,30 +32,72 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //find names of all the staff
+        final StaffDao dao = new StaffDao(this);
+        dao.open();
+        final String[] staffNames = dao.findAllStaffNames();
+        final ArrayAdapter<String> namesAdapater = new ArrayAdapter<String>
+                (this, android.R.layout.select_dialog_item, staffNames);
+
+        //set names in autocomplete textview
+        final AutoCompleteTextView nameField = (AutoCompleteTextView) findViewById(R.id.nameField);
+        nameField.setThreshold(1);
+        nameField.setAdapter(namesAdapater);
+
+        //Safe name only when user picks a value
+        nameField.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String input = namesAdapater.getItem(position).toString();
+
+                Staff currentPerson = dao.findStaffByName(input.split(" ")[1]);
+
+                SharedPreferences.Editor editor =
+                        getSharedPreferences("PlanningPreferences", MODE_PRIVATE).edit();
+                editor.putInt("userID", currentPerson.getId());
+                editor.apply();
+            }
+        });
+
+        //when the user types, check if the current input is a legit input,
+        //in that case safe it directly
+        nameField.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                SharedPreferences.Editor editor;
+                for (String name:staffNames)
+                {
+                    if (s.toString().equalsIgnoreCase(name)){
+                         editor = getSharedPreferences
+                                 ("PlanningPreferences", MODE_PRIVATE).edit();
+                         editor.putInt("userID",
+                                 dao.findStaffByName(name.split(" ")[1]).getId());
+                         editor.apply();
+                    }
+                }
+
+            }
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
         final ImageButton nameButton = (ImageButton) findViewById(R.id.nameButton);
         nameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Get name from EditText
-                EditText edit = (EditText)findViewById(R.id.nom);
-                String name = edit.getText().toString();
 
-                //Find the data of the staff in the database
-                StaffDao dao = new StaffDao(getBaseContext());
-                dao.open();
-                Staff staff = dao.findStaffByName(name);
-                if (staff == null){
-                    Toast.makeText(MainActivity.this,"Staff not fund",
-                            Toast.LENGTH_SHORT).show();
+                //Check if user has already entered something legit
+                SharedPreferences prefs =
+                        getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
+                if (prefs.getInt("userID",0)==0) {
+                    Toast.makeText(MainActivity.this,
+                            "\"Please identify yourself!\"", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                int userID = staff.getId();
-
-                //Save id in the preferences
-                SharedPreferences.Editor editor = getSharedPreferences("PlanningPreferences", MODE_PRIVATE).edit();
-                editor.putInt("userID", userID);
-                editor.putString("Day", "4");
-                editor.apply();
 
                 //Open Record activity
                 Intent i = new Intent(getBaseContext(), RecordActivity.class);

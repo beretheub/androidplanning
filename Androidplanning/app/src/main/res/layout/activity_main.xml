@@ -18,29 +18,28 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:orientation="horizontal">
 
-
-        <EditText
-            android:id="@+id/nom"
-            android:layout_width="191dp"
+        <AutoCompleteTextView
+            android:id="@+id/nameField"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="monospace"
-            android:hint="Nom Prénom"
+            android:layout_weight="80"
+            android:hint="@string/hintLogin"
             android:inputType="textPersonName"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
-            android:textSize="12sp" />
+            android:textSize="12sp"/>
 
         <ImageButton
             android:id="@+id/nameButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="20"
             android:src="@drawable/search_icon" />
 
     </LinearLayout>
