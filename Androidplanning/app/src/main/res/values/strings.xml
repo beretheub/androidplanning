@@ -25,4 +25,7 @@
     <string name="checkBoxRaceLabel">only race</string>
     <string name="okLabel">OK</string>
     <string name="chooseDayLabel">Choose current day</string>
+    <string name="password_text">Password</string>
+    <string name="username_text">Username</string>
+    <string name="signin_text">Sign in</string>
 </resources>

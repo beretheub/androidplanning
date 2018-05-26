@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             ih.importAll("4");
         }
 
+
         //find names of all the staff
         final StaffDao dao = new StaffDao(this);
         dao.open();
@@ -53,6 +54,15 @@ public class MainActivity extends AppCompatActivity {
         final AutoCompleteTextView nameField = (AutoCompleteTextView) findViewById(R.id.nameField);
         nameField.setThreshold(1);
         nameField.setAdapter(namesAdapater);
+
+        //find currentStaff if there is one
+        SharedPreferences prefs =
+                getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
+        int currentID = prefs.getInt("userID",0);
+        if (currentID != 0){
+            Staff currentStaff = dao.findStaffById(currentID);
+            nameField.setHint(currentStaff.getFirstname() + " " + currentStaff.getName());
+        }
 
         //Safe name only when user picks a value
         nameField.setOnItemClickListener(new AdapterView.OnItemClickListener() {
