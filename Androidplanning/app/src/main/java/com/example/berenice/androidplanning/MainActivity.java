@@ -21,7 +21,7 @@ import com.example.berenice.androidplanning.database.ImportHandler;
 import com.example.berenice.androidplanning.database.Staff;
 import com.example.berenice.androidplanning.database.StaffDao;
 import com.example.berenice.androidplanning.menus.MyMenu;
-import com.example.berenice.androidplanning.records.ScheduleActivity;
+import com.example.berenice.androidplanning.schedule.ScheduleActivity;
 
 public class MainActivity extends AppCompatActivity {
 

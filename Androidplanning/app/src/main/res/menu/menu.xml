@@ -31,4 +31,10 @@
         android:orderInCategory="0"
         android:title="Test Database">
     </item>
+    <item
+        android:id="@+id/choose_day"
+        android:icon="@drawable/logo_raid_blanc"
+        android:orderInCategory="0"
+        android:title="Journées">
+    </item>
 </menu>

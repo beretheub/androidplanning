@@ -1,4 +1,4 @@
-package com.example.berenice.androidplanning.records;
+package com.example.berenice.androidplanning.schedule;
 
 
 import android.content.Context;
@@ -9,13 +9,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 
@@ -76,7 +75,7 @@ public class ScheduleActivity extends AppCompatActivity {
         lView.setAdapter(adapter);
 
 
-       TextView day_details = (TextView) findViewById(R.id.day);
+       ImageButton day_details = (ImageButton) findViewById(R.id.day_details);
         day_details.setOnClickListener(new View.OnClickListener() {
             @Override
 
@@ -105,7 +104,7 @@ public class ScheduleActivity extends AppCompatActivity {
             Context mContext = this.getBaseContext();
             LayoutInflater inflater = (LayoutInflater)
                     mContext.getSystemService(LAYOUT_INFLATER_SERVICE);
-            View layout = inflater.inflate(R.layout.popup,
+            View layout = inflater.inflate(R.layout.popup_day,
                     (ViewGroup) findViewById(R.id.popup_day));
             pw = new PopupWindow(layout, 900, 1270, true);
             pw.showAtLocation(layout, Gravity.CENTER, 0, 0);
@@ -116,11 +115,11 @@ public class ScheduleActivity extends AppCompatActivity {
         }
     }
 
-        private View.OnClickListener cancel_button = new View.OnClickListener() {
-            public void onClick(View v) {
-                pw.dismiss();
-            }
-        };
-    }
+    private View.OnClickListener cancel_button = new View.OnClickListener() {
+        public void onClick(View v) {
+            pw.dismiss();
+        }
+    };
+}
 
 
