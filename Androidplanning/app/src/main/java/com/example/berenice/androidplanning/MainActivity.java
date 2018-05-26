@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                         //Save current day in preferences
                         SharedPreferences.Editor editor = getSharedPreferences
                                 ("PlanningPreferences", MODE_PRIVATE).edit();
-                        editor.putString("current_day", newDay);
+                        editor.putString("Day", newDay);
                         editor.apply();
 
                         //Load the right database

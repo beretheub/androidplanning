@@ -40,7 +40,7 @@ public class MyMenu extends AppCompatActivity {
         Intent i;
 
         switch (item.getItemId()){
-            
+
             case R.id.goto_sendSms:
                 i = new Intent(context, SendSmsActivity.class);
                 i.putExtra("recips","5,6,28");

@@ -44,8 +44,8 @@ public class ScheduleActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        int userID = 1;
-        String currentDay = "";
+        int userID;
+        String currentDay;
 
         //Access shared preferences
         SharedPreferences prefs = getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
