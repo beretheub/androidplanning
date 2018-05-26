@@ -28,6 +28,7 @@ import java.util.List;
 
 /**
  * Activity to write and send a SMS to predefined persons
+ * Takes the ids of recipients in the intent
  */
 public class SendSmsActivity extends AppCompatActivity  {
 
