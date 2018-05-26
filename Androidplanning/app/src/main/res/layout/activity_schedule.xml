@@ -38,14 +38,14 @@
                 android:layout_height="48dp"
                 android:lineSpacingExtra="8sp"
                 android:padding="3dp"
-                android:text="INSERT DAY NUMBER HERE"
+                android:text="DAY"
                 android:textColor="#208040"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:typeface="normal" />
 
             <Space
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
@@ -53,7 +53,7 @@
                 android:id="@+id/day_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="right"
+                android:gravity="end"
                 android:color="#045FB4"
                 android:src="@drawable/details_icon" />
 
@@ -62,14 +62,14 @@
             android:id="@+id/nameStaff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="INSERT NAME Staffeur HERE"
+            android:text="STAFF NAME"
             android:padding="3dp"/>
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <View
-                android:layout_height="3dip"
+                android:layout_height="5dip"
                 android:background="#FF909090" />
 
         </TableLayout>

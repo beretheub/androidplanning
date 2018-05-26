@@ -18,7 +18,7 @@
                 android:id="@+id/sendMessageSelected"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Send message"/>
+                android:text="@string/send_message"/>
 
             <SearchView
                 android:id="@+id/searchView"

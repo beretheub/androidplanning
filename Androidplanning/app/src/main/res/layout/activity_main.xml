@@ -12,7 +12,7 @@
         android:layout_width="fill_parent"
         android:layout_height="116dp"
         android:gravity="center"
-        android:text="Bonjour ! Qui es-tu ?"
+        android:text="@string/welcome_question"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
 
@@ -30,8 +30,8 @@
             android:layout_weight="80"
             android:hint="@string/hintLogin"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF"
+            android:textColor="@color/black"
+            android:textColorHint="@color/darkGrey"
             android:textSize="12sp"/>
 
         <ImageButton
