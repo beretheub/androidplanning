@@ -22,4 +22,5 @@
     <string name="hintLogin">Name Firstname</string>
     <string name="selectAll">Check all</string>
     <string name="deselectAll">Uncheck all</string>
+    <string name="checkBoxRaceLabel">only race</string>
 </resources>
