@@ -50,7 +50,7 @@ public class ScheduleActivity extends AppCompatActivity {
         //Access shared preferences
         SharedPreferences prefs = getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
         userID = prefs.getInt("userID", 0);
-        currentDay = prefs.getString("Day", "1");
+        currentDay = prefs.getString("Day", "4");
 
         StaffDao dao = new StaffDao(this);
         dao.open();
