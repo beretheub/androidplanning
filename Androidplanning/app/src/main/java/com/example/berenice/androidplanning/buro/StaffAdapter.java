@@ -70,9 +70,7 @@ public class StaffAdapter extends BaseAdapter implements ListAdapter, Filterable
         allChecked=value;
         notifyDataSetChanged();
         if(allChecked) {
-            for (int i=0; i<list.size();i++){
-                itemsChecked.add(list.get(i));
-            }
+            itemsChecked = new ArrayList<>(filteredList);
         }
     }
 
