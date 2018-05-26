@@ -1,9 +1,11 @@
 package com.example.berenice.androidplanning.database;
 
+import android.support.annotation.NonNull;
+
 /**
  * Class to represent one line of the Staff table
  */
-public class Staff {
+public class Staff implements Comparable {
     int id;
     String name;
     String firstname;
@@ -88,5 +90,15 @@ public class Staff {
 
     public void setTalkieCourt(Boolean talkieCourt) {
         this.talkieCourt = talkieCourt;
+    }
+
+    @Override
+    public int compareTo(@NonNull Object o) {
+        return -1 * ((Staff) o).getName().compareTo(this.getName());
+    }
+
+    @Override
+    public boolean equals(Object o){
+        return (((Staff) o).getId() == this.getId());
     }
 }

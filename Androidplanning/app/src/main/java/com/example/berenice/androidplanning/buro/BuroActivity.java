@@ -13,11 +13,13 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.berenice.androidplanning.R;
+import com.example.berenice.androidplanning.database.QueryHandler;
 import com.example.berenice.androidplanning.database.Staff;
 import com.example.berenice.androidplanning.database.StaffDao;
 import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
@@ -37,7 +39,7 @@ public class BuroActivity extends AppCompatActivity {
         //Find list of the entire staff
         StaffDao sdao = new StaffDao(this);
         sdao.open();
-        ArrayList<Staff> allStaff = sdao.findAllStaff();
+        final ArrayList<Staff> allStaff = sdao.findAllStaff();
         sdao.close();
 
         //Instantiate adapter
@@ -52,10 +54,12 @@ public class BuroActivity extends AppCompatActivity {
         Button checkAll;
         Button unCheckAll;
         Button sendMessage;
+        final CheckBox onlyRaceCheckBox;
 
         checkAll = findViewById(R.id.selectAllButton);
         unCheckAll = findViewById(R.id.unselectAllButton);
         sendMessage = findViewById(R.id.sendMessageSelected);
+        onlyRaceCheckBox = findViewById(R.id.onlyRaceCheckBox);
 
         checkAll.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,16 +78,16 @@ public class BuroActivity extends AppCompatActivity {
         sendMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ArrayList<Integer> positionsChecked = adapter.getPositionsChecked();
-                if(positionsChecked.size()==0){
+                ArrayList<Staff> staffChecked = adapter.getItemsChecked();
+                if(staffChecked.size()==0){
                     Toast.makeText(BuroActivity.this,
                             "Please choose at least one recipient", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                Collections.sort(positionsChecked);
+                Collections.sort(staffChecked);
                 String recipsId="";
-                for (int i: positionsChecked){
-                    recipsId += String.valueOf(i+1)+",";
+                for (Staff s: staffChecked){
+                    recipsId += String.valueOf(s.getId())+",";
                 }
                 Intent i = new Intent(BuroActivity.this, SendSmsActivity.class);
                 i.putExtra("recips",recipsId);
@@ -91,6 +95,45 @@ public class BuroActivity extends AppCompatActivity {
             }
         });
 
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        final SearchView searchView = (SearchView) findViewById(R.id.searchView);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchView.setIconifiedByDefault(true);
+
+        SearchView.OnQueryTextListener textChangeListener = new SearchView.OnQueryTextListener()
+        {
+            @Override
+            public boolean onQueryTextChange(String cs)
+            {
+                adapter.getFilter().filter(cs);
+                //adapter.setTextToFilter(cs);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextSubmit(String query)
+            {
+                adapter.getFilter().filter(query);
+                //adapter.setTextToFilter(query);
+                return false;
+            }
+        };
+        searchView.setOnQueryTextListener(textChangeListener);
+
+        onlyRaceCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onlyRaceCheckBox.isChecked()){
+                    QueryHandler qh = new QueryHandler();
+                    ArrayList<Staff> staffOnRace = qh.getStaffOnRace(BuroActivity.this);
+                    adapter.setList(staffOnRace);
+                }
+                else{
+                    adapter.setList(allStaff);
+                }
+                searchView.setQuery("",false);
+            }
+        });
     }
 
 }
