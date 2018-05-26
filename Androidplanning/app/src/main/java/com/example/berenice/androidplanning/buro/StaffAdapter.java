@@ -17,6 +17,7 @@ import com.example.berenice.androidplanning.R;
 import com.example.berenice.androidplanning.database.Staff;
 import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -26,6 +27,7 @@ public class StaffAdapter extends BaseAdapter implements ListAdapter{
 
     private ArrayList<Staff> list = new ArrayList<>();
     private Context context;
+    private ArrayList<Integer> positionsChecked = new ArrayList<>();
 
     private boolean allChecked;
 
@@ -51,8 +53,19 @@ public class StaffAdapter extends BaseAdapter implements ListAdapter{
     }
 
     public void setAllChecked(boolean value){
+        positionsChecked = new ArrayList<>();
         allChecked=value;
-        notifyDataSetChanged();}
+        notifyDataSetChanged();
+        if(allChecked) {
+            for (int i=0; i<list.size();i++){
+                positionsChecked.add(i);
+            }
+        }
+    }
+
+    public ArrayList<Integer> getPositionsChecked(){
+        return positionsChecked;
+    }
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
@@ -62,15 +75,24 @@ public class StaffAdapter extends BaseAdapter implements ListAdapter{
             view = inflater.inflate(R.layout.simple_list_multiple_choice, null);
         }
 
-        CheckedTextView nameView = view.findViewById(R.id.text1);
+        final CheckedTextView nameView = view.findViewById(R.id.text1);
         nameView.setText(getItem(position).getName());
         nameView.setChecked(allChecked);
+
 
         nameView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ((CheckedTextView)v).toggle();
-                allChecked = false;
+                if(nameView.isChecked()){
+                    positionsChecked.add(position);
+                }
+                else {
+                    for(int i=0; i<positionsChecked.size(); i++){
+                        if (positionsChecked.get(i)==position){positionsChecked.remove(i);}
+                    }
+                }
+
             }
         });
 
