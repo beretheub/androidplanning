@@ -8,15 +8,12 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="wrap_content">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="?attr/actionBarSize"/>
 
     </android.support.design.widget.AppBarLayout>
 
@@ -91,7 +88,7 @@
                     android:text="INSERT TASK DESCRIPTION"
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:lines="5"
+                    android:minLines="4"
                     />
                 <View android:layout_width="2dp"
                     android:background="#FF909090"
