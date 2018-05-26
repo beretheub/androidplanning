@@ -2,7 +2,9 @@ package com.example.berenice.androidplanning.database;
 
 import android.content.Context;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Class to handle all the complicated Database requests.
@@ -115,5 +117,26 @@ public class QueryHandler {
         sdao.close();
 
         return result;
+    }
+
+    public ArrayList<Staff> getStaffOnRace(Context context)
+    {
+        ArrayList<Staff> res = new ArrayList<>();
+
+        TaskStaffDao tsdao = new TaskStaffDao(context);
+        StaffDao sdao = new StaffDao(context);
+
+        tsdao.open();
+        ArrayList<Integer> staffIds = tsdao.getStaffOnRace();
+        tsdao.close();
+
+        sdao.open();
+        for (int i:staffIds){
+            res.add(sdao.findStaffById(i));
+        }
+        sdao.close();
+        Collections.sort(res);
+
+        return res;
     }
 }

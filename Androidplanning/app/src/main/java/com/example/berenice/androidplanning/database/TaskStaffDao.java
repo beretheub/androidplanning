@@ -200,4 +200,24 @@ public class TaskStaffDao extends DaoBase {
 
         return result;
     }
+
+    public ArrayList<Integer> getStaffOnRace() {
+        String query;
+        query = String.format("select %s from %s where %s = ?",
+                Constants.TASKS_STAFF_STAFF,
+                Constants.TABLE_TASKS_STAFF,
+                Constants.TASKS_STAFF_RACE);
+
+        Cursor c = getDb().rawQuery(
+                query, new String[]{"1"});
+
+        ArrayList<Integer> result = new ArrayList<>();
+
+        while (c.moveToNext()) {
+
+            result.add(c.getInt(0));
+        }
+
+        return result;
+    }
 }
