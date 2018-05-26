@@ -1,19 +1,16 @@
-package com.example.berenice.androidplanning.records;
+package com.example.berenice.androidplanning.schedule;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.berenice.androidplanning.DateFormater;
 import com.example.berenice.androidplanning.database.Task;
 import com.example.berenice.androidplanning.R;
-import com.example.berenice.androidplanning.task.taskActivity;
 
 
 import java.util.ArrayList;

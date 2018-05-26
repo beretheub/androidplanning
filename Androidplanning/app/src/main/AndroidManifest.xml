@@ -28,7 +28,7 @@
             android:label="@string/title_activity_task"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".records.ScheduleActivity"
+            android:name=".schedule.ScheduleActivity"
             android:label="@string/title_activity_fiche"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

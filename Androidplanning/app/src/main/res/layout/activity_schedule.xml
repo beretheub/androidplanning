@@ -26,19 +26,38 @@
         android:orientation="vertical"
         android:layout_marginTop="?attr/actionBarSize">
 
-        <TextView
-            android:id="@+id/day"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:lineSpacingExtra="8sp"
-            android:padding="3dp"
-            android:text="INSERT DAY NUMBER HERE"
-            android:textColor="#208040"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:typeface="normal"
-            android:clickable="true"/>
+            android:orientation="horizontal">
 
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:lineSpacingExtra="8sp"
+                android:padding="3dp"
+                android:text="INSERT DAY NUMBER HERE"
+                android:textColor="#208040"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/day_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:color="#045FB4"
+                android:src="@drawable/details_icon" />
+
+        </LinearLayout>
         <TextView
             android:id="@+id/nameStaff"
             android:layout_width="match_parent"
