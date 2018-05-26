@@ -42,7 +42,10 @@
             android:layout_weight="20"
             android:src="@drawable/search_icon" />
 
+
+
     </LinearLayout>
+
 
     <ImageView
         android:id="@+id/logo_raid"
@@ -50,5 +53,13 @@
         android:layout_height="165dp"
         android:layout_gravity="bottom"
         android:src="@drawable/logo_raid_blanc" />
+
+    <Button
+        android:id="@+id/openDayDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="@string/chooseDayLabel"/>
+
 
 </LinearLayout>

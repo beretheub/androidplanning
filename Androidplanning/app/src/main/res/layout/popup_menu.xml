@@ -14,31 +14,26 @@
         android:textSize="24sp"
         android:textStyle="bold" />
     <RadioGroup
+        android:id="@+id/pickDay"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RadioButton
-
-            android:id="@+id/butt1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Day 1"/>
         <RadioButton
-            android:id="@+id/butt2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Day 2"/>
         <RadioButton
-            android:id="@+id/butt3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Day 3"/>
         <RadioButton
-            android:id="@+id/butt4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Day 4"/>
         <RadioButton
-            android:id="@+id/butt5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Day 5"/>
@@ -50,6 +45,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Close"/>
+        android:text="@string/okLabel"/>
 
 </LinearLayout>

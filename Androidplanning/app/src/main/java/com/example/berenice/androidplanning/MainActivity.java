@@ -1,18 +1,24 @@
 package com.example.berenice.androidplanning;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.berenice.androidplanning.database.Constants;
@@ -108,6 +114,59 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        final Button openDayDialog = (Button) findViewById(R.id.openDayDialog);
+        openDayDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(MainActivity.this);
+                LayoutInflater inflater = MainActivity.this.getLayoutInflater();
+                View dialogView = inflater.inflate(R.layout.popup_menu, null);
+                dialogBuilder.setView(dialogView);
+
+                final AlertDialog alertDialog = dialogBuilder.create();
+
+                final RadioGroup group =(RadioGroup) dialogView.findViewById(R.id.pickDay);
+                Button okButton = (Button) dialogView.findViewById(R.id.close_popup_menu);
+
+                okButton.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        //Find current day
+                        int radioButtonId = group.getCheckedRadioButtonId();
+                        if(radioButtonId==-1){
+                            Toast.makeText(MainActivity.this,
+                                    "Please choose the current day", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
+                        RadioButton selected=
+                                (RadioButton) group.findViewById(radioButtonId);
+                        String buttonText = (String) selected.getText();
+                        String newDay =
+                                buttonText.substring(buttonText.length()-1);
+
+                        //Save current day in preferences
+                        SharedPreferences.Editor editor = getSharedPreferences
+                                ("PlanningPreferences", MODE_PRIVATE).edit();
+                        editor.putString("current_day", newDay);
+                        editor.apply();
+
+                        //Load the right database
+                        ImportHandler ih = new ImportHandler(MainActivity.this);
+                        ih.importAll(newDay);
+
+                        //Closes popup
+                        alertDialog.dismiss();
+                    }
+                });
+
+                alertDialog.show();
+
+            }
+        });
     }
 
     @Override
@@ -120,5 +179,7 @@ public class MainActivity extends AppCompatActivity {
     {
         return new MyMenu().onclickAction(item, getBaseContext());
     }
+
+
 
 }

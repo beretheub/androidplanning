@@ -23,4 +23,6 @@
     <string name="selectAll">Check all</string>
     <string name="deselectAll">Uncheck all</string>
     <string name="checkBoxRaceLabel">only race</string>
+    <string name="okLabel">OK</string>
+    <string name="chooseDayLabel">Choose current day</string>
 </resources>
