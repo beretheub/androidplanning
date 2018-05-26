@@ -36,7 +36,7 @@ public class LoginActivity extends Activity {
                 String password = String.valueOf(LoginActivity.this.password.getText());
 
                 // Validates the User name and Password for admin, admin
-                if (username.equals("buro") && password.equals("staffeurEnCarton")) {
+                if (username.equals("buro") && password.equals("buro")) {
                     Intent i = new Intent(LoginActivity.this, BuroActivity.class);
                     startActivity(i);
                     return;
