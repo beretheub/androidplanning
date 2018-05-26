@@ -26,6 +26,7 @@ public class ImportHandler {
      */
     public void importAll(String day)
     {
+        context.deleteDatabase(Constants.DATABASE_NAME);
         importTaskStaff(context, day);
         importCars(context, day);
         importTasks(context, day);
