@@ -10,6 +10,7 @@ import android.content.Intent;
 import com.example.berenice.androidplanning.MainActivity;
 import com.example.berenice.androidplanning.R;
 import com.example.berenice.androidplanning.buro.BuroActivity;
+import com.example.berenice.androidplanning.buro.LoginActivity;
 import com.example.berenice.androidplanning.database.ImportHandler;
 import com.example.berenice.androidplanning.database.TestDbActivity;
 import com.example.berenice.androidplanning.schedule.ScheduleActivity;
@@ -65,7 +66,7 @@ public class MyMenu extends AppCompatActivity {
                 return true;
 
             case R.id.goto_buro:
-                i = new Intent(context, BuroActivity.class);
+                i = new Intent(context, LoginActivity.class);
                 context.startActivity(i);
                 return true;
 
