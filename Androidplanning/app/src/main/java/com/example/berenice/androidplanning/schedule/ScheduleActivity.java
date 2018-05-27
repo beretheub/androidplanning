@@ -28,6 +28,7 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.berenice.androidplanning.R;
 import com.example.berenice.androidplanning.database.QueryHandler;
@@ -64,7 +65,7 @@ public class ScheduleActivity extends AppCompatActivity {
         int userID = prefs.getInt("userID", 0);
         String currentDay = prefs.getString("Day", "1");
 
-        toolbar.setTitle(" Schedule J" + currentDay );
+        toolbar.setTitle(R.string.title_activity_fiche+ " J" + currentDay );
         setSupportActionBar(toolbar);
 
         //find current Staff if there is one
@@ -113,9 +114,16 @@ public class ScheduleActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Boolean succes = false;
                 for (Task t:taskList) {
-                    t.exportToCalender(getBaseContext());
+                    if(!t.exportToCalender(getBaseContext())){
+                        Toast.makeText(ScheduleActivity.this, "Export failed!",
+                                Toast.LENGTH_SHORT).show();
+                        return;}
+
                 }
+                Toast.makeText(ScheduleActivity.this, "Export successful",
+                        Toast.LENGTH_SHORT).show();
             }
         });
 

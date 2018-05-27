@@ -41,6 +41,8 @@ public class SendSmsActivity extends AppCompatActivity  {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        toolbar.setTitle(R.string.title_activity_send_sms);
+
         //Ask for SMS permission
         if (!(ContextCompat.checkSelfPermission(this,
                 Manifest.permission.SEND_SMS)

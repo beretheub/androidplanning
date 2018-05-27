@@ -85,7 +85,7 @@ public class Task implements Comparable{
         Description = description;
     }
 
-    public void exportToCalender(Context context) {
+    public Boolean exportToCalender(Context context) {
         Calendar departureTime = Calendar.getInstance();
         Calendar endTime = Calendar.getInstance();
 
@@ -124,9 +124,11 @@ public class Task implements Comparable{
         // Insert event to calendar
         if (ActivityCompat.checkSelfPermission
                 (context, Manifest.permission.WRITE_CALENDAR) != PackageManager.PERMISSION_GRANTED)
-            {return;}
+            {return false;}
 
         Uri uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
+
+        return true;
     }
 
     @Override
