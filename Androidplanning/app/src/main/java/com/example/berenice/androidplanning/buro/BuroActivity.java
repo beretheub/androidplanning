@@ -27,8 +27,11 @@ import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class BuroActivity extends AppCompatActivity {
 
+/**
+ * Activity to enable the buro to contact a group of staffeurs
+ **/
+public class BuroActivity extends AppCompatActivity {
 
 
     @Override

@@ -125,7 +125,7 @@ public class ScheduleActivity extends AppCompatActivity {
         ListView lView = (ListView) findViewById(R.id.listTasks);
         lView.setAdapter(adapter);
 
-
+        //details about the day
        ImageButton day_details = (ImageButton) findViewById(R.id.day_details);
         day_details.setOnClickListener(new View.OnClickListener() {
             @Override

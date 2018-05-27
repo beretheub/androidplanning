@@ -20,7 +20,7 @@ import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
 import java.util.ArrayList;
 
 /**
- *
+ * Adapter to display the composition of a car
  */
 public class CarListAdapter extends BaseAdapter implements ListAdapter {
     private ArrayList<Staff> list;

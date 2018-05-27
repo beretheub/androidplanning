@@ -13,6 +13,10 @@ import android.widget.Toolbar;
 
 import com.example.berenice.androidplanning.R;
 
+/**
+ * Enable to login as a buro member
+ **/
+
 public class LoginActivity extends AppCompatActivity {
     private EditText username;
     private EditText password;

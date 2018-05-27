@@ -10,9 +10,9 @@ import android.content.BroadcastReceiver;
         import android.util.Log;
         import android.widget.Toast;
 
-/*
- * Reception des SMS
- */
+/**
+ * SMS reception
+ **/
 public class SmsReceiver extends BroadcastReceiver {
 
     private static final String TAG = "SMSBroadcastReceiver";

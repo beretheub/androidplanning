@@ -14,7 +14,7 @@ package com.example.berenice.androidplanning.sendSms;
         import android.widget.Toast;
 
 /**
- *  Envoi des SMS
+ *  SMS sending
  */
 public class Sms {
 

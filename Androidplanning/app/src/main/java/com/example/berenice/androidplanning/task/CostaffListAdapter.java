@@ -19,7 +19,7 @@ import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
 import java.util.ArrayList;
 
 /**
- * ListAdapter in order to show the colleagues on a certain task
+ * ListAdapter in order to show the colleagues on a certain task, and give the possibility to contact them
  */
 public class CostaffListAdapter extends BaseAdapter implements ListAdapter{
 

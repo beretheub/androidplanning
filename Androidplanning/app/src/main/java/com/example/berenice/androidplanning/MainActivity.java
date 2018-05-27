@@ -29,6 +29,9 @@ import com.example.berenice.androidplanning.database.StaffDao;
 import com.example.berenice.androidplanning.menus.MyMenu;
 import com.example.berenice.androidplanning.schedule.ScheduleActivity;
 
+/*
+ * Welcome page
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //toolbar
         android.support.v7.widget.Toolbar toolbar =
                 (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
 
@@ -129,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //choice of the day
         final Button openDayDialog = (Button) findViewById(R.id.openDayDialog);
         openDayDialog.setOnClickListener(new View.OnClickListener() {
             @Override

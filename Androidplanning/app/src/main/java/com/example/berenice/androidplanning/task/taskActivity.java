@@ -29,6 +29,7 @@ import java.util.ArrayList;
 /**
  * Activity to display one task with all the information and colleagues
  */
+
 public class taskActivity extends AppCompatActivity {
 
     @Override

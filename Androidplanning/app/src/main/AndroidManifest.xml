@@ -36,9 +36,6 @@
             android:name=".schedule.ScheduleActivity"
             android:label="@string/title_activity_fiche"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".database.TestDbActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".buro.BuroActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/title_activity_buro"/>

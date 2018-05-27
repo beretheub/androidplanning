@@ -23,7 +23,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
- * ListAdapter in order to show the colleagues on a certain task
+ * ListAdapter in order to show the staffeurs and give the possibility to select some of them
  */
 public class StaffAdapter extends BaseAdapter implements ListAdapter, Filterable{
 
