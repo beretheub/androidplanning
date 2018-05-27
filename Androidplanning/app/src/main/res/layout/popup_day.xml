@@ -18,31 +18,37 @@
         android:layout_height="17dp" />
 
     <TextView
+        android:id="@+id/popup_line1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Trail 1 : 8km, 400D+" />
 
     <TextView
+        android:id="@+id/popup_line2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CP 1" />
 
     <TextView
+        android:id="@+id/popup_line3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="VTT 1 : 15km, 606D+" />
 
     <TextView
+        android:id="@+id/popup_line4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Escalade" />
 
     <TextView
+        android:id="@+id/popup_line5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CP 2" />
 
     <TextView
+        android:id="@+id/popup_line6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Village d'activités Meet and Challenge" />
@@ -62,6 +68,7 @@
 
 
     <ImageView
+        android:id="@+id/profil"
         android:layout_width="277dp"
         android:layout_height="131dp"
         android:src="@drawable/profil"
