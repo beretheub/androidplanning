@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Planning RaidCS</string>
-    <string name="title_activity_send_sms">sendSMS</string>
 
     #Strings for the SMS activity
+    <string name="title_activity_send_sms">sendSMS</string>
     <string name="messageText">Text</string>
     <string name="messageLabel">Type your message here:</string>
     <string name="sendButtonLabel">Send</string>
@@ -19,7 +19,7 @@
     <string name="sendButtonAllLabel">Send SMS all</string>
 
     #Strings for the schedule activity
-    <string name="title_activity_fiche">Schedule</string>
+    <string name="title_activity_fiche">Schedule J%1s</string>
     <string name="day_figures">This day\'s numbers</string>
     <string name="profil">Profile</string>
     <string name="close">Close</string>

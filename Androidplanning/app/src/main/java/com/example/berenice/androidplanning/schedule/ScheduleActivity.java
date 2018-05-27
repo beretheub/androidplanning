@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.provider.CalendarContract.Events;
@@ -65,7 +66,8 @@ public class ScheduleActivity extends AppCompatActivity {
         int userID = prefs.getInt("userID", 0);
         String currentDay = prefs.getString("Day", "1");
 
-        toolbar.setTitle(R.string.title_activity_fiche+ " J" + currentDay );
+        Resources res = getResources();
+        toolbar.setTitle(res.getString(R.string.title_activity_fiche, currentDay));
         setSupportActionBar(toolbar);
 
         //find current Staff if there is one
@@ -117,7 +119,7 @@ public class ScheduleActivity extends AppCompatActivity {
                 Boolean succes = false;
                 for (Task t:taskList) {
                     if(!t.exportToCalender(getBaseContext())){
-                        Toast.makeText(ScheduleActivity.this, "Export failed!",
+                        Toast.makeText(getApplicationContext(), "Export failed!",
                                 Toast.LENGTH_SHORT).show();
                         return;}
 
