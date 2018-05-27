@@ -45,10 +45,17 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
+        //Check if there is already a day registered. Set one if not.
+        SharedPreferences prefs =
+                getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("Day",prefs.getString("Day", "1"));
+        editor.apply();
+
         //check if there is a database
         if(!DatabaseHandler.doesDatabaseExist(this, Constants.DATABASE_NAME)){
             ImportHandler ih = new ImportHandler(this);
-            ih.importAll("4");
+            ih.importAll(prefs.getString("Day", "1"));
         }
 
         //find names of all the staff
@@ -64,8 +71,6 @@ public class MainActivity extends AppCompatActivity {
         nameField.setAdapter(namesAdapater);
 
         //find currentStaff if there is one
-        SharedPreferences prefs =
-                getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
         int currentID = prefs.getInt("userID",0);
         if (currentID != 0){
             Staff currentStaff = dao.findStaffById(currentID);

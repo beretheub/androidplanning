@@ -53,8 +53,12 @@ public class ScheduleActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        int userID;
-        String currentDay;
+        //Access shared preferences
+        SharedPreferences prefs = getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
+        int userID = prefs.getInt("userID", 0);
+        String currentDay = prefs.getString("Day", "1");
+
+        toolbar.setTitle(R.id.nameTask_schedule+ " J" + currentDay );
 
         //Ask for SMS permission
         if (!(ContextCompat.checkSelfPermission(this,
@@ -98,19 +102,12 @@ public class ScheduleActivity extends AppCompatActivity {
         intent.putExtra(CalendarContract.Events.EVENT_LOCATION, "My Guest House");
         startActivity(intent);*/
 
-        //Access shared preferences
-        SharedPreferences prefs = getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
-        userID = prefs.getInt("userID", 0);
-        currentDay = prefs.getString("Day", "4");
-
         StaffDao dao = new StaffDao(this);
         dao.open();
         Staff currentStaff = dao.findStaffById(userID);
         dao.close();
 
         //Update fields
-        TextView dayTextView = findViewById(R.id.day);
-        dayTextView.setText("J" + currentDay);
         TextView nameStaff = findViewById(R.id.nameStaff);
         nameStaff.setText(currentStaff.getName().toUpperCase() + ", " + currentStaff.getFirstname());
 
@@ -126,7 +123,7 @@ public class ScheduleActivity extends AppCompatActivity {
         lView.setAdapter(adapter);
 
         //details about the day
-       ImageButton day_details = (ImageButton) findViewById(R.id.day_details);
+       Button day_details = (Button) findViewById(R.id.day_details);
         day_details.setOnClickListener(new View.OnClickListener() {
             @Override
 
