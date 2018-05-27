@@ -9,31 +9,67 @@
         android:layout_height="wrap_content">
 
         <TableRow>
-            <TextView
-                android:id="@+id/departureTime_schedule"
-                android:text="@string/departureLabel"
-                android:textStyle="bold"
+            <LinearLayout
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_width="0dp"
-                android:lines="2" />
+                android:orientation="vertical">
+                <TextView
+                    android:text="@string/departureLabel"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"/>
+                <TextView
+                    android:id="@+id/departureTime_schedule"
+                    android:text="TIME"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="8dp"/>
+            </LinearLayout>
             <View android:layout_width="2dp"
                 android:background="#FF909090"
                 android:layout_height="match_parent"/>
-            <TextView
-                android:id="@+id/beginTime_schedule"
-                android:text="@string/beginLabel"
-                android:textStyle="bold"
-                android:layout_width="0dp"
-                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:text="@string/beginLabel"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"/>
+                <TextView
+                    android:id="@+id/beginTime_schedule"
+                    android:text="TIME"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"/>
+            </LinearLayout>
             <View android:layout_width="2dp"
                 android:background="#FF909090"
                 android:layout_height="match_parent"/>
-            <TextView
-                android:id="@+id/endTime_schedule"
-                android:text="@string/endLabel"
-                android:textStyle="bold"
-                android:layout_width="0dp"
-                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:text="@string/endLabel"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"/>
+                <TextView
+                    android:id="@+id/endTime_schedule"
+                    android:text="TIME"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="8dp"/>
+            </LinearLayout>
+
         </TableRow>
         <View
             android:layout_height="1dip"
@@ -46,7 +82,7 @@
                 android:textStyle="bold"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:lines="4" />
+                android:maxLines="4" />
             <View android:layout_width="2dp"
                 android:background="#FF909090"
                 android:layout_height="match_parent"/>
@@ -57,8 +93,8 @@
                 android:layout_weight="1"
                 android:width="0dp"/>
         </TableRow>
-        <View android:layout_width="2dp"
+        <View android:layout_width="4dip"
             android:background="#FF909090"
-            android:layout_height="match_parent"/>
+            android:layout_height="4dip"/>
     </TableLayout>
 </RelativeLayout>

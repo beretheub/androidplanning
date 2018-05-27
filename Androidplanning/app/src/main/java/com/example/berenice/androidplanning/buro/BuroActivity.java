@@ -36,6 +36,11 @@ public class BuroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buro);
 
+        android.support.v7.widget.Toolbar toolbar =
+                (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+
         //Find list of the entire staff
         StaffDao sdao = new StaffDao(this);
         sdao.open();
@@ -80,7 +85,7 @@ public class BuroActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ArrayList<Staff> staffChecked = adapter.getItemsChecked();
                 if(staffChecked.size()==0){
-                    Toast.makeText(BuroActivity.this,
+                    Toast.makeText(getApplicationContext(),
                             "Please choose at least one recipient", Toast.LENGTH_SHORT).show();
                     return;
                 }

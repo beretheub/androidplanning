@@ -1,10 +1,17 @@
 package com.example.berenice.androidplanning.schedule;
 
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.provider.CalendarContract;
+import android.provider.CalendarContract.Events;
+
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
@@ -13,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+
 
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -29,6 +37,7 @@ import com.example.berenice.androidplanning.database.Task;
 import com.example.berenice.androidplanning.task.taskActivity;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  * Activity to display the schedule of one member, during one day, with the different tasks and times
@@ -47,10 +56,52 @@ public class ScheduleActivity extends AppCompatActivity {
         int userID;
         String currentDay;
 
+        //Ask for SMS permission
+        if (!(ContextCompat.checkSelfPermission(this,
+                Manifest.permission.READ_CALENDAR)
+                == PackageManager.PERMISSION_GRANTED)) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.READ_CALENDAR},
+                    0);
+        }
+
+        //Ask for SMS permission
+        if (!(ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_CALENDAR)
+                == PackageManager.PERMISSION_GRANTED)) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.WRITE_CALENDAR},
+                    0);
+        }
+
+            Calendar beginTime = Calendar.getInstance();
+            Calendar endTime = Calendar.getInstance();
+            Intent intent = new Intent(Intent.ACTION_INSERT)
+                .setData(CalendarContract.Events.CONTENT_URI)
+                .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
+                        beginTime.getTimeInMillis())
+                .putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
+                        endTime.getTimeInMillis())
+                .putExtra(Events.TITLE, "Yoga")
+                .putExtra(Events.DESCRIPTION, "Group class");
+            startActivity(intent);
+
+        /*
+        Calendar cal = Calendar.getInstance();
+
+        Intent intent = new Intent(Intent.ACTION_INSERT);
+        intent.setType("vnd.android.cursor/item/event");
+        intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,cal.getTimeInMillis());
+        intent.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true);
+        intent.putExtra(CalendarContract.Events.TITLE, "testEvent");
+        intent.putExtra(CalendarContract.Events.DESCRIPTION, "This is a sample description");
+        intent.putExtra(CalendarContract.Events.EVENT_LOCATION, "My Guest House");
+        startActivity(intent);*/
+
         //Access shared preferences
         SharedPreferences prefs = getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
         userID = prefs.getInt("userID", 0);
-        currentDay = prefs.getString("Day", "1");
+        currentDay = prefs.getString("Day", "4");
 
         StaffDao dao = new StaffDao(this);
         dao.open();

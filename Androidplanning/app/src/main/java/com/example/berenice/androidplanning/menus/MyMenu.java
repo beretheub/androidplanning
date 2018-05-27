@@ -41,7 +41,17 @@ public class MyMenu extends AppCompatActivity {
         Intent i;
 
         switch (item.getItemId()){
+            case R.id.goto_schedule:
+                i = new Intent(context, ScheduleActivity.class);
+                context.startActivity(i);
+                return true;
 
+            case R.id.goto_buro:
+                i = new Intent(context, LoginActivity.class);
+                context.startActivity(i);
+                return true;
+            /*
+            //Used for tests during developement
             case R.id.goto_sendSms:
                 i = new Intent(context, SendSmsActivity.class);
                 i.putExtra("recips","5,6,28");
@@ -50,13 +60,7 @@ public class MyMenu extends AppCompatActivity {
 
             case R.id.goto_task:
                 i = new Intent(context, taskActivity.class);
-                //TODO just to test!
                 i.putExtra("currentTask", "28");
-                context.startActivity(i);
-                return true;
-
-            case R.id.goto_schedule:
-                i = new Intent(context, ScheduleActivity.class);
                 context.startActivity(i);
                 return true;
 
@@ -64,11 +68,7 @@ public class MyMenu extends AppCompatActivity {
                 i = new Intent(context, TestDbActivity.class);
                 context.startActivity(i);
                 return true;
-
-            case R.id.goto_buro:
-                i = new Intent(context, LoginActivity.class);
-                context.startActivity(i);
-                return true;
+            */
 
             default:
                 return false;

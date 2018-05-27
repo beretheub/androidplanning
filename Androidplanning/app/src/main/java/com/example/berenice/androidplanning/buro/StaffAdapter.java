@@ -142,8 +142,9 @@ public class StaffAdapter extends BaseAdapter implements ListAdapter, Filterable
                     // We'll go through all the contacts and see
                     // if they contain the supplied string
                     for (Staff s : list) {
-                        if (s.getName().toUpperCase().contains( constraint.toString().toUpperCase() )
-                                || s.getFirstname().toUpperCase().contains(constraint.toString().toUpperCase())) {
+                        if ((s.getName()+" "+s.getFirstname()).toUpperCase()
+                                .contains(constraint.toString().toUpperCase() ))
+                        {
                             // if `contains` == true then add it
                             // to our filtered list
                             filteredContacts.add(s);
