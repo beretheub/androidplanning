@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Androidplanning</string>
+    <string name="app_name">Planning RaidCS</string>
     <string name="title_activity_send_sms">sendSMS</string>
 
     #Strings for the SMS activity
@@ -7,6 +7,8 @@
     <string name="messageLabel">Type your message here:</string>
     <string name="sendButtonLabel">Send</string>
     <string name="recipientsLabel">Recipients</string>
+
+    #Strings for the task activity
     <string name="title_activity_task">Task</string>
     <string name="departureLabel">Departure:</string>
     <string name="beginLabel">Begin:</string>
@@ -16,18 +18,30 @@
     <string name="costaffLabel">Colleagues:</string>
     <string name="sendButtonAllLabel">Send SMS all</string>
 
+    #Strings for the schedule activity
     <string name="title_activity_fiche">Schedule</string>
-    <string name="title_activity_test_db">TestDb</string>
     <string name="day_figures">This day\'s numbers</string>
-    <string name="hintLogin">Name Firstname</string>
+    <string name="profil">Profile</string>
+    <string name="close">Close</string>
+
+    #Strings for the buro activity
+    <string name="title_activity_buro">Buro</string>
     <string name="selectAll">Check all</string>
     <string name="deselectAll">Uncheck all</string>
     <string name="checkBoxRaceLabel">only race</string>
+    <string name="send_message">Send message</string>
+
+    #Strings for the main activity
+    <string name="hintLogin">Name Firstname</string>
     <string name="okLabel">OK</string>
     <string name="chooseDayLabel">Choose current day</string>
+    <string name="welcome_question">Hi, how and who are you?</string>
+
+    #Strings for the login activity
+    <string name="title_activity_login">Login</string>
     <string name="password_text">Password</string>
     <string name="username_text">Username</string>
     <string name="signin_text">Sign in</string>
-    <string name="send_message">Send message</string>
-    <string name="welcome_question">Hi, how and who are you?</string>
+    <string name="noCostaffAlert">You are all alone for your task :(</string>
+
 </resources>

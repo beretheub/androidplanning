@@ -36,12 +36,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        android.support.v7.widget.Toolbar toolbar =
+                (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+
         //check if there is a database
         if(!DatabaseHandler.doesDatabaseExist(this, Constants.DATABASE_NAME)){
             ImportHandler ih = new ImportHandler(this);
             ih.importAll("4");
         }
-
 
         //find names of all the staff
         final StaffDao dao = new StaffDao(this);
@@ -114,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences prefs =
                         getSharedPreferences("PlanningPreferences", MODE_PRIVATE);
                 if (prefs.getInt("userID",0)==0) {
-                    Toast.makeText(MainActivity.this,
+                    Toast.makeText(getApplicationContext(),
                             "\"Please identify yourself!\"", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -147,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                         //Find current day
                         int radioButtonId = group.getCheckedRadioButtonId();
                         if(radioButtonId==-1){
-                            Toast.makeText(MainActivity.this,
+                            Toast.makeText(getApplicationContext(),
                                     "Please choose the current day", Toast.LENGTH_SHORT).show();
                             return;
                         }

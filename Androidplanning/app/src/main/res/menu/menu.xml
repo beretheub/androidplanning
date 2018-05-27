@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:actionbarcompat_mse="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/goto_sendSms"
+        android:id="@+id/goto_schedule"
         android:icon="@drawable/logo_raid_blanc"
         android:orderInCategory="0"
-        android:title="Write message">
+        android:title="Schedule">
     </item>
     <item
         android:id="@+id/goto_buro"
@@ -13,18 +13,22 @@
         android:orderInCategory="1"
         android:title="Se connecter en tant que buro">
     </item>
+    <!--
+    Buttons used for testing during development
+    <item
+        android:id="@+id/goto_sendSms"
+        android:icon="@drawable/logo_raid_blanc"
+        android:orderInCategory="0"
+        android:title="Write message">
+    </item>
+
     <item
         android:id="@+id/goto_task"
         android:icon="@drawable/logo_raid_blanc"
         android:orderInCategory="0"
         android:title="Task">
     </item>
-    <item
-        android:id="@+id/goto_schedule"
-        android:icon="@drawable/logo_raid_blanc"
-        android:orderInCategory="0"
-        android:title="Schedule">
-    </item>
+
     <item
         android:id="@+id/goto_testDB"
         android:icon="@drawable/logo_raid_blanc"
@@ -37,4 +41,5 @@
         android:orderInCategory="0"
         android:title="Journées">
     </item>
+    -->
 </menu>
