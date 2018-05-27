@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.provider.CalendarContract;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 
 import com.example.berenice.androidplanning.DateFormater;
@@ -18,7 +19,7 @@ import java.util.TimeZone;
 /**
  * Class to represent one line of the Task table
  */
-public class Task {
+public class Task implements Comparable{
     int id;
     String name;
     String departure;
@@ -126,5 +127,10 @@ public class Task {
             {return;}
 
         Uri uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
+    }
+
+    @Override
+    public int compareTo(@NonNull Object o) {
+        return -1 * ((Task) o).getDeparture().compareTo(this.getDeparture());
     }
 }

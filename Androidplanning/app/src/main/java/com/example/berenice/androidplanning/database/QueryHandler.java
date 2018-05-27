@@ -34,6 +34,8 @@ public class QueryHandler {
         tsdao.close();
         tdao.close();
 
+        Collections.sort(result);
+
         return result;
     }
 
