@@ -105,22 +105,6 @@ public class ScheduleActivity extends AppCompatActivity {
         export_calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Ask for calendar permission
-                if (!(ContextCompat.checkSelfPermission(getBaseContext(),
-                        Manifest.permission.READ_CALENDAR)
-                        == PackageManager.PERMISSION_GRANTED)) {
-                    ActivityCompat.requestPermissions(ScheduleActivity.this,
-                            new String[]{Manifest.permission.READ_CALENDAR},
-                            0);
-                }
-                //Ask for calendar permission
-                if (!(ContextCompat.checkSelfPermission(getBaseContext(),
-                        Manifest.permission.WRITE_CALENDAR)
-                        == PackageManager.PERMISSION_GRANTED)) {
-                    ActivityCompat.requestPermissions(ScheduleActivity.this,
-                            new String[]{Manifest.permission.WRITE_CALENDAR},
-                            0);
-                }
 
                 for (Task t:taskList) {
                     t.exportToCalender(getBaseContext());
