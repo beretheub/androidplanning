@@ -1,5 +1,11 @@
 package com.example.berenice.androidplanning.database;
 
+import android.content.Context;
+import android.content.Intent;
+import android.provider.CalendarContract;
+
+import java.util.Calendar;
+
 /**
  * Class to represent one line of the Task table
  */
@@ -67,5 +73,19 @@ public class Task {
 
     public void setDescription(String description) {
         Description = description;
+    }
+
+    public void exportToCalender(Context context){
+        Calendar beginTime = Calendar.getInstance();
+        Calendar endTime = Calendar.getInstance();
+        Intent intent = new Intent(Intent.ACTION_INSERT)
+                .setData(CalendarContract.Events.CONTENT_URI)
+                .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
+                        beginTime.getTimeInMillis())
+                .putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
+                        endTime.getTimeInMillis())
+                .putExtra(CalendarContract.Events.TITLE, "Yoga")
+                .putExtra(CalendarContract.Events.DESCRIPTION, "Group class");
+        context.startActivity(intent);
     }
 }

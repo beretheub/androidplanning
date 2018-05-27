@@ -60,48 +60,7 @@ public class ScheduleActivity extends AppCompatActivity {
 
         toolbar.setTitle(R.id.nameTask_schedule+ " J" + currentDay );
 
-        //Ask for SMS permission
-        if (!(ContextCompat.checkSelfPermission(this,
-                Manifest.permission.READ_CALENDAR)
-                == PackageManager.PERMISSION_GRANTED)) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.READ_CALENDAR},
-                    0);
-        }
-
-        //Ask for SMS permission
-        if (!(ContextCompat.checkSelfPermission(this,
-                Manifest.permission.WRITE_CALENDAR)
-                == PackageManager.PERMISSION_GRANTED)) {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_CALENDAR},
-                    0);
-        }
-
-            Calendar beginTime = Calendar.getInstance();
-            Calendar endTime = Calendar.getInstance();
-            Intent intent = new Intent(Intent.ACTION_INSERT)
-                .setData(CalendarContract.Events.CONTENT_URI)
-                .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
-                        beginTime.getTimeInMillis())
-                .putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
-                        endTime.getTimeInMillis())
-                .putExtra(Events.TITLE, "Yoga")
-                .putExtra(Events.DESCRIPTION, "Group class");
-            startActivity(intent);
-
-        /*
-        Calendar cal = Calendar.getInstance();
-
-        Intent intent = new Intent(Intent.ACTION_INSERT);
-        intent.setType("vnd.android.cursor/item/event");
-        intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,cal.getTimeInMillis());
-        intent.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true);
-        intent.putExtra(CalendarContract.Events.TITLE, "testEvent");
-        intent.putExtra(CalendarContract.Events.DESCRIPTION, "This is a sample description");
-        intent.putExtra(CalendarContract.Events.EVENT_LOCATION, "My Guest House");
-        startActivity(intent);*/
-
+        //find current Staff if there is one
         StaffDao dao = new StaffDao(this);
         dao.open();
         Staff currentStaff = dao.findStaffById(userID);
@@ -111,12 +70,12 @@ public class ScheduleActivity extends AppCompatActivity {
         TextView nameStaff = findViewById(R.id.nameStaff);
         nameStaff.setText(currentStaff.getName().toUpperCase() + ", " + currentStaff.getFirstname());
 
-        //generate list
+        //generate taskList
         QueryHandler qh = new QueryHandler();
-        final ArrayList<Task> list = qh.getTasksFromStaff(this, userID);
+        final ArrayList<Task> taskList = qh.getTasksFromStaff(this, userID);
 
         //instantiate custom adapter
-        TasksListAdapter adapter = new TasksListAdapter(list, this);
+        TasksListAdapter adapter = new TasksListAdapter(taskList, this);
 
         //handle listview and assign adapter
         ListView lView = (ListView) findViewById(R.id.listTasks);
@@ -137,8 +96,35 @@ public class ScheduleActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ScheduleActivity.this, taskActivity.class);
-                intent.putExtra("currentTask", String.valueOf(list.get(position).getId()));
+                intent.putExtra("currentTask", String.valueOf(taskList.get(position).getId()));
                 startActivity(intent);
+            }
+        });
+
+        Button export_calendar = (Button) findViewById(R.id.export_calendar);
+        export_calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Ask for calendar permission
+                if (!(ContextCompat.checkSelfPermission(getBaseContext(),
+                        Manifest.permission.READ_CALENDAR)
+                        == PackageManager.PERMISSION_GRANTED)) {
+                    ActivityCompat.requestPermissions(ScheduleActivity.this,
+                            new String[]{Manifest.permission.READ_CALENDAR},
+                            0);
+                }
+                //Ask for calendar permission
+                if (!(ContextCompat.checkSelfPermission(getBaseContext(),
+                        Manifest.permission.WRITE_CALENDAR)
+                        == PackageManager.PERMISSION_GRANTED)) {
+                    ActivityCompat.requestPermissions(ScheduleActivity.this,
+                            new String[]{Manifest.permission.WRITE_CALENDAR},
+                            0);
+                }
+
+                for (Task t:taskList) {
+                    t.exportToCalender(getBaseContext());
+                }
             }
         });
 

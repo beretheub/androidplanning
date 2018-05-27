@@ -44,5 +44,6 @@
     <string name="signin_text">Sign in</string>
     <string name="noCostaffAlert">You are all alone for your task :(</string>
     <string name="details_button">Details of the day</string>
+    <string name="export_calendar">Export to calendar</string>
 
 </resources>
