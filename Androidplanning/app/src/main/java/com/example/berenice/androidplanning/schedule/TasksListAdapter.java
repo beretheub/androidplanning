@@ -9,9 +9,8 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import com.example.berenice.androidplanning.DateFormater;
-import com.example.berenice.androidplanning.database.Task;
 import com.example.berenice.androidplanning.R;
-
+import com.example.berenice.androidplanning.database.Task;
 
 import java.util.ArrayList;
 /**

@@ -3,16 +3,15 @@ package com.example.berenice.androidplanning.menus;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-
-import com.example.berenice.androidplanning.R;
-import com.example.berenice.androidplanning.buro.LoginActivity;
-import com.example.berenice.androidplanning.schedule.ScheduleActivity;
-
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
+
+import com.example.berenice.androidplanning.R;
+import com.example.berenice.androidplanning.buro.LoginActivity;
+import com.example.berenice.androidplanning.schedule.ScheduleActivity;
 
 /**
  * Define the menu that is used for some activities

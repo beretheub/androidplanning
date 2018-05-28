@@ -8,9 +8,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.provider.CalendarContract;
-import android.provider.CalendarContract.Events;
-
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -21,13 +18,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
-
-
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
-
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,17 +28,13 @@ import com.example.berenice.androidplanning.R;
 import com.example.berenice.androidplanning.database.QueryHandler;
 import com.example.berenice.androidplanning.database.Staff;
 import com.example.berenice.androidplanning.database.StaffDao;
-
 import com.example.berenice.androidplanning.database.Task;
 import com.example.berenice.androidplanning.task.taskActivity;
-
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 /**
  * Activity to display the schedule of one member, during one day, with the different tasks and times
@@ -111,12 +100,19 @@ public class ScheduleActivity extends AppCompatActivity {
             }
         });
 
+        //Ask for Calendar permission
+        if (!(ContextCompat.checkSelfPermission(getBaseContext(),
+                Manifest.permission.WRITE_CALENDAR)
+                == PackageManager.PERMISSION_GRANTED)) {
+            ActivityCompat.requestPermissions(ScheduleActivity.this,
+                    new String[]{Manifest.permission.WRITE_CALENDAR},
+                    0);
+        }
+
         Button export_calendar = (Button) findViewById(R.id.export_calendar);
         export_calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Boolean succes = false;
                 for (Task t:taskList) {
                     if(!t.exportToCalender(getBaseContext())){
                         Toast.makeText(getApplicationContext(), "Export failed!",
@@ -124,7 +120,7 @@ public class ScheduleActivity extends AppCompatActivity {
                         return;}
 
                 }
-                Toast.makeText(ScheduleActivity.this, "Export successful",
+                Toast.makeText(getApplicationContext(), "Export successful",
                         Toast.LENGTH_SHORT).show();
             }
         });

@@ -3,7 +3,6 @@ package com.example.berenice.androidplanning.database;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.provider.SyncStateContract;
 
 import java.util.ArrayList;
 

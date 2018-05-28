@@ -1,21 +1,16 @@
 package com.example.berenice.androidplanning.task;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.berenice.androidplanning.R;
 import com.example.berenice.androidplanning.database.Staff;
-import com.example.berenice.androidplanning.sendSms.SendSmsActivity;
 
 import java.util.ArrayList;
 

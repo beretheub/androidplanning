@@ -2,7 +2,7 @@
     <string name="app_name">Planning RaidCS</string>
 
     #Strings for the SMS activity
-    <string name="title_activity_send_sms">sendSMS</string>
+    <string name="title_activity_send_sms">Send a message</string>
     <string name="messageText">Text</string>
     <string name="messageLabel">Type your message here:</string>
     <string name="sendButtonLabel">Send</string>
